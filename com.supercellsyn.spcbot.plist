@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.supercellsyn.spcbot</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/ryan/Development/supercell-syn/venv-supercell-syn-313/bin/python</string>
+        <string>/Users/ryan/Development/supercell-syn/spc_bot.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/ryan/Development/supercell-syn</string>
+
+    <!-- 00:00 UTC = 17:00 MST (Nov-Mar) / 18:00 MDT (Mar-Nov) -->
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Hour</key>
+            <integer>17</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+        <dict>
+            <key>Hour</key>
+            <integer>18</integer>
+            <key>Minute</key>
+            <integer>0</integer>
+        </dict>
+    </array>
+
+    <key>StandardOutPath</key>
+    <string>/Users/ryan/Development/supercell-syn/logs/launchd_stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/ryan/Development/supercell-syn/logs/launchd_stderr.log</string>
+</dict>
+</plist>
