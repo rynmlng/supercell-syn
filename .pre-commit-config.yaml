@@ -1,0 +1,32 @@
+---
+repos:
+  - repo: local
+    hooks:
+      - id: isort
+        name: isort (local)
+        description: Run isort import formatter
+        entry: python -m isort
+        language: system
+        types_or:
+          - python
+          - pyi
+
+      - id: black
+        name: black (local)
+        description: Run black code formatter
+        entry: python -m black
+        language: system
+        require_serial: true
+        types_or:
+          - python
+          - pyi
+
+      - id: flake8
+        name: flake8 (local)
+        description: Run flake8 style linter
+        entry: python -m flake8
+        language: system
+        require_serial: true
+        types_or:
+          - python
+          - pyi
