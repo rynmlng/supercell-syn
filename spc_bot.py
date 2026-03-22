@@ -203,10 +203,12 @@ def main() -> None:
 
     log.info("=== SPC Bot starting (dry_run=%s) ===", args.dry_run)
 
-    # Late-run handling
+    # Late-run handling (interactive relaunch is macOS-only)
     if not args.dry_run and not args.confirm_late_run and is_late():
-        relaunch_interactive()
-        return
+        if sys.platform == "darwin":
+            relaunch_interactive()
+            return
+        log.warning("Late run detected but not on macOS — proceeding anyway")
 
     if args.confirm_late_run:
         if not confirm_late_run():
