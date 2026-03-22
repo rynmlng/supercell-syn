@@ -14,20 +14,40 @@
     <key>WorkingDirectory</key>
     <string>/Users/ryan/Development/supercell-syn</string>
 
-    <!-- 00:00 UTC = 17:00 MST (Nov-Mar) / 18:00 MDT (Mar-Nov) -->
+    <!-- 12:35 UTC = 06:35 MDT (Mar-Jun) — peak tornado season only -->
     <key>StartCalendarInterval</key>
     <array>
         <dict>
+            <key>Month</key>
+            <integer>3</integer>
             <key>Hour</key>
-            <integer>17</integer>
+            <integer>6</integer>
             <key>Minute</key>
-            <integer>0</integer>
+            <integer>35</integer>
         </dict>
         <dict>
+            <key>Month</key>
+            <integer>4</integer>
             <key>Hour</key>
-            <integer>18</integer>
+            <integer>6</integer>
             <key>Minute</key>
-            <integer>0</integer>
+            <integer>35</integer>
+        </dict>
+        <dict>
+            <key>Month</key>
+            <integer>5</integer>
+            <key>Hour</key>
+            <integer>6</integer>
+            <key>Minute</key>
+            <integer>35</integer>
+        </dict>
+        <dict>
+            <key>Month</key>
+            <integer>6</integer>
+            <key>Hour</key>
+            <integer>6</integer>
+            <key>Minute</key>
+            <integer>35</integer>
         </dict>
     </array>
 

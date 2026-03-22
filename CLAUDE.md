@@ -22,7 +22,7 @@ An X (Twitter) bot that automates daily storm chasing content posts.
 - Never commit or expose `.env` values
 
 ## Scheduling
-- Bot runs daily at 00:00 UTC via launchd (`com.supercellsyn.spcbot.plist`)
-- 00:00 UTC = 5:00 PM MST (Nov–Mar) / 6:00 PM MDT (Mar–Nov)
-- The plist has two `StartCalendarInterval` entries (Hour 17 and 18) to cover both DST states
-- The script itself checks UTC time for late-run detection
+- Bot runs daily at 12:35 UTC via launchd (`com.supercellsyn.spcbot.plist`), a few minutes after SPC publishes outlooks at ~12:30 UTC
+- 12:35 UTC = 5:35 AM MST (Nov–Mar) / 6:35 AM MDT (Mar–Nov)
+- The plist has two `StartCalendarInterval` entries (Hour 5 and 6, Minute 35) to cover both DST states
+- The script itself checks UTC time for late-run detection (>60 min past 12:35 UTC)

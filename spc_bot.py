@@ -37,10 +37,12 @@ log = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 SPC_BASE = "https://www.spc.noaa.gov/products/outlook"
 DAY48_URL = "https://www.spc.noaa.gov/products/exper/day4-8/day48prob.gif"
+SCHEDULED_RUN_HOUR = 12
+SCHEDULED_RUN_MINUTE = 35
 LATE_RUN_THRESHOLD_MINUTES = 60
 HTTP_HEADERS = {"User-Agent": "SupercellSynBot/1.0 (+https://x.com/SupercellSyn)"}
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-IMAGE_DIR = os.path.join(PROJECT_DIR, "images")
+IMAGE_DIR = os.path.join(PROJECT_DIR, "images", "outlooks")
 
 
 # ---------------------------------------------------------------------------
@@ -90,9 +92,14 @@ def _get_with_retry(url: str, retries: int = 3) -> requests.Response | None:
             resp.raise_for_status()
             return resp
         except requests.RequestException as exc:
-            wait = 2 ** attempt
-            log.warning("Attempt %d failed for %s: %s — retrying in %ds",
-                        attempt + 1, url, exc, wait)
+            wait = 2**attempt
+            log.warning(
+                "Attempt %d failed for %s: %s — retrying in %ds",
+                attempt + 1,
+                url,
+                exc,
+                wait,
+            )
             time.sleep(wait)
     log.error("All %d attempts failed for %s", retries, url)
     return None
@@ -102,14 +109,11 @@ def _get_with_retry(url: str, retries: int = 3) -> requests.Response | None:
 # Posting to X
 # ---------------------------------------------------------------------------
 def post_tweet(image_paths: list[str], dry_run: bool = False) -> None:
-    today = datetime.now(timezone.utc).strftime("%B %d, %Y")
+    now = datetime.now(timezone.utc)
+    today = now.strftime("%A's (%-m/%-d/%y)")
     labels = ["Day 1", "Day 2", "Day 3", "Day 4-8"]
     available = [labels[i] for i, p in enumerate(image_paths) if p]
-    text = (
-        f"SPC Convective Outlooks for {today}\n\n"
-        f"{' \u00b7 '.join(available)}\n\n"
-        "#wxtwitter #severeweather"
-    )
+    text = f"{today} fresh SPC convective outlooks\n\n" f"{' · '.join(available)}"
     log.info("Tweet text:\n%s", text)
 
     if dry_run:
@@ -154,8 +158,9 @@ def post_tweet(image_paths: list[str], dry_run: bool = False) -> None:
 # ---------------------------------------------------------------------------
 def is_late() -> bool:
     now = datetime.now(timezone.utc)
-    minutes_past_midnight = now.hour * 60 + now.minute
-    return minutes_past_midnight > LATE_RUN_THRESHOLD_MINUTES
+    scheduled = SCHEDULED_RUN_HOUR * 60 + SCHEDULED_RUN_MINUTE
+    current = now.hour * 60 + now.minute
+    return (current - scheduled) > LATE_RUN_THRESHOLD_MINUTES
 
 
 def relaunch_interactive() -> None:
@@ -165,9 +170,9 @@ def relaunch_interactive() -> None:
     cmd = f'{python} "{script_path}" --confirm-late-run'
     applescript = (
         f'tell application "Terminal"\n'
-        f'  activate\n'
+        f"  activate\n"
         f'  do script "{cmd}"\n'
-        f'end tell'
+        f"end tell"
     )
     log.info("Late run detected — launching interactive Terminal")
     subprocess.run(["osascript", "-e", applescript], check=True)
@@ -176,7 +181,7 @@ def relaunch_interactive() -> None:
 def confirm_late_run() -> bool:
     print("\n*** LATE RUN ***")
     print(f"Current UTC time: {datetime.now(timezone.utc).strftime('%H:%M')}")
-    print("This run is more than 60 minutes past 00:00 UTC.")
+    print("This run is more than 60 minutes past 12:35 UTC.")
     answer = input("Proceed with posting? (y/n): ").strip().lower()
     return answer == "y"
 
@@ -186,10 +191,14 @@ def confirm_late_run() -> bool:
 # ---------------------------------------------------------------------------
 def main() -> None:
     parser = argparse.ArgumentParser(description="SPC Convective Outlook Bot")
-    parser.add_argument("--dry-run", action="store_true",
-                        help="Download images but don't post to X")
-    parser.add_argument("--confirm-late-run", action="store_true",
-                        help="Interactive confirmation for late runs")
+    parser.add_argument(
+        "--dry-run", action="store_true", help="Download images but don't post to X"
+    )
+    parser.add_argument(
+        "--confirm-late-run",
+        action="store_true",
+        help="Interactive confirmation for late runs",
+    )
     args = parser.parse_args()
 
     log.info("=== SPC Bot starting (dry_run=%s) ===", args.dry_run)
