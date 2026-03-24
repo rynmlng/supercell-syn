@@ -1,6 +1,12 @@
 tweepy
 requests
 python-dotenv
+anthropic
+Pillow
+beautifulsoup4
+herbie-data
+metpy
+cartopy
 
 # dev / code quality
 black

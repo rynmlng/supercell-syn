@@ -1,12 +1,12 @@
-name: SPC Convective Outlook Bot
+name: Storm Chase Forecast Bot
 
 on:
   schedule:
-    - cron: '35 12 * 3-6 *'  # 12:35 UTC, March–June
+    - cron: '30 14 * 3-6 *'  # 14:30 UTC, March–June (HRRR 12Z fh=6 reliably on S3 by then)
   workflow_dispatch:           # allow manual runs from GitHub UI
 
 jobs:
-  post:
+  chase:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -18,21 +18,25 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies
+      - name: Install system dependencies (cartopy/GEOS/PROJ)
+        run: sudo apt-get install -y libgeos-dev libproj-dev proj-data proj-bin
+
+      - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      - name: Run bot
+      - name: Run chase bot
         env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           X_API_KEY: ${{ secrets.X_API_KEY }}
           X_API_SECRET: ${{ secrets.X_API_SECRET }}
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
-        run: python spc_bot.py
+        run: python chase_bot.py
 
-      - name: Commit updated outlook images
+      - name: Commit chase images
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add images/outlooks/
-          git diff --staged --quiet || git commit -m "Bot: Update SPC outlook images $(date -u +%Y-%m-%d)"
+          git add images/chase/
+          git diff --staged --quiet || git commit -m "Bot: Chase forecast $(date -u +%Y-%m-%d)"
           git push
