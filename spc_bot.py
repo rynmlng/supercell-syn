@@ -60,8 +60,11 @@ def fetch_outlook_timestamp(day: int) -> str | None:
     if not matches:
         log.warning("No timestamp found on %s", url)
         return None
-    # Use the first categorical timestamp found
-    ts = matches[0]
+    # Pick the most recent issuance that has already been published (≤ current UTC HHMM).
+    # This ensures we always use the daytime 1200Z outlook rather than the overnight 0100Z one.
+    now_hhmm = int(datetime.now(timezone.utc).strftime("%H%M"))
+    published = [ts for ts in matches if int(ts) <= now_hhmm]
+    ts = max(published) if published else max(matches)
     log.info("Day %d timestamp: %s", day, ts)
     return ts
 
@@ -108,13 +111,16 @@ def _get_with_retry(url: str, retries: int = 3) -> requests.Response | None:
 # ---------------------------------------------------------------------------
 # Posting to X
 # ---------------------------------------------------------------------------
-def post_tweet(image_paths: list[str], dry_run: bool = False) -> None:
+def post_to_x(image_paths: list[str], dry_run: bool = False) -> None:
     now = datetime.now(timezone.utc)
     today = now.strftime("%A's (%-m/%-d/%y)")
     labels = ["Day 1", "Day 2", "Day 3", "Day 4-8"]
     available = [labels[i] for i, p in enumerate(image_paths) if p]
-    text = f"{today} fresh SPC convective outlooks\n\n" f"{' · '.join(available)}"
-    log.info("Tweet text:\n%s", text)
+    text = (
+        f"{today} fresh SPC convective outlooks brought to you by Otto\n\n"
+        f"{' · '.join(available)}"
+    )
+    log.info("Post text:\n%s", text)
 
     if dry_run:
         log.info("DRY RUN — skipping post")
@@ -129,7 +135,7 @@ def post_tweet(image_paths: list[str], dry_run: bool = False) -> None:
     )
     api = tweepy.API(auth)
 
-    # v2 client for tweet creation
+    # v2 client for posting
     client = tweepy.Client(
         consumer_key=os.getenv("X_API_KEY"),
         consumer_secret=os.getenv("X_API_SECRET"),
@@ -148,9 +154,9 @@ def post_tweet(image_paths: list[str], dry_run: bool = False) -> None:
 
     response = client.create_tweet(text=text, media_ids=media_ids)
     if response.data:
-        log.info("Tweet posted! ID: %s", response.data["id"])
+        log.info("Posted! ID: %s", response.data["id"])
     else:
-        log.error("Tweet creation returned no data: %s", response)
+        log.error("Post returned no data: %s", response)
 
 
 # ---------------------------------------------------------------------------
@@ -240,7 +246,7 @@ def main() -> None:
         return
 
     log.info("Downloaded %d of 4 outlooks", len(available))
-    post_tweet(image_paths, dry_run=args.dry_run)
+    post_to_x(image_paths, dry_run=args.dry_run)
 
     log.info("=== SPC Bot finished ===")
 
