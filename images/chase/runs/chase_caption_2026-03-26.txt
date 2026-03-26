@@ -1,0 +1,23 @@
+The chase forecast map has been generated! Here's the complete analysis:
+
+---
+
+## 🌪️ Chase Forecast — Thursday, March 26, 2026
+
+### Synopsis
+A progressive late-March trough is driving a QLCS across the upper Midwest, with the SPC issuing an **Enhanced Risk** over Indiana and Ohio. The moisture boundary (dry line) runs roughly N-S through central Illinois/Indiana (~88-90°W), with dewpoints dropping from the upper 50s-60s°F on the east side to the 30s-40s°F to the west — a classic 20-25°F gradient.
+
+### Target Analysis
+- **Hatch Area:** Central Indiana (~39.5°N, 86.5°W) — near Indianapolis/Bloomington, where discrete convective cores first fire along the moisture boundary at fh=6 (18Z/1PM CDT), on the southern flank of the QLCS.
+- **Positioning Location:** Northern Ohio (~41.6°N, 82.8°W) — near Sandusky/Norwalk, 250 miles downstream of the hatch area along the Bunkers Right storm motion vector (+10 mi south adjustment).
+- **Bunkers Right Motion:** 050° at 35 kt (from 230° SW)
+- **Storm Mode:** Bookend supercells favored on the southern terminus of the QLCS, firing near the dry line. Isolated, discrete cells possible ahead of the linear structure.
+
+### Confidence
+**Moderate** — While the QLCS dominates, the southern flank near the moisture boundary is the strongest candidate for discrete supercell development. Soundings were unavailable for independent confirmation of shear profiles, but the synoptic setup strongly supports right-moving supercells in this regime.
+
+---
+
+### 📝 Post Caption (≤240 characters):
+
+> Today, Chase recommends positioning in northern Ohio. Hatch area near central Indiana along the dry line. SPC Enhanced risk with discrete supercells possible on the southern flank of a QLCS. BRM 230°/35kt.
