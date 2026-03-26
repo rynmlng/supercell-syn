@@ -23,10 +23,10 @@ AI-powered agentic storm intercept recommendation. Only runs on days with an SPC
   URL: https://www.spc.noaa.gov/products/outlook/day1otlk.html
   Purpose: Observe NOAA's convection outlook, categorized
 - Name: Pivotal Weather HRRR 2 m AGL Dew Point
-  URL: https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:02d}/sfctd-imp.conus.png
+  URL: https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:03d}/sfctd-imp.conus.png
   Purpose: Determine the dry-line for cumulus and cumulonimbus hatching.
 - Name: Pivotal Weather HRRR Composite Reflectivity (dBZ)
-  URL: https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:02d}/refcmp.conus.png
+  URL: https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:03d}/refcmp.conus.png
   Purpose: Predict precipitation and convective cores of storms.
 - Name: Pivotal Weather Sounding Chart For Location
   Purpose: Read directional & speed shear from hodograph, storm speed from Bunkers Right Storm Motion Vector, and confirm low-level jet to feed storms from Skew-T Log-P Diagram.
@@ -43,7 +43,7 @@ AI-powered agentic storm intercept recommendation. Only runs on days with an SPC
 ## Chase Bot — HRRR URL Format
 
 All Pivotal Weather HRRR map images:
-`https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:02d}/{p}.conus.png`
+`https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:03d}/{p}.conus.png`
 
 Available runs: `https://www.pivotalweather.com/status_model.php?m=hrrr&s=1`
 Returns JSON array of `{"rh": "2026032220", "fh": 18, "tiers": [...], "final_fh": 18}`.

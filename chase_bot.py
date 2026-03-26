@@ -194,7 +194,7 @@ def _save_daily_image(b64: str, name: str) -> None:
 
 def _tool_get_dew_point(inp: dict) -> list:
     rh, fh = inp["rh"], inp["fh"]
-    url = f"https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:02d}/sfctd-imp.conus.png"
+    url = f"https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:03d}/sfctd-imp.conus.png"
     b64 = _fetch_image_b64(url)
     if not b64:
         return [
@@ -223,7 +223,7 @@ def _tool_get_dew_point(inp: dict) -> list:
 
 def _tool_get_reflectivity(inp: dict) -> list:
     rh, fh = inp["rh"], inp["fh"]
-    url = f"https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:02d}/refcmp.conus.png"
+    url = f"https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:03d}/refcmp.conus.png"
     b64 = _fetch_image_b64(url)
     if not b64:
         return [
@@ -353,7 +353,7 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
     pos_lat, pos_lon = _destination_point(pos_lat, pos_lon, 180.0, 10)
 
     # Download reflectivity chart as base map
-    base_url = f"https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:02d}/refcmp.conus.png"
+    base_url = f"https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:03d}/refcmp.conus.png"
     b64 = _fetch_image_b64(base_url)
     if not b64:
         return {"error": f"Failed to download base map: {base_url}"}
