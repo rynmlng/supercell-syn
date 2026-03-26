@@ -2,7 +2,7 @@ name: Storm Chase Forecast Bot
 
 on:
   schedule:
-    - cron: '30 14 * 3-6 *'  # 14:30 UTC, March–June (HRRR 12Z fh=6 reliably on S3 by then)
+    - cron: '30 12 * 3-6 *'  # 12:30 UTC, March–June (HRRR 12Z publishes ~1 fh/min; fh=6 ready by ~12:10)
   workflow_dispatch:           # allow manual runs from GitHub UI
 
 jobs:
