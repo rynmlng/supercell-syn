@@ -395,16 +395,17 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
         width=2,
     )
 
-    # Positioning marker — yellow filled circle
+    # Positioning marker — fuchsia filled circle
+    FUCHSIA = (255, 0, 255, 255)
     r2 = 16
     draw.ellipse(
         [pos_px[0] - r2, pos_px[1] - r2, pos_px[0] + r2, pos_px[1] + r2],
-        outline=(255, 230, 0, 255),
+        outline=FUCHSIA,
         width=3,
     )
     draw.ellipse(
         [pos_px[0] - 6, pos_px[1] - 6, pos_px[0] + 6, pos_px[1] + 6],
-        fill=(255, 230, 0, 255),
+        fill=FUCHSIA,
     )
 
     # Fonts
@@ -416,22 +417,43 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
         font_sm = font
 
     # Labels
-    def _label(px, text, color, sub=None):
-        ox = px[0] + 20
-        draw.text((ox, px[1] - 10), text, fill=color, font=font)
-        if sub:
-            draw.text((ox, px[1] + 6), sub, fill=(220, 220, 220, 255), font=font_sm)
+    LABEL_BG = (255, 255, 255, 204)  # semi-transparent white (~80% opaque)
+    PAD = 2
 
-    _label(
+    def _text_with_bg(pos, text, color, font):
+        bbox = draw.textbbox(pos, text, font=font)
+        overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        ImageDraw.Draw(overlay).rectangle(
+            [bbox[0] - PAD, bbox[1] - PAD, bbox[2] + PAD, bbox[3] + PAD],
+            fill=LABEL_BG,
+        )
+        img.alpha_composite(overlay)
+        draw.text(pos, text, fill=color, font=font)
+
+    def _label_right(px, text, color, sub=None):
+        ox = px[0] + 20
+        _text_with_bg((ox, px[1] - 10), text, color, font)
+        if sub:
+            _text_with_bg((ox, px[1] + 6), sub, color, font_sm)
+
+    def _label_below(px, text, color, sub=None):
+        tw = draw.textlength(text, font=font)
+        tx = px[0] - tw // 2
+        _text_with_bg((tx, px[1] + 22), text, color, font)
+        if sub:
+            sw = draw.textlength(sub, font=font_sm)
+            _text_with_bg((px[0] - sw // 2, px[1] + 38), sub, color, font_sm)
+
+    _label_below(
         hatch_px,
         "HATCH AREA",
         (255, 60, 60, 255),
         f"{hatch_lat:.2f}, {hatch_lon:.2f}",
     )
-    _label(
+    _label_right(
         pos_px,
         "POSITION HERE",
-        (255, 60, 60, 255),
+        FUCHSIA,
         f"{pos_lat:.2f}, {pos_lon:.2f}",
     )
 
@@ -454,8 +476,8 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
     draw.rectangle([8, ly, 210, h - 8], fill=(0, 0, 0, 170))
     draw.ellipse([16, ly + 8, 34, ly + 26], outline=(255, 60, 60, 255), width=2)
     draw.text((40, ly + 10), "Hatch Area", fill=(255, 60, 60, 255), font=font_sm)
-    draw.ellipse([16, ly + 30, 34, ly + 48], outline=(255, 60, 60, 255), width=2)
-    draw.text((40, ly + 32), "Position Location", fill=(255, 60, 60, 255), font=font_sm)
+    draw.ellipse([16, ly + 30, 34, ly + 48], outline=FUCHSIA, width=2)
+    draw.text((40, ly + 32), "Position Location", fill=FUCHSIA, font=font_sm)
 
     # Save
     date_label = RETRO_DATE or datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -1276,12 +1298,12 @@ def run_agent() -> tuple[str | None, str | None]:
     global _sounding_counter
     _sounding_counter = 0
 
-    # Remove stale sounding files from any previous run
+    # Clear all stale images from any previous run
     import glob as _glob
 
-    for stale in _glob.glob(os.path.join(LAST_RUN_DIR, "sounding_*.png")):
+    for stale in _glob.glob(os.path.join(LAST_RUN_DIR, "*.png")):
         os.remove(stale)
-        log.info("Removed stale sounding: %s", stale)
+        log.info("Removed stale image: %s", stale)
 
     client = anthropic.Anthropic()
     if RETRO_DATE:

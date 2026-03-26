@@ -63,15 +63,17 @@ Use the entry with the highest `rh` where `fh >= 0` as the latest available run.
 6. Draw a point 250 miles from the Hatch Area in the direction the storm moves TOWARD (BRM direction + 180°). Then draw a point 10 miles south of this. That is the Positioning Location. The Storm Vector speed is not used for drawing points — it is informational for the chaser to know how hard it will be to follow the storm.
 
 ### Image Generation
-Annotated map uses the HRRR Composite Reflectivity chart as the base layer, with the following overlaid:
-- Red circle + cross → Hatch Area
-- Yellow filled circle → Positioning Location
+Annotated map uses the HRRR Composite Reflectivity chart as the base layer. Choose the forward hour (fh) where reflectivity is most active **in or near the hatch area** — this is typically 1–3 hours after initiation, not the initiation hour itself. If fh=6 shows no reflectivity near the hatch area, scan fh=7–10 and pick the frame with the clearest storm cores. The goal is a map that visually confirms the storm activity the forecast is based on.
+
+Overlaid elements:
+- Red circle + cross → Hatch Area (label below the point)
+- Fuchsia filled circle → Positioning Location (label to the right)
 - Blue-grey dashed line → path between them
 - Orange arrow → storm motion direction indicator
 - Title bar showing date, valid time (UTC and CT), and Storm Motion (BRM FROM direction / speed)
 
 ### Output / Post Format
-Post caption (≤240 chars): state where the hatch area is (tornado target zone, not positioning), SPC risk category, storm mode (discrete supercells preferred), BRM direction and speed, and the target valid time in CT (e.g. "target window 4–6PM CT"). No SRH or other metrics. No hashtags. Start with 🌪️.
+Post caption (≤240 chars): state where the hatch area is (tornado target zone, not positioning), SPC risk category, storm mode (discrete supercells preferred), target window in CT (e.g. "target window 4–7PM CT"), and BRM direction and speed. No SRH or other metrics. No hashtags. No emojis.
 
 ## Tech Stack
 - Python 3.12 (venv: venv-supercellsyn-bot-312)
