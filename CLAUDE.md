@@ -58,7 +58,7 @@ Use the entry with the highest `rh` where `fh >= 0` as the latest available run.
 1. View the "NOAA SPC Day 1 Convective Outlook." Note locations of Enhanced, Moderate, and High risk (orange, red, and magenta).
 2. Look at the "Pivotal Weather 2 m AGL Dew Point" parameter and find a dry-line within 500 miles of the risk area. Scan through different forward hours of the latest model run. A sharp dry line is identified by a rapid dewpoint drop of 20–30°F across ~75 miles, transitioning from ≥60°F (humid) east of the line to ≤40°F (arid) to the west.
 3. Scan the "Pivotal Weather HRRR Composite Reflectivity (dBZ)" parameter for high reflectivities near the dry line. Large, isolated cells (≥50 dBZ) are indicative of supercells. Prioritize discrete cells near the moisture boundary. The southern tip of a QLCS can also spin off isolated supercells (bookend) — don't fully discard a QLCS, but deprioritize cells buried in the middle of the linear structure.
-4. Drill into areas of high reflectivity from (3) and pull sounding charts. Look for low-level jets (LLJs) at 850–925 hPa and notable directional & speed shear in the hodograph. Note these areas as the Hatch Area. Focus on daytime convection (fh=3–9, valid 15Z–21Z) — do not anchor on overnight or pre-dawn convection.
+4. Drill into areas of high reflectivity from (3) and pull sounding charts. Look for low-level jets (LLJs) at 850–925 hPa and notable directional & speed shear in the hodograph. Note these areas as the Hatch Area. Focus on daytime convection (fh=3–13, valid 15Z–01Z, through local sunset) — do not anchor on overnight or pre-dawn convection. Do not artificially cap at an earlier hour if the peak setup clearly occurs later in the afternoon or early evening.
 5. From matching soundings in (4), extract the Bunkers Right Storm Motion Vector (BRM) to determine storm motion direction (reported as FROM, wind convention) and speed in knots. Note this as the Storm Vector.
 6. Draw a point 250 miles from the Hatch Area in the direction the storm moves TOWARD (BRM direction + 180°). Then draw a point 10 miles south of this. That is the Positioning Location. The Storm Vector speed is not used for drawing points — it is informational for the chaser to know how hard it will be to follow the storm.
 
@@ -68,10 +68,10 @@ Annotated map uses the HRRR Composite Reflectivity chart as the base layer, with
 - Yellow filled circle → Positioning Location
 - Blue-grey dashed line → path between them
 - Orange arrow → storm motion direction indicator
-- Title bar showing date and Storm Motion (BRM FROM direction / speed)
+- Title bar showing date, valid time (UTC and CT), and Storm Motion (BRM FROM direction / speed)
 
 ### Output / Post Format
-Post caption (≤240 chars): state where the hatch area is (tornado target zone, not positioning), SPC risk category, storm mode (discrete supercells preferred), BRM direction and speed. No SRH or other metrics. No hashtags. Start with 🌪️.
+Post caption (≤240 chars): state where the hatch area is (tornado target zone, not positioning), SPC risk category, storm mode (discrete supercells preferred), BRM direction and speed, and the target valid time in CT (e.g. "target window 4–6PM CT"). No SRH or other metrics. No hashtags. Start with 🌪️.
 
 ## Tech Stack
 - Python 3.12 (venv: venv-supercellsyn-bot-312)

@@ -431,15 +431,19 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
     _label(
         pos_px,
         "POSITION HERE",
-        (255, 230, 0, 255),
+        (255, 60, 60, 255),
         f"{pos_lat:.2f}, {pos_lon:.2f}",
     )
 
     # Title bar
-    today_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    run_dt = datetime.strptime(rh, "%Y%m%d%H").replace(tzinfo=timezone.utc)
+    valid_dt = run_dt + timedelta(hours=fh)
+    ct_offset = timedelta(hours=-5)  # CDT (Mar–Nov)
+    valid_ct = valid_dt + ct_offset
     vector_dir_from = (vector_dir + 180) % 360
     title = (
-        f"Supercell Syn Chase Forecast — {today_str}   "
+        f"Supercell Syn Chase Forecast — {valid_dt.strftime('%Y-%m-%d')}   "
+        f"Valid: {valid_dt.strftime('%HZ')} / {valid_ct.strftime('%-I%p CT')}   "
         f"Storm Motion: {vector_dir_from:.0f}° @ {vector_spd:.0f} kts"
     )
     draw.rectangle([0, 0, w, 26], fill=(0, 0, 0, 200))
@@ -450,8 +454,8 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
     draw.rectangle([8, ly, 210, h - 8], fill=(0, 0, 0, 170))
     draw.ellipse([16, ly + 8, 34, ly + 26], outline=(255, 60, 60, 255), width=2)
     draw.text((40, ly + 10), "Hatch Area", fill=(255, 60, 60, 255), font=font_sm)
-    draw.ellipse([16, ly + 30, 34, ly + 48], outline=(255, 230, 0, 255), width=2)
-    draw.text((40, ly + 32), "Position Location", fill=(255, 230, 0, 255), font=font_sm)
+    draw.ellipse([16, ly + 30, 34, ly + 48], outline=(255, 60, 60, 255), width=2)
+    draw.text((40, ly + 32), "Position Location", fill=(255, 60, 60, 255), font=font_sm)
 
     # Save
     date_label = RETRO_DATE or datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -1374,11 +1378,18 @@ def post_to_x(image_path: str, caption: str) -> None:
 
     log.info("Uploading image: %s", image_path)
     media = api.media_upload(filename=image_path)
-    resp = client.create_tweet(text=caption, media_ids=[media.media_id])
-    if resp.data:
-        log.info("Posted! ID: %s", resp.data["id"])
-    else:
-        log.error("Post returned no data: %s", resp)
+    log.info("Uploaded media ID: %s", media.media_id)
+    try:
+        resp = client.create_tweet(text=caption, media_ids=[media.media_id])
+        if resp.data:
+            log.info("Posted! ID: %s", resp.data["id"])
+        else:
+            log.error("Post returned no data: %s", resp)
+    except tweepy.errors.Forbidden as exc:
+        log.error(
+            "403 Forbidden posting tweet: %s",
+            exc.response.text if exc.response else exc,
+        )
 
 
 # ---------------------------------------------------------------------------
