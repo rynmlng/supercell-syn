@@ -59,7 +59,7 @@ Bypassed with `--dry-run` or `--confirm-late-run`.
 
 ## Saved Images
 
-Images are saved to `images/outlooks/` and committed to the repo after each run:
+Images are saved to `images/otto/` and committed to the repo after each run:
 
 | File | Contents |
 |---|---|

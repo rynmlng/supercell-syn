@@ -42,7 +42,7 @@ SCHEDULED_RUN_MINUTE = 35
 LATE_RUN_THRESHOLD_MINUTES = 60
 HTTP_HEADERS = {"User-Agent": "SupercellSynBot/1.0 (+https://x.com/SupercellSyn)"}
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-IMAGE_DIR = os.path.join(PROJECT_DIR, "images", "outlooks")
+IMAGE_DIR = os.path.join(PROJECT_DIR, "images", "otto")
 
 
 # ---------------------------------------------------------------------------

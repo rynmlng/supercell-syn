@@ -47,7 +47,10 @@ log = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 IMAGE_DIR = os.path.join(PROJECT_DIR, "images", "chase")
-os.makedirs(IMAGE_DIR, exist_ok=True)
+RUNS_DIR = os.path.join(IMAGE_DIR, "runs")
+LAST_RUN_DIR = os.path.join(IMAGE_DIR, "last_run")
+os.makedirs(RUNS_DIR, exist_ok=True)
+os.makedirs(LAST_RUN_DIR, exist_ok=True)
 
 SPC_BASE = "https://www.spc.noaa.gov/products/outlook"
 SPC_DAY1_GEOJSON = (
@@ -185,8 +188,8 @@ def _tool_get_spc_outlook(_inp: dict) -> list:
 
 
 def _save_daily_image(b64: str, name: str) -> None:
-    """Save a base64 image to images/chase/ with a fixed filename that overwrites each run."""
-    path = os.path.join(IMAGE_DIR, f"{name}.png")
+    """Save a base64 image to images/chase/last_run/ overwriting each run."""
+    path = os.path.join(LAST_RUN_DIR, f"{name}.png")
     with open(path, "wb") as f:
         f.write(base64.b64decode(b64))
     log.info("Saved %s", path)
@@ -451,7 +454,8 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
     draw.text((40, ly + 32), "Position Location", fill=(255, 230, 0, 255), font=font_sm)
 
     # Save
-    out_path = os.path.join(IMAGE_DIR, "chase_map.png")
+    date_label = RETRO_DATE or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    out_path = os.path.join(RUNS_DIR, f"chase_map_{date_label}.png")
     img.convert("RGB").save(out_path, "PNG")
     log.info("Saved annotated map: %s", out_path)
 
@@ -1167,7 +1171,7 @@ def _retro_generate_annotated_map(inp: dict) -> dict:
         )
 
         out_path = os.path.join(
-            IMAGE_DIR,
+            RUNS_DIR,
             f"chase_{RETRO_DATE}_{run_dt.strftime('%Y%m%d%H')}_fh{fh:02d}.png",
         )
         plt.savefig(out_path, format="png", bbox_inches="tight", dpi=100)
@@ -1271,7 +1275,7 @@ def run_agent() -> tuple[str | None, str | None]:
     # Remove stale sounding files from any previous run
     import glob as _glob
 
-    for stale in _glob.glob(os.path.join(IMAGE_DIR, "sounding_*.png")):
+    for stale in _glob.glob(os.path.join(LAST_RUN_DIR, "sounding_*.png")):
         os.remove(stale)
         log.info("Removed stale sounding: %s", stale)
 
@@ -1352,12 +1356,8 @@ def run_agent() -> tuple[str | None, str | None]:
 # ---------------------------------------------------------------------------
 # Post to X
 # ---------------------------------------------------------------------------
-def post_to_x(image_path: str, caption: str, dry_run: bool = False) -> None:
+def post_to_x(image_path: str, caption: str) -> None:
     log.info("Caption:\n%s", caption)
-    if dry_run:
-        log.info("DRY RUN — skipping X post")
-        return
-
     auth = tweepy.OAuth1UserHandler(
         os.getenv("X_API_KEY"),
         os.getenv("X_API_SECRET"),
@@ -1423,6 +1423,11 @@ def main() -> None:
         help="Run the agent and generate the map but do not post to X",
     )
     parser.add_argument(
+        "--post-only",
+        action="store_true",
+        help="Skip agent; read today's saved image and caption and post to X",
+    )
+    parser.add_argument(
         "--date",
         metavar="YYYY-MM-DD",
         help="Retroactive mode: analyze a past date using HRRR archive from AWS S3 via herbie",
@@ -1433,10 +1438,26 @@ def main() -> None:
         RETRO_DATE = args.date
         log.info("Retroactive mode: date=%s", RETRO_DATE)
 
+    date_label = RETRO_DATE or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    image_path = os.path.join(RUNS_DIR, f"chase_map_{date_label}.png")
+    caption_path = os.path.join(RUNS_DIR, f"chase_caption_{date_label}.txt")
+
+    if args.post_only:
+        log.info("=== Chase Bot starting (post-only, date=%s) ===", date_label)
+        if not os.path.exists(image_path):
+            log.error("No saved image found at %s", image_path)
+            return
+        with open(caption_path) as f:
+            caption = f.read().strip()
+        log.info("Loaded caption: %s", caption)
+        post_to_x(image_path, caption)
+        log.info("=== Chase Bot finished ===")
+        return
+
     log.info(
         "=== Chase Bot starting (dry_run=%s, date=%s) ===",
         args.dry_run,
-        RETRO_DATE or "today",
+        date_label,
     )
 
     # Pre-flight: only run the agentic analysis on Enhanced/Moderate/High risk days.
@@ -1453,13 +1474,21 @@ def main() -> None:
 
     if not caption:
         log.warning("Agent produced no caption — using default")
-        date_label = RETRO_DATE or datetime.now(timezone.utc).strftime("%-m/%-d/%y")
         caption = (
             f"Storm chase forecast for {date_label}. "
             "See map for positioning recommendation."
         )
 
-    post_to_x(image_path, caption, dry_run=args.dry_run)
+    with open(caption_path, "w") as f:
+        f.write(caption)
+    log.info("Saved caption: %s", caption_path)
+
+    if args.dry_run:
+        log.info("DRY RUN — skipping X post")
+        log.info("=== Chase Bot finished ===")
+        return
+
+    post_to_x(image_path, caption)
     log.info("=== Chase Bot finished ===")
 
 
