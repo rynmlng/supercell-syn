@@ -351,9 +351,10 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
     rh = inp["rh"]
     fh = inp["fh"]
 
-    # Compute positioning location per the recommendation logic
-    pos_lat, pos_lon = _destination_point(hatch_lat, hatch_lon, vector_dir, 250)
-    pos_lat, pos_lon = _destination_point(pos_lat, pos_lon, 180.0, 10)
+    # Compute positioning location: scale distance with BRM speed (×7 factor targets
+    # ~7 hrs of lead time), clamped to 75–250 miles.
+    pos_dist = max(75, min(vector_spd * 7, 250))
+    pos_lat, pos_lon = _destination_point(hatch_lat, hatch_lon, vector_dir, pos_dist)
 
     # Download reflectivity chart as base map
     base_url = f"https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:03d}/refcmp.conus.png"
@@ -481,7 +482,7 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
 
     # Save
     date_label = RETRO_DATE or datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    out_path = os.path.join(RUNS_DIR, f"chase_map_{date_label}.png")
+    out_path = os.path.join(RUNS_DIR, f"chase_{date_label}.png")
     img.convert("RGB").save(out_path, "PNG")
     log.info("Saved annotated map: %s", out_path)
 
@@ -584,8 +585,8 @@ TOOLS = [
         "description": (
             "Generate the final annotated chase forecast map and save it as a PNG. "
             "Provide the hatch area coordinates and Bunkers Right Storm Motion Vector. "
-            "The tool computes the positioning location (250 miles from the hatch area "
-            "in the storm vector direction, then 10 miles south) and draws both points "
+            "The tool computes the positioning location (BRM speed × 7, clamped 75–250 miles "
+            "from the hatch area in the storm vector direction) and draws both points "
             "on the HRRR reflectivity chart. Returns the saved image path."
         ),
         "input_schema": {
@@ -1079,10 +1080,35 @@ def _retro_generate_annotated_map(inp: dict) -> dict:
     vector_spd = inp["storm_vector_speed_knots"]
     fh = inp["fh"]
 
-    pos_lat, pos_lon = _destination_point(hatch_lat, hatch_lon, vector_dir, 250)
-    pos_lat, pos_lon = _destination_point(pos_lat, pos_lon, 180.0, 10)
+    pos_dist = max(75, min(vector_spd * 7, 250))
+    pos_lat, pos_lon = _destination_point(hatch_lat, hatch_lon, vector_dir, pos_dist)
     run_dt = _retro_run_dt()
+    rh = RETRO_DATE.replace("-", "") + "12"
 
+    out_path = os.path.join(RUNS_DIR, f"chase_{RETRO_DATE}.png")
+
+    # Try Pivotal Weather PNG first (same path as live run)
+    base_url = f"https://m2o.pivotalweather.com/maps/models/hrrr/{rh}/{fh:03d}/refcmp.conus.png"
+    b64 = _fetch_image_b64(base_url)
+    if b64:
+        # Reuse the same PIL overlay logic as the live annotated map
+        inp_live = dict(inp)
+        inp_live["rh"] = rh
+        result = _tool_generate_annotated_map(inp_live)
+        # Rename the output file to the retro naming convention
+        live_path = result.get("image_path", "")
+        if live_path and os.path.exists(live_path):
+            os.replace(live_path, out_path)
+            result["image_path"] = out_path
+        log.info("Saved retro annotated map (Pivotal Weather base): %s", out_path)
+        return result
+
+    # Fallback: render from herbie HRRR archive via AWS S3
+    log.info(
+        "Pivotal Weather image unavailable for %s fh=%d, falling back to herbie",
+        RETRO_DATE,
+        fh,
+    )
     try:
         import matplotlib
 
@@ -1196,13 +1222,9 @@ def _retro_generate_annotated_map(inp: dict) -> dict:
             f"HRRR Init: {run_dt:%Y-%m-%d %HZ}  fh={fh}h  Valid: {valid_dt:%Y-%m-%d %HZ}"
         )
 
-        out_path = os.path.join(
-            RUNS_DIR,
-            f"chase_{RETRO_DATE}_{run_dt.strftime('%Y%m%d%H')}_fh{fh:02d}.png",
-        )
         plt.savefig(out_path, format="png", bbox_inches="tight", dpi=100)
         plt.close(fig)
-        log.info("Saved retro annotated map: %s", out_path)
+        log.info("Saved retro annotated map (herbie fallback): %s", out_path)
 
         return {
             "image_path": out_path,
@@ -1472,8 +1494,8 @@ def main() -> None:
         log.info("Retroactive mode: date=%s", RETRO_DATE)
 
     date_label = RETRO_DATE or datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    image_path = os.path.join(RUNS_DIR, f"chase_map_{date_label}.png")
-    caption_path = os.path.join(RUNS_DIR, f"chase_caption_{date_label}.txt")
+    image_path = os.path.join(RUNS_DIR, f"chase_{date_label}.png")
+    caption_path = os.path.join(RUNS_DIR, f"chase_{date_label}.txt")
 
     if args.post_only:
         log.info("=== Chase Bot starting (post-only, date=%s) ===", date_label)

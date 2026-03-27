@@ -58,8 +58,7 @@ Inputs from Claude:
 What it computes:
 ```
 positioning_location = hatch_area
-    → move 250 miles in storm_vector_direction (TOWARD)
-    → move 10 miles south
+    → move clamp(BRM_speed_knots × 7, 75, 250) miles in storm_vector_direction (TOWARD)
 ```
 
 What it draws on the reflectivity chart:
