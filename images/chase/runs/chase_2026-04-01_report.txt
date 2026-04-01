@@ -1,26 +1,87 @@
-The annotated chase forecast map has been generated and saved. Here are the final results:
 
----
+# Chase Forecast Analysis — April 1, 2026
 
-## 🎯 Chase Forecast — April 1, 2026
+## 1. SPC Day 1 Convective Outlook
+- **Enhanced Risk (Level 3/5)** over western Oklahoma extending into north-central Texas
+- **Slight Risk** broadly covers central Kansas through the mid-Mississippi Valley into Kentucky/Tennessee
+- **Marginal Risk** spans from the southern Plains to the Ohio Valley
+- This is a significant spring severe weather setup with primary focus on western Oklahoma along the dryline
 
+## 2. Dry Line Analysis (HRRR 12Z Run)
+
+### fh=6 (18Z / 1 PM CDT):
+- Sharp dry line identified across western/central Oklahoma
+- East of ~-98°W: dewpoints 60-66°F (rich Gulf moisture)
+- West of ~-99°W: dewpoints 31-40°F (arid air from the elevated mixed layer)
+- Gradient: ~30°F drop across approximately 60 miles — textbook dry line
+- Dry line runs NW-SE from the OK Panhandle into north-central Texas
+
+### fh=9 (21Z / 4 PM CDT):
+- Dry line has advanced east to approximately -97.5°W in Oklahoma
+- Gradient remains sharp, dewpoints 60-64°F on the moist side, 32-38°F on the dry side
+- Enhanced convergence along the advancing dry line nose expected to be primary CI mechanism
+
+### fh=12 (00Z / 7 PM CDT):
+- Dry line continues eastward to ~-97°W
+- Moisture remains robust east of the boundary (62-66°F dewpoints in central OK)
+- Late-day boundary intersection possible as outflow boundaries interact
+
+## 3. Reflectivity Analysis
+
+### fh=6 (18Z / 1 PM CDT):
+- Existing QLCS band from Kansas northeast into Missouri/Illinois — this is the warm sector linear system
+- Developing convection in the TX/OK Panhandle and western Kansas along elevated terrain
+- No strong discrete cells yet in the Enhanced risk area (too early for peak heating)
+
+### fh=7 (19Z / 2 PM CDT):
+- Discrete convective cells beginning to fire across western Kansas and into the Oklahoma Panhandle
+- Cells appear isolated and along the dry line — promising for discrete supercell mode
+- QLCS continues northeast, moving away from primary target area
+
+### fh=9 (21Z / 4 PM CDT):
+- Multiple isolated convective cells now visible in western Kansas and central/western Oklahoma
+- Cells are along the dry line in the Enhanced risk area
+- Several cells showing 40-50+ dBZ cores with discrete structure — supercell signatures
+- These are separate from the QLCS, which has moved into eastern MO/IL
+- **This is the prime chase window**
+
+## 4. Sounding Analysis
+- **NOTE:** The HRRR sounding service was unavailable (token authentication error on all attempts)
+- Estimated Bunkers Right Motion based on synoptic pattern:
+  - Classic April dryline setup in western Oklahoma with moderate-to-strong deep-layer southwesterly shear
+  - Estimated BRM: **230°/28kt** (FROM 230°, moving TOWARD 050° at 28 knots)
+  - This is consistent with typical spring supercell motion in the Southern Plains
+
+## 5. Hatch Area Selection
+- **Location:** 35.5°N, -98.5°W (western Oklahoma, near Weatherford/Clinton area)
+- **Rationale:**
+  - Directly along the dry line at peak afternoon heating
+  - Within the SPC Enhanced risk area
+  - Discrete cells first appear here by fh=7-9 (2-4 PM CDT)
+  - Isolated from the QLCS to the northeast
+  - Rich 60°F+ dewpoints on the moist side provide ample instability
+  - Sharp moisture gradient provides focused convergence for CI
+
+## 6. Positioning Location
+- **Location:** 37.3°N, -95.8°W (southeastern Kansas, near Coffeyville/Independence)
+- **Distance from hatch area:** ~196 miles (BRM 28kt × 7 hours)
+- **Rationale:** Positioned downstream in the storm motion direction (NE) to allow storms to approach; chasers can intercept as supercells track from the hatch area toward the northeast
+
+## 7. Confidence & Caveats
+- **Confidence: MODERATE-HIGH**
+- Strong dryline setup with classic spring supercell ingredients
+- Enhanced SPC risk confirms high potential
+- **Caveat:** Sounding data unavailable; BRM is estimated. Actual storm motions may deviate.
+- **Caveat:** If convective mode trends linear (QLCS overtakes discrete cells), chase quality will diminish
+- **Recommendation:** Monitor 18Z-19Z radar closely for first discrete pops along the dry line in western OK. If cells remain isolated and deviant right-movers develop, intercept aggressively.
+
+## 8. Final Target Summary
 | Parameter | Value |
-|---|---|
-| **Hatch Area** | 35.5°N, 98.5°W — **West-central Oklahoma** (near Weatherford/Clinton), right on the dry line |
-| **Positioning Location** | 37.8°N, 96.0°W — **South-central Kansas** (near Wichita/El Dorado), ~210 mi NE along the storm vector |
-| **Bunkers Right Motion** | Toward 040° at 30 kt (FROM 220°/SW) |
-| **SPC Risk** | **Moderate (Level 4/5)** — Central Oklahoma |
-| **Target Window** | 20Z–00Z (3 PM – 7 PM CDT) |
-| **Storm Mode** | Discrete supercells firing along the dry line; QLCS to the north across KS |
-
-### Key Rationale:
-- **Dry line** is razor-sharp near -98.5°W — dew points crash from 62°F to 36°F in under 75 miles
-- **First discrete cells** pop at ~20Z (fh=14) in the Moderate risk corridor, growing by 21Z
-- The **Kansas QLCS** is to the north; our target is the **isolated dry line supercells** in central OK, which have clear inflow and room to organize
-- BRM of 040°/30kt means storms track NE toward the I-35 corridor — **positioning near Wichita** gives ~3.5 hours of lead time
-
----
-
-### 📝 Post Caption
-
-> Today, Chase recommends positioning in south-central Kansas. Hatch area near west-central Oklahoma. SPC Moderate risk with discrete supercells firing along the dry line. BRM 220°/30kt.
+|-----------|-------|
+| Hatch Area | 35.5°N, -98.5°W (western Oklahoma) |
+| Positioning | 37.3°N, -95.8°W (SE Kansas) |
+| SPC Risk | Enhanced |
+| Storm Mode | Discrete supercells along dryline |
+| BRM (FROM) | 230° / 28 kt |
+| Best Chase Window | 19Z-00Z (2 PM - 7 PM CDT) |
+| Peak Hour | 21Z (4 PM CDT) |
