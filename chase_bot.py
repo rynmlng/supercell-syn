@@ -135,14 +135,36 @@ def _tool_get_available_runs(_inp: dict) -> dict:
         r = _session.get(url, timeout=15)
         r.raise_for_status()
         runs = sorted(r.json(), key=lambda x: x["rh"], reverse=True)
-        latest = runs[0]
-        return {
-            "latest_rh": latest["rh"],
-            "max_fh": latest["fh"],
-            "recent_runs": [{"rh": x["rh"], "max_fh": x["fh"]} for x in runs[:6]],
-        }
     except Exception as exc:
         return {"error": str(exc)}
+
+    # Walk down the list until we find a run whose fh=6 dew point image is actually
+    # published — the status API can report a run before CDN images are available.
+    for run in runs[:6]:
+        probe_url = (
+            f"https://m2o.pivotalweather.com/maps/models/hrrr"
+            f"/{run['rh']}/006/sfctd-imp.conus.png"
+        )
+        try:
+            probe = _session.head(probe_url, timeout=10)
+            if probe.status_code == 200:
+                log.info("Verified run %s (fh=6 image available)", run["rh"])
+                return {
+                    "latest_rh": run["rh"],
+                    "max_fh": run["fh"],
+                    "recent_runs": [
+                        {"rh": x["rh"], "max_fh": x["fh"]} for x in runs[:6]
+                    ],
+                }
+            log.warning(
+                "Run %s fh=6 not yet available (%s) — trying older run",
+                run["rh"],
+                probe.status_code,
+            )
+        except Exception as exc:
+            log.warning("Probe failed for run %s: %s", run["rh"], exc)
+
+    return {"error": "No verified HRRR run found with fh=6 images available"}
 
 
 def _tool_get_spc_outlook(_inp: dict) -> list:
@@ -343,7 +365,22 @@ def _tool_get_sounding(inp: dict) -> list:
         return [{"type": "text", "text": f"Error fetching sounding: {exc}"}]
 
 
+MIN_DEW_POINT_FRAMES = 3
+
+
 def _tool_generate_annotated_map(inp: dict) -> dict:
+    import glob as _glob
+
+    dew_point_files = _glob.glob(os.path.join(LAST_RUN_DIR, "dew_point_*.png"))
+    if len(dew_point_files) < MIN_DEW_POINT_FRAMES:
+        return {
+            "error": (
+                f"Insufficient dew point coverage: only {len(dew_point_files)} frame(s) fetched, "
+                f"minimum {MIN_DEW_POINT_FRAMES} required. "
+                "Fetch more dew point forward hours before generating the map."
+            )
+        }
+
     hatch_lat = inp["hatch_area_lat"]
     hatch_lon = inp["hatch_area_lon"]
     vector_dir = inp["storm_vector_direction_deg"]
@@ -581,6 +618,24 @@ TOOLS = [
         },
     },
     {
+        "name": "save_analysis_report",
+        "description": (
+            "Save the full analysis report (markdown) to a file for review. "
+            "Call this with your complete written analysis immediately before "
+            "your final message. Your final message must then be ONLY the post caption."
+        ),
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "report": {
+                    "type": "string",
+                    "description": "The full markdown analysis report to save",
+                },
+            },
+            "required": ["report"],
+        },
+    },
+    {
         "name": "generate_annotated_map",
         "description": (
             "Generate the final annotated chase forecast map and save it as a PNG. "
@@ -632,12 +687,23 @@ TOOLS = [
     },
 ]
 
+
+def _tool_save_analysis_report(inp: dict) -> dict:
+    date_label = RETRO_DATE or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    report_path = os.path.join(RUNS_DIR, f"chase_{date_label}_report.txt")
+    with open(report_path, "w") as f:
+        f.write(inp["report"])
+    log.info("Saved analysis report: %s", report_path)
+    return {"saved": report_path}
+
+
 _TOOL_FN = {
     "get_available_runs": _tool_get_available_runs,
     "get_spc_outlook": _tool_get_spc_outlook,
     "get_dew_point": _tool_get_dew_point,
     "get_reflectivity": _tool_get_reflectivity,
     "get_sounding": _tool_get_sounding,
+    "save_analysis_report": _tool_save_analysis_report,
     "generate_annotated_map": _tool_generate_annotated_map,
 }
 
@@ -1286,9 +1352,12 @@ CRITICAL CONSTRAINTS:
 Follow this process in order:
 1. Call get_available_runs() to find the latest HRRR run.
 2. Call get_spc_outlook() to see today's risk areas (Enhanced/Moderate/High = priority).
-3. Call get_dew_point() at fh=6 and fh=9 to locate the dry line — look for a rapid \
+3. Call get_dew_point() across at least 3 forward hours spanning the afternoon window \
+   (fh=6, fh=9, fh=12 at minimum) to locate and track the dry line — look for a rapid \
    dewpoint drop of 20–30°F across a short distance (≤75 miles). Note the longitude \
-   of the dry line's eastern edge (where moisture is still high).
+   of the dry line's eastern edge (where moisture is still high). If you cannot \
+   successfully fetch at least 3 dew point frames, call save_analysis_report() with \
+   the reason and stop — do not proceed to generate a map.
 4. Call get_reflectivity() at fh=6 to find the FIRST isolated high-reflectivity cells \
    (≥50 dBZ) appearing near the dry line during early afternoon. These "poppers" are \
    the prime supercell candidates. If a QLCS is present, note whether discrete cells \
@@ -1300,7 +1369,10 @@ Follow this process in order:
 6. Call generate_annotated_map() with the best hatch area (where discrete cells are \
    firing near the dry line) and the Bunkers Right Storm Motion Vector. Use the fh \
    where those discrete cells first appear (typically fh=6 or fh=9).
-7. After the map is generated, write a post caption (≤240 characters) in this format:
+7. After the map is generated, call save_analysis_report() with your full written
+   analysis (markdown is fine). Then your final message must be ONLY the post caption
+   — no headers, no markdown, no extra commentary — in this exact format
+   (≤240 characters):
    "Today, Chase recommends positioning in {positioning region}. Hatch area near \
    {hatch region}. SPC {risk} risk with {storm mode}. BRM {dir}°/{spd}kt."
    - {positioning region} and {hatch region} are plain English place names (e.g. "western Kentucky", "central Arkansas")

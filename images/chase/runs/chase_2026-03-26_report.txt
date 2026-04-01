@@ -1,0 +1,31 @@
+The annotated chase map has been generated and saved. Here's the complete forecast summary:
+
+---
+
+## 🌪️ Chase Forecast — Thursday, March 26, 2026
+
+### Setup Overview
+A potent mid-level trough is driving a vigorous frontal system through the Midwest. The SPC has issued an **Enhanced Risk** from central Illinois through Indiana and Ohio. A sharp moisture boundary (~20°F dew point drop across 75 miles) runs through central Illinois near -89.5°W, separating 58°F+ dew points to the east from upper 30s to the northwest.
+
+### Hatch Area: Central Illinois (~39.5°N, 89.5°W)
+- Located right on the frontal moisture boundary — ideal for convective initiation
+- **SFC CAPE: 1870 J/kg** with manageable **CIN of -58 J/kg**
+- **Supercell Composite: 6.9** — excellent discrete supercell potential
+- **SRH 0-3km: 206 m²/s²**, Critical Angle: 92°
+- Discrete cells expected to fire on the **southern flank of the developing QLCS** during peak afternoon heating (fh=6 / 21Z / 4 PM CDT)
+
+### Positioning Location: Southwestern Ohio (~39.2°N, 84.8°W)
+- ~250 miles downstream (east) from the hatch area, shifted 10 miles south
+- Near the Cincinnati metro area — allows intercept as storms propagate eastward
+- **Bunkers Right Storm Motion: FROM 271° at 28 kt** (storms track due east)
+
+### Timing
+- **Initiation:** ~18Z–21Z (1–4 PM CDT) along the moisture boundary in central IL
+- **Peak chase window:** 21Z–00Z (4–7 PM CDT) as cells mature and move into western Indiana
+- **After dark by ~01Z** — plan to be positioned before then
+
+---
+
+### Post Caption:
+
+> Today, Chase recommends positioning in southwestern Ohio. Hatch area near central Illinois. SPC Enhanced risk with discrete supercells firing on the southern flank of a QLCS. Target window 4–7PM CT. BRM 271°/28kt.
