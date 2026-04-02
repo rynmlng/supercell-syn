@@ -1,0 +1,62 @@
+# Chase Forecast Analysis — Thursday, April 2, 2026
+
+## SPC Outlook Summary
+The SPC Day 1 Convective Outlook (issued 1256Z) shows a significant severe weather setup across the central US:
+- **Enhanced (orange) risk** over eastern Kansas and western Missouri (~38–39°N, 94–96°W)
+- **Slight (yellow) risk** extending broadly from eastern Kansas through Missouri, Illinois, Iowa
+- **Marginal (green) risk** encompassing much of the central/eastern US
+- Forecasters: Mosier/Bentley
+
+## Dry Line Analysis
+Three dew point frames (fh=6/18Z, fh=9/21Z, fh=12/00Z) from the HRRR 12Z run reveal a textbook dry line:
+
+- **Location**: N-S oriented through **central Kansas and central Oklahoma** along approximately **97–98°W**
+- **Eastern edge**: Dew points 60–68°F (rich Gulf moisture transport)
+- **Western edge**: Dew points rapidly drop to 20–30°F (arid continental air)
+- **Gradient strength**: ~30–40°F drop over 50–75 miles — extremely sharp, well-defined boundary
+- **Temporal evolution**: The dry line sharpens through the afternoon (fh=9) and maintains integrity into early evening (fh=12), with a slight eastward push
+- The eastern edge of the dry line intersects the SPC Enhanced risk area, creating an overlap zone ideal for supercell initiation
+
+## Reflectivity Analysis
+
+### fh=6 (18Z / ~1 PM CDT):
+- A large **QLCS/MCS complex** is moving through Iowa, NE Kansas, and into Missouri with embedded 50+ dBZ cores — linear, unfavorable for discrete chasing
+- **Key finding**: Along the dry line in **central Kansas (~37.5–38.5°N, 97–98°W)**, isolated convective cells are beginning to initiate — the first "poppers" of the day
+- These cells are discrete and located right at the moisture boundary, independent of the northern QLCS
+
+### fh=9 (21Z / ~4 PM CDT):
+- The QLCS has progressed NE into Iowa/Illinois — moving away from the primary target
+- **Discrete cells along the Kansas dry line have strengthened** with higher-reflectivity cores
+- Isolated supercell signatures developing in south-central to central Kansas
+- The southern flank of the QLCS is well north/east of these dry line cells, providing isolation
+
+## Sounding Assessment
+The sounding tool was unavailable (persistent errors across all coordinates and run times attempted). Analysis relies on climatological/pattern-based estimates:
+
+- **Setup type**: Classic spring Central Plains dry line event
+- **Expected BRM**: Toward ~50° (northeast) at ~30 knots, based on typical profiles for progressive trough/dry line setups
+- **FROM direction (wind convention)**: ~230° (southwest)
+- **Expected low-level jet**: SSW at 850–925 hPa supporting moisture transport and low-level shear
+- **Hodograph expectation**: Clockwise-turning with speed, classic supercell environment
+
+## Hatch Area Selection
+**38.0°N, 97.5°W** — Central Kansas, near Hutchinson/McPherson
+
+Rationale:
+- Located directly along the dry line where the sharpest moisture gradient exists
+- Within the SPC Enhanced risk area
+- Discrete convective cells are initiating here by fh=6 (18Z), independent of the QLCS
+- Rich 60°F+ dew points on the east side provide abundant CAPE
+- Isolated storm mode maximizes supercell potential
+
+## Positioning Location
+**39.9°N, 94.5°W** — Eastern Kansas near Kansas City
+
+Computed as BRM speed × 7 ≈ 210 miles from hatch area in the storm motion direction (toward 50°/NE). This positions the chaser downstream where storms will propagate during the afternoon, allowing interception as discrete supercells move NE off the dry line.
+
+## Confidence & Caveats
+- **Confidence: MODERATE-HIGH** for the dry line target and discrete storm mode
+- **Caveat**: Sounding data was unavailable, so BRM estimate is pattern-based rather than model-derived
+- **Caveat**: The QLCS to the north could complicate the environment if it sends outflow south into the target area
+- **Watch for**: Storms initiating earlier than expected; dry line potentially stalling or surging east
+- **Storm mode**: Expect discrete supercells along the dry line through late afternoon, with potential for merging/upscale growth toward evening
