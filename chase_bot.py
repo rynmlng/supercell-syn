@@ -46,9 +46,9 @@ log = logging.getLogger(__name__)
 # Constants
 # ---------------------------------------------------------------------------
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-IMAGE_DIR = os.path.join(PROJECT_DIR, "images", "chase")
-RUNS_DIR = os.path.join(IMAGE_DIR, "runs")
-LAST_RUN_DIR = os.path.join(IMAGE_DIR, "last_run")
+CHASE_DIR = os.path.join(PROJECT_DIR, "runs", "chase")
+RUNS_DIR = os.path.join(CHASE_DIR, "runs")
+LAST_RUN_DIR = os.path.join(CHASE_DIR, "last_run")
 os.makedirs(RUNS_DIR, exist_ok=True)
 os.makedirs(LAST_RUN_DIR, exist_ok=True)
 
