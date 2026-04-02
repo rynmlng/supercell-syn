@@ -167,6 +167,40 @@ def _tool_get_available_runs(_inp: dict) -> dict:
     return {"error": "No verified HRRR run found with fh=6 images available"}
 
 
+def _spc_risk_centroids() -> str:
+    """Fetch SPC Day 1 GeoJSON and return a text summary of Enhanced+ risk centroids."""
+    try:
+        r = requests.get(SPC_DAY1_GEOJSON, headers=SPC_HEADERS, timeout=30)
+        r.raise_for_status()
+        data = r.json()
+        label_order = {"HIGH": 0, "MDT": 1, "ENH": 2}
+        label_names = {"HIGH": "High", "MDT": "Moderate", "ENH": "Enhanced"}
+        lines = []
+        for feature in sorted(
+            data.get("features", []),
+            key=lambda f: label_order.get(f.get("properties", {}).get("LABEL", ""), 99),
+        ):
+            label = feature.get("properties", {}).get("LABEL", "")
+            if label not in label_order:
+                continue
+            geom = feature.get("geometry", {})
+            coords: list = []
+            if geom.get("type") == "Polygon":
+                for ring in geom.get("coordinates", []):
+                    coords.extend(ring)
+            elif geom.get("type") == "MultiPolygon":
+                for poly in geom.get("coordinates", []):
+                    for ring in poly:
+                        coords.extend(ring)
+            if coords:
+                avg_lon = sum(c[0] for c in coords) / len(coords)
+                avg_lat = sum(c[1] for c in coords) / len(coords)
+                lines.append(f"{label_names[label]}: ~{avg_lat:.1f}°N, {avg_lon:.1f}°W")
+        return ("GeoJSON-derived risk centroids — " + "; ".join(lines)) if lines else ""
+    except Exception:
+        return ""
+
+
 def _tool_get_spc_outlook(_inp: dict) -> list:
     url = f"{SPC_BASE}/day1otlk.html"
     try:
@@ -190,20 +224,21 @@ def _tool_get_spc_outlook(_inp: dict) -> list:
                     "text": f"Error: could not download SPC image from {img_url}",
                 }
             ]
+        centroids = _spc_risk_centroids()
+        text = (
+            f"SPC Day 1 Convective Outlook (ts={ts}). "
+            "Risk categories: Marginal=green, Slight=yellow, Enhanced=orange, "
+            "Moderate=red, High=magenta. Note approximate center lat/lon of "
+            "Enhanced/Moderate/High risk areas."
+        )
+        if centroids:
+            text += f" {centroids}."
         return [
             {
                 "type": "image",
                 "source": {"type": "base64", "media_type": "image/png", "data": b64},
             },
-            {
-                "type": "text",
-                "text": (
-                    f"SPC Day 1 Convective Outlook (ts={ts}). "
-                    "Risk categories: Marginal=green, Slight=yellow, Enhanced=orange, "
-                    "Moderate=red, High=magenta. Note approximate center lat/lon of "
-                    "Enhanced/Moderate/High risk areas."
-                ),
-            },
+            {"type": "text", "text": text},
         ]
     except Exception as exc:
         return [{"type": "text", "text": f"Error fetching SPC outlook: {exc}"}]
@@ -279,16 +314,29 @@ def _tool_get_sounding(inp: dict) -> list:
     rh, fh = inp["rh"], inp["fh"]
     lat, lon = inp["lat"], inp["lon"]
 
+    model_page_url = (
+        f"https://www.pivotalweather.com/model.php"
+        f"?rh={rh}&fh={fh}&dpdt=&mc=&r=us_c&p=refcmp&m=hrrr"
+    )
     sounding_page_url = (
         f"https://www.pivotalweather.com/sounding.php"
-        f"?m=hrrr&p=refcmp&rh={rh}&fh={fh}&r=conus"
-        f"&lon={lon:.4f}&lat={lat:.4f}"
+        f"?rh={rh}&fh={fh}&dpdt=&mc=&lat={lat:.4f}&lon={lon:.4f}&r=us_c&p=refcmp&m=hrrr"
     )
     try:
-        # Step 1: get sounding page to extract the server-generated token
+        # Step 1: get sounding page to extract the server-generated token.
+        # Establish PHPSESSID via homepage, then model page as referrer.
+        # Pivotal Weather blocks requests without a valid session cookie.
+        _session.get("https://www.pivotalweather.com/", timeout=15)
+        _session.get(model_page_url, timeout=15)
         r = _session.get(
             sounding_page_url,
-            headers={"Referer": "https://www.pivotalweather.com/"},
+            headers={
+                "Referer": model_page_url,
+                "Sec-Fetch-Dest": "iframe",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "same-origin",
+                "Sec-Fetch-User": "?1",
+            },
             timeout=30,
         )
         r.raise_for_status()
@@ -296,6 +344,13 @@ def _tool_get_sounding(inp: dict) -> list:
         soup = BeautifulSoup(r.text, "html.parser")
         token_div = soup.find(id="snd_token")
         if not token_div:
+            log.warning(
+                "Sounding unavailable: snd_token not found (rh=%s, fh=%s, lat=%s, lon=%s)",
+                rh,
+                fh,
+                lat,
+                lon,
+            )
             return [
                 {
                     "type": "text",
@@ -304,6 +359,13 @@ def _tool_get_sounding(inp: dict) -> list:
             ]
         token = token_div.get("data-token", "")
         if not token:
+            log.warning(
+                "Sounding unavailable: empty token (rh=%s, fh=%s, lat=%s, lon=%s)",
+                rh,
+                fh,
+                lat,
+                lon,
+            )
             return [{"type": "text", "text": "Error: empty sounding token."}]
 
         # Step 2: call make_sounding.php to get the image filename
@@ -322,6 +384,14 @@ def _tool_get_sounding(inp: dict) -> list:
         image_filename = root.get("image")
         if not image_filename:
             error_msg = root.get("error", "Unknown error from make_sounding.php")
+            log.warning(
+                "Sounding unavailable: make_sounding.php error (rh=%s, fh=%s, lat=%s, lon=%s): %s",
+                rh,
+                fh,
+                lat,
+                lon,
+                error_msg,
+            )
             return [{"type": "text", "text": f"Sounding error: {error_msg}"}]
 
         snapped_lat = root.get("lat", str(lat))
@@ -331,6 +401,14 @@ def _tool_get_sounding(inp: dict) -> list:
         img_url = f"https://i1o.pivotalweather.com/sounding_images/{image_filename}"
         b64 = _fetch_image_b64(img_url)
         if not b64:
+            log.warning(
+                "Sounding unavailable: failed to download image (rh=%s, fh=%s, lat=%s, lon=%s): %s",
+                rh,
+                fh,
+                lat,
+                lon,
+                img_url,
+            )
             return [
                 {
                     "type": "text",
@@ -1509,6 +1587,53 @@ def post_to_x(image_path: str, caption: str) -> None:
 
 
 # ---------------------------------------------------------------------------
+# Sounding pre-flight check
+# ---------------------------------------------------------------------------
+def sounding_service_available(rh: str) -> bool:
+    """Return True if the Pivotal Weather sounding service is responding.
+
+    Probes step 1 of the sounding fetch (HTML page + snd_token extraction) at a
+    fixed central US location. Fail-closed: soundings are required for a valid
+    forecast, so an unavailable service aborts the run.
+    """
+    model_page_url = (
+        f"https://www.pivotalweather.com/model.php"
+        f"?rh={rh}&fh=6&dpdt=&mc=&r=us_c&p=refcmp&m=hrrr"
+    )
+    probe_url = (
+        f"https://www.pivotalweather.com/sounding.php"
+        f"?rh={rh}&fh=6&dpdt=&mc=&lat=38.0000&lon=-97.5000&r=us_c&p=refcmp&m=hrrr"
+    )
+    try:
+        _session.get("https://www.pivotalweather.com/", timeout=15)
+        _session.get(model_page_url, timeout=15)
+        r = _session.get(
+            probe_url,
+            headers={
+                "Referer": model_page_url,
+                "Sec-Fetch-Dest": "iframe",
+                "Sec-Fetch-Mode": "navigate",
+                "Sec-Fetch-Site": "same-origin",
+                "Sec-Fetch-User": "?1",
+            },
+            timeout=30,
+        )
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+        token_div = soup.find(id="snd_token")
+        if token_div and token_div.get("data-token"):
+            log.info("Sounding pre-flight: service available (rh=%s)", rh)
+            return True
+        log.warning(
+            "Sounding pre-flight: snd_token missing or empty — service unavailable"
+        )
+        return False
+    except Exception as exc:
+        log.warning("Sounding pre-flight: probe failed (%s) — aborting run", exc)
+        return False
+
+
+# ---------------------------------------------------------------------------
 # SPC pre-flight check
 # ---------------------------------------------------------------------------
 def spc_has_enhanced_risk() -> bool:
@@ -1592,6 +1717,15 @@ def main() -> None:
     if not RETRO_DATE and not spc_has_enhanced_risk():
         log.info("=== Chase Bot exiting — no Enhanced+ risk today ===")
         return
+
+    # Pre-flight: verify the sounding service is up before burning agent turns.
+    # Fail-closed — soundings are required for a valid forecast.
+    if not RETRO_DATE:
+        run_info = _tool_get_available_runs({})
+        latest_rh = run_info.get("latest_rh", "")
+        if not latest_rh or not sounding_service_available(latest_rh):
+            log.error("=== Chase Bot exiting — sounding service unavailable ===")
+            return
 
     image_path, caption = run_agent()
 

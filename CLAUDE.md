@@ -14,7 +14,7 @@ AI-powered agentic storm intercept recommendation. Only runs on days with an SPC
 - Pre-flight check: fetches `day1otlk_cat.nolyr.geojson` and bails if no ENH/MDT/HIGH label
 - Runs the Claude Opus agentic loop to analyze HRRR data and generate an annotated chase map
 - Posts the map + caption to X
-- Runs daily at 13:15 UTC via GitHub Actions (March–June); HRRR 12Z fh=6 publishes at ~13:00 UTC, fh=9 at ~13:03, fh=12 at ~13:07
+- Runs daily at 13:20 UTC via GitHub Actions (March–June); HRRR 12Z fh=6 publishes at ~13:07 UTC, fh=9 at ~13:12, fh=12 at ~13:17
 - Scheduled via `.github/workflows/chase-bot.yml`
 
 ## Chase Bot — Data Sources
