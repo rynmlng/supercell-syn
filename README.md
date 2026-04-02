@@ -26,12 +26,12 @@ An AI-powered agentic storm intercept recommendation. Only activates on days wit
 
 ## Cost
 
-| Bot | Per activation | Notes |
-|-----|---------------|-------|
-| Otto | $0 | No AI — purely image fetching and posting |
-| Chase | ~$2–5 | Claude Opus 4.6 with adaptive thinking; ~6 agent turns with CONUS map images and sounding charts per run |
+| Bot | Amortized | Worst case | Notes |
+|-----|-----------|------------|-------|
+| Otto | $0 | $0 | No AI — purely image fetching and posting |
+| Chase | ~$2–3 | ~$5 | Claude Opus 4.6 ($15/$75 per MTok in/out); thinking capped at 8,000 tokens; ~6 agent turns with CONUS map images, sounding charts, and analysis report |
 
-Chase only activates on ENH+ days (~15–25 per season), putting the **seasonal cost at roughly $30–125**.
+Chase only activates on ENH+ days (~15–25 per season), putting the **seasonal cost at roughly $30–75 amortized, $75–125 worst case**.
 
 ---
 

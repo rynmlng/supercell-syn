@@ -1423,8 +1423,8 @@ def run_agent() -> tuple[str | None, str | None]:
         log.info("Agent turn %d", turn + 1)
         with client.messages.stream(
             model="claude-opus-4-6",
-            max_tokens=8192,
-            thinking={"type": "adaptive"},
+            max_tokens=10000,
+            thinking={"type": "enabled", "budget_tokens": 8000},
             system=SYSTEM,
             tools=TOOLS,
             messages=messages,
