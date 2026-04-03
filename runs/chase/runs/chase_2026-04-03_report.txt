@@ -1,0 +1,163 @@
+# Chase Forecast Analysis — Friday, April 3, 2026
+
+## Model Run
+- **HRRR Init:** 2026-04-03 13Z
+- **Analysis Window:** fh=5 (18Z) through fh=9 (22Z) — 1 PM to 5 PM CDT
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Enhanced Risk (orange):** Northern Kansas through northern Missouri and southern Iowa (~38–41°N, 93–97°W)
+- **Slight Risk (yellow):** Central Oklahoma northward through Kansas into Missouri and the Ohio Valley
+- **Marginal Risk (green):** Broad area from the southern Plains through the Southeast and Ohio Valley
+- **Forecasters:** Guyer/Weinman, issued 1240Z
+
+---
+
+## Dry Line Analysis (3 frames: fh=5, fh=7, fh=9)
+
+A well-defined dry line runs **north-south from central Kansas (~38°N, ~98°W) through central Oklahoma (~35°N, ~97°W) into central Texas**.
+
+### Key Moisture Gradient:
+- **East of dry line:** Dewpoints 60–69°F (rich Gulf moisture advection, green/dark green shading)
+- **West of dry line:** Dewpoints plunge to 20–35°F within 50–75 miles (classic dry line signature)
+- **Gradient:** 30–40°F dewpoint drop over ~50–75 miles — an extremely sharp boundary
+
+### Temporal Evolution:
+- **fh=5 (18Z/1PM):** Dry line well-defined along ~98°W in KS, ~97°W in OK. Moisture pooling to 67°F in eastern KS/OK.
+- **fh=7 (20Z/3PM):** Dry line holds steady, slight eastward mixing. Moisture remains robust at 63–66°F east of the boundary.
+- **fh=9 (22Z/5PM):** Dry line begins modest eastward push. Moisture axis holding 61–65°F dewpoints. Convection firing along the boundary.
+
+---
+
+## Reflectivity Analysis (fh=5, fh=7, fh=9)
+
+### fh=5 (18Z / 1 PM CDT):
+- Early convective initiation across **northern Kansas/southern Nebraska** — elevated convection along the warm front
+- Some 40–50 dBZ cells developing near ~39–40°N
+- Mostly stratiform, not yet discrete supercell mode
+
+### fh=7 (20Z / 3 PM CDT):
+- Convection strengthening significantly across **northern Kansas into NE Kansas/NW Missouri**
+- Higher reflectivity cores (≥50 dBZ, yellow/orange) near ~39.5°N, 96°W
+- A developing convective complex with some isolated cells along the dry line in central Kansas
+- Beginning to take on linear (QLCS) characteristics to the north
+
+### fh=9 (22Z / 5 PM CDT):
+- A clear **north-south line of convection** has developed along ~97–98°W from central Kansas through Oklahoma — **dry line convection is fully engaged**
+- The strongest cores (50+ dBZ) remain in northern Kansas/Missouri (QLCS)
+- **Discrete cells visible at the southern end** of the developing line in central Kansas/north-central Oklahoma (~36–38°N, ~97–98°W)
+- Best isolated supercell targets: southern end of the dry line convection in **north-central Oklahoma**
+
+### Storm Mode Assessment:
+- **Northern KS/MO:** Transitioning to QLCS — cells embedded in linear structure (unfavorable for chasing)
+- **Central KS:** On the dry side; sounding shows no SBCAPE
+- **North-central OK (~36.5°N, 97.5°W):** Discrete supercells firing along the dry line with excellent isolation from the QLCS to the north — **PRIMARY TARGET**
+
+---
+
+## Sounding Analysis (fh=7 / 20Z)
+
+### Location 1: NE Kansas (39.0°N, 96.5°W) — REJECTED
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 0 J/kg |
+| ML CAPE | 0 J/kg |
+| MU CAPE | 1644 J/kg |
+| CIN | 0 (no parcels reach LFC) |
+| BRM | 235°/39 kt |
+| SRH 0-1km | 85 m²/s² |
+| SRH 0-3km | 246 m²/s² |
+| Eff Shear | 167 (bulk) |
+| STP | 0.0 |
+| Supercell Comp | 4.6 |
+
+**Assessment:** No surface-based instability. Only elevated MU CAPE. This location is in the cooler air north of the warm front. Excellent shear parameters but no fuel for surface-based supercells. ❌
+
+### Location 2: Central Kansas (38.0°N, 97.5°W) — REJECTED
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 0 J/kg |
+| ML CAPE | 0 J/kg |
+| MU CAPE | 1305 J/kg |
+| CIN | 0 |
+| Sfc Td | 46°F |
+| BRM | 239°/39 kt |
+| SRH 0-1km | 58 m²/s² |
+| SRH 0-3km | 313 m²/s² |
+| Eff Shear | 147 |
+| STP | 0.0 |
+| Supercell Comp | 3.4 |
+
+**Assessment:** Right on the dry line — surface dewpoint of only 46°F (dry side). No surface-based CAPE. Excellent deep-layer shear (0-3km SRH=313) but no thermodynamic support for surface-based convection. ❌
+
+### Location 3: North-central Oklahoma (36.5°N, 97.5°W) — ⭐ PRIMARY TARGET
+| Parameter | Value |
+|-----------|-------|
+| **SFC CAPE** | **2974 J/kg** |
+| ML CAPE | 2289 J/kg |
+| MU CAPE | 2974 J/kg |
+| **CIN** | **0 J/kg (uncapped!)** |
+| Sfc Td | 63°F |
+| Sfc T | 83°F |
+| **BRM** | **249°/30 kt** |
+| SRH 0-1km | 69 m²/s² |
+| SRH 0-3km | 112 m²/s² |
+| Eff Shear | 109 |
+| EHI 0-1km | 1.3 |
+| EHI 0-3km | 2.1 |
+| **STP (cin)** | **0.5** |
+| STP (fixed) | 0.4 |
+| **Supercell Comp** | **5.7** |
+| SHIP | 1.4 |
+| WNDG | 1.1 |
+| 3CAPE | 78 |
+| **Critical Angle** | **88°** |
+| SigSvr | 37,927 m³/s³ |
+| BRN Shear | 19 m²/s² |
+| LCL | 1957m AGL |
+| PW | 1.17 in |
+| SARS Supercell | 14% TOR |
+| SARS Sig Hail | 65% significant (231 matches, up to 4.5") |
+
+**Assessment:** OUTSTANDING environment for discrete supercells.
+- **Thermodynamics:** Nearly 3000 J/kg of surface-based CAPE with ZERO CIN — explosive, uncapped environment. Surface dewpoint of 63°F on the moist side of the dry line.
+- **Kinematics:** Bunkers Right Motion 249°/30 kt. 0-3km SRH of 112 m²/s² is moderate. Effective shear of 109 is adequate. Critical angle of 88° is near-perfect for tornado potential.
+- **Composite Parameters:** Supercell composite of 5.7 is strongly supportive. EHI 0-3km of 2.1 suggests sustained rotating updrafts. STP of 0.5 indicates marginal but nonzero tornado potential.
+- **Hail Threat:** SARS shows 65% significant hail probability with analogs up to 4.5". SHIP of 1.4 supports large hail.
+- **Concerns:** LCL height of 1957m AGL is somewhat elevated (>1500m is less favorable for tornadoes), and BRN Shear of 19 m²/s² is on the low side. 0-1km shear of 10 kt is modest. However, the massive CAPE and perfect critical angle compensate.
+
+---
+
+## Chase Target Summary
+
+### Hatch Area
+- **Location:** North-central Oklahoma, near Perry/Stillwater (~36.5°N, 97.5°W)
+- **Rationale:** Discrete supercells firing along the dry line boundary. Explosive CAPE (2974 J/kg), no CIN, rich 63°F dewpoints. Best isolation from the QLCS developing to the north in Kansas.
+- **SPC Risk Level:** Slight risk area, adjacent to Enhanced risk to the northeast
+
+### Positioning Location
+- **Location:** Southwestern Missouri (~37.5°N, 93.9°W) — approximately 210 miles ENE of the hatch area
+- **Computed as:** BRM speed (30 kt) × 7 = 210 miles along the storm motion vector (069°)
+- **Rationale:** Position downwind (ENE) of the hatch area. Storms initiated near the dry line in N-central OK will propagate into the Enhanced risk area across SW Missouri during the late afternoon.
+
+### Bunkers Right Storm Motion Vector
+- **Direction:** 249° FROM (moves TOWARD 069° ENE)
+- **Speed:** 30 knots
+
+### Confidence Level: **MODERATE-HIGH**
+- **Strengths:** Explosive thermodynamics, sharp dry line, uncapped environment, good supercell composite, excellent critical angle, strong significant hail analogs
+- **Weaknesses:** Somewhat elevated LCL (1957m), modest low-level shear (0-1km=10 kt), BRN Shear on the low side (19 m²/s²). The QLCS to the north could potentially absorb some cells. 0-3km SRH of 112 is moderate rather than strong.
+
+### Primary Threat:
+- **Large to very large hail (65% significant hail analogs, up to 4.5")**
+- **Damaging winds (WNDG=1.1)**
+- **Marginal tornado potential (STP=0.5, critical angle=88° but elevated LCL)**
+
+---
+
+## Timeline (CDT)
+- **1 PM (18Z/fh=5):** Early elevated convection in N Kansas. Monitor dry line for CI signals in N-central OK.
+- **3 PM (20Z/fh=7):** Discrete supercells expected to initiate along the dry line near Perry/Stillwater, OK. This is the targeting window.
+- **5 PM (22Z/fh=9):** Storms propagate ENE. Dry line convection fully engaged from KS into OK. Watch for QLCS absorption from the north.
+- **7 PM (00Z/fh=12):** Storms approaching SW Missouri positioning area. Transition to evening chase or disengage.
