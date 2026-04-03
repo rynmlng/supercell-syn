@@ -85,16 +85,24 @@ _session.headers.update(PIVOTAL_HEADERS)
 def _fetch_image_b64(url: str, extra_headers: dict | None = None) -> str | None:
     """Fetch an image URL and return base64-encoded bytes, or None on failure."""
     headers = dict(extra_headers or {})
-    try:
-        r = _session.get(url, headers=headers, timeout=30)
-        if r.status_code == 404:
-            log.warning("404: %s", url)
-            return None
-        r.raise_for_status()
-        return base64.standard_b64encode(r.content).decode("utf-8")
-    except requests.RequestException as exc:
-        log.error("Failed to fetch %s: %s", url, exc)
-        return None
+    last_exc: Exception | None = None
+    for attempt in range(1, 4):
+        try:
+            r = _session.get(url, headers=headers, timeout=30)
+            if r.status_code == 404:
+                log.warning("404: %s", url)
+                return None
+            r.raise_for_status()
+            return base64.standard_b64encode(r.content).decode("utf-8")
+        except requests.RequestException as exc:
+            last_exc = exc
+            if attempt < 3:
+                log.warning(
+                    "Image fetch attempt %d/3 failed (%s), retrying in 5s", attempt, exc
+                )
+                time.sleep(5)
+    log.error("Failed to fetch %s after 3 attempts: %s", url, last_exc)
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -331,125 +339,108 @@ def _tool_get_sounding(inp: dict) -> list:
         f"https://www.pivotalweather.com/sounding.php"
         f"?rh={rh}&fh={fh}&dpdt=&mc=&lat={lat:.4f}&lon={lon:.4f}&r=us_c&p=refcmp&m=hrrr"
     )
-    try:
-        # Step 1: get sounding page to extract the server-generated token.
-        # Establish PHPSESSID via homepage, then model page as referrer.
-        # Pivotal Weather blocks requests without a valid session cookie.
-        _session.get("https://www.pivotalweather.com/", timeout=15)
-        _session.get(model_page_url, timeout=15)
-        r = _session.get(
-            sounding_page_url,
-            headers={
-                "Referer": model_page_url,
-                "Sec-Fetch-Dest": "iframe",
-                "Sec-Fetch-Mode": "navigate",
-                "Sec-Fetch-Site": "same-origin",
-                "Sec-Fetch-User": "?1",
-            },
-            timeout=30,
+
+    last_exc: Exception | None = None
+    for attempt in range(1, 4):
+        try:
+            # Step 1: get sounding page to extract the server-generated token.
+            # Establish PHPSESSID via homepage, then model page as referrer.
+            # Pivotal Weather blocks requests without a valid session cookie.
+            _session.get("https://www.pivotalweather.com/", timeout=15)
+            _session.get(model_page_url, timeout=15)
+            r = _session.get(
+                sounding_page_url,
+                headers={
+                    "Referer": model_page_url,
+                    "Sec-Fetch-Dest": "iframe",
+                    "Sec-Fetch-Mode": "navigate",
+                    "Sec-Fetch-Site": "same-origin",
+                    "Sec-Fetch-User": "?1",
+                },
+                timeout=30,
+            )
+            r.raise_for_status()
+
+            soup = BeautifulSoup(r.text, "html.parser")
+            token_div = soup.find(id="snd_token")
+            if not token_div or not token_div.get("data-token"):
+                raise ValueError("snd_token missing or empty")
+            token = token_div["data-token"]
+
+            # Step 2: call make_sounding.php to get the image filename
+            make_url = (
+                f"https://i1o.pivotalweather.com/make_sounding.php"
+                f"?m=hrrr&rh={rh}&fh={fh}&t={token}&lat={lat:.4f}&lon={lon:.4f}"
+            )
+            r2 = _session.get(
+                make_url,
+                headers={"Referer": sounding_page_url},
+                timeout=30,
+            )
+            r2.raise_for_status()
+
+            root = ET.fromstring(r2.text)
+            image_filename = root.get("image")
+            if not image_filename:
+                error_msg = root.get("error", "Unknown error from make_sounding.php")
+                raise ValueError(f"make_sounding.php: {error_msg}")
+
+            snapped_lat = root.get("lat", str(lat))
+            snapped_lon = root.get("lon", str(lon))
+
+            # Step 3: fetch the sounding PNG
+            img_url = f"https://i1o.pivotalweather.com/sounding_images/{image_filename}"
+            b64 = _fetch_image_b64(img_url)
+            if not b64:
+                raise ValueError(f"failed to download sounding image {img_url}")
+
+            break  # success
+        except Exception as exc:
+            last_exc = exc
+            if attempt < 3:
+                log.warning(
+                    "Sounding attempt %d/3 failed (rh=%s, fh=%s, lat=%s, lon=%s): %s — retrying in 15s",
+                    attempt,
+                    rh,
+                    fh,
+                    lat,
+                    lon,
+                    exc,
+                )
+                time.sleep(15)
+    else:
+        log.warning(
+            "Sounding unavailable after 3 attempts (rh=%s, fh=%s, lat=%s, lon=%s): %s",
+            rh,
+            fh,
+            lat,
+            lon,
+            last_exc,
         )
-        r.raise_for_status()
+        return [{"type": "text", "text": f"Error: sounding unavailable — {last_exc}"}]
 
-        soup = BeautifulSoup(r.text, "html.parser")
-        token_div = soup.find(id="snd_token")
-        if not token_div:
-            log.warning(
-                "Sounding unavailable: snd_token not found (rh=%s, fh=%s, lat=%s, lon=%s)",
-                rh,
-                fh,
-                lat,
-                lon,
-            )
-            return [
-                {
-                    "type": "text",
-                    "text": f"Error: snd_token not found for lat={lat}, lon={lon}",
-                }
-            ]
-        token = token_div.get("data-token", "")
-        if not token:
-            log.warning(
-                "Sounding unavailable: empty token (rh=%s, fh=%s, lat=%s, lon=%s)",
-                rh,
-                fh,
-                lat,
-                lon,
-            )
-            return [{"type": "text", "text": "Error: empty sounding token."}]
+    # Save to disk (enumerated, stale files cleaned at run start)
+    global _sounding_counter
+    _sounding_counter += 1
+    _save_daily_image(b64, f"sounding_{_sounding_counter}")
 
-        # Step 2: call make_sounding.php to get the image filename
-        make_url = (
-            f"https://i1o.pivotalweather.com/make_sounding.php"
-            f"?m=hrrr&rh={rh}&fh={fh}&t={token}&lat={lat:.4f}&lon={lon:.4f}"
-        )
-        r2 = _session.get(
-            make_url,
-            headers={"Referer": sounding_page_url},
-            timeout=30,
-        )
-        r2.raise_for_status()
-
-        root = ET.fromstring(r2.text)
-        image_filename = root.get("image")
-        if not image_filename:
-            error_msg = root.get("error", "Unknown error from make_sounding.php")
-            log.warning(
-                "Sounding unavailable: make_sounding.php error (rh=%s, fh=%s, lat=%s, lon=%s): %s",
-                rh,
-                fh,
-                lat,
-                lon,
-                error_msg,
-            )
-            return [{"type": "text", "text": f"Sounding error: {error_msg}"}]
-
-        snapped_lat = root.get("lat", str(lat))
-        snapped_lon = root.get("lon", str(lon))
-
-        # Step 3: fetch the sounding PNG
-        img_url = f"https://i1o.pivotalweather.com/sounding_images/{image_filename}"
-        b64 = _fetch_image_b64(img_url)
-        if not b64:
-            log.warning(
-                "Sounding unavailable: failed to download image (rh=%s, fh=%s, lat=%s, lon=%s): %s",
-                rh,
-                fh,
-                lat,
-                lon,
-                img_url,
-            )
-            return [
-                {
-                    "type": "text",
-                    "text": f"Error: failed to download sounding image {img_url}",
-                }
-            ]
-
-        # Save to disk (enumerated, stale files cleaned at run start)
-        global _sounding_counter
-        _sounding_counter += 1
-        _save_daily_image(b64, f"sounding_{_sounding_counter}")
-
-        return [
-            {
-                "type": "image",
-                "source": {"type": "base64", "media_type": "image/png", "data": b64},
-            },
-            {
-                "type": "text",
-                "text": (
-                    f"HRRR Sounding — rh={rh}, fh={fh}h, "
-                    f"lat={snapped_lat}, lon={snapped_lon}. "
-                    "Analyze: (1) hodograph for directional/speed shear and Bunkers Right "
-                    "Storm Motion Vector (labeled 'RM' — note its direction in degrees and "
-                    "speed in knots), (2) Skew-T for low-level jet at 850-925 hPa, "
-                    "(3) overall supercell potential."
-                ),
-            },
-        ]
-    except Exception as exc:
-        log.exception("Sounding fetch failed for lat=%s lon=%s", lat, lon)
-        return [{"type": "text", "text": f"Error fetching sounding: {exc}"}]
+    return [
+        {
+            "type": "image",
+            "source": {"type": "base64", "media_type": "image/png", "data": b64},
+        },
+        {
+            "type": "text",
+            "text": (
+                f"HRRR Sounding — rh={rh}, fh={fh}h, "
+                f"lat={snapped_lat}, lon={snapped_lon}. "
+                "Analyze: (1) hodograph for directional/speed shear and Bunkers Right "
+                "Storm Motion Vector (labeled 'RM' — note its direction in degrees and "
+                "speed in knots), (2) Skew-T for low-level jet at 850-925 hPa, "
+                "(3) overall supercell potential."
+            ),
+        },
+    ]
 
 
 MIN_DEW_POINT_FRAMES = 3
@@ -1602,8 +1593,8 @@ def sounding_service_available(rh: str) -> bool:
     """Return True if the Pivotal Weather sounding service is responding.
 
     Probes step 1 of the sounding fetch (HTML page + snd_token extraction) at a
-    fixed central US location. Fail-closed: soundings are required for a valid
-    forecast, so an unavailable service aborts the run.
+    fixed central US location. Retries up to 3 times with 30s backoff before
+    failing closed — soundings are required for a valid forecast.
     """
     model_page_url = (
         f"https://www.pivotalweather.com/model.php"
@@ -1613,33 +1604,42 @@ def sounding_service_available(rh: str) -> bool:
         f"https://www.pivotalweather.com/sounding.php"
         f"?rh={rh}&fh=6&dpdt=&mc=&lat=38.0000&lon=-97.5000&r=us_c&p=refcmp&m=hrrr"
     )
-    try:
-        _session.get("https://www.pivotalweather.com/", timeout=15)
-        _session.get(model_page_url, timeout=15)
-        r = _session.get(
-            probe_url,
-            headers={
-                "Referer": model_page_url,
-                "Sec-Fetch-Dest": "iframe",
-                "Sec-Fetch-Mode": "navigate",
-                "Sec-Fetch-Site": "same-origin",
-                "Sec-Fetch-User": "?1",
-            },
-            timeout=30,
-        )
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, "html.parser")
-        token_div = soup.find(id="snd_token")
-        if token_div and token_div.get("data-token"):
-            log.info("Sounding pre-flight: service available (rh=%s)", rh)
-            return True
-        log.warning(
-            "Sounding pre-flight: snd_token missing or empty — service unavailable"
-        )
-        return False
-    except Exception as exc:
-        log.warning("Sounding pre-flight: probe failed (%s) — aborting run", exc)
-        return False
+    for attempt in range(1, 4):
+        try:
+            _session.get("https://www.pivotalweather.com/", timeout=15)
+            _session.get(model_page_url, timeout=15)
+            r = _session.get(
+                probe_url,
+                headers={
+                    "Referer": model_page_url,
+                    "Sec-Fetch-Dest": "iframe",
+                    "Sec-Fetch-Mode": "navigate",
+                    "Sec-Fetch-Site": "same-origin",
+                    "Sec-Fetch-User": "?1",
+                },
+                timeout=30,
+            )
+            r.raise_for_status()
+            soup = BeautifulSoup(r.text, "html.parser")
+            token_div = soup.find(id="snd_token")
+            if token_div and token_div.get("data-token"):
+                log.info("Sounding pre-flight: service available (rh=%s)", rh)
+                return True
+            raise ValueError("snd_token missing or empty")
+        except Exception as exc:
+            if attempt < 3:
+                log.warning(
+                    "Sounding pre-flight attempt %d/3 failed: %s — retrying in 30s",
+                    attempt,
+                    exc,
+                )
+                time.sleep(30)
+            else:
+                log.warning(
+                    "Sounding pre-flight: service unavailable after 3 attempts — last error: %s",
+                    exc,
+                )
+    return False
 
 
 # ---------------------------------------------------------------------------
