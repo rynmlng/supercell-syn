@@ -13,6 +13,7 @@ import logging
 import math
 import os
 import re
+import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from io import BytesIO
@@ -131,12 +132,20 @@ def _latlon_to_pixel(lat: float, lon: float, img_w: int, img_h: int) -> tuple[in
 # ---------------------------------------------------------------------------
 def _tool_get_available_runs(_inp: dict) -> dict:
     url = "https://www.pivotalweather.com/status_model.php?m=hrrr&s=1"
-    try:
-        r = _session.get(url, timeout=15)
-        r.raise_for_status()
-        runs = sorted(r.json(), key=lambda x: x["rh"], reverse=True)
-    except Exception as exc:
-        return {"error": str(exc)}
+    last_exc: Exception | None = None
+    for attempt in range(1, 4):
+        try:
+            r = _session.get(url, timeout=15)
+            r.raise_for_status()
+            runs = sorted(r.json(), key=lambda x: x["rh"], reverse=True)
+            break
+        except Exception as exc:
+            last_exc = exc
+            log.warning("Status API attempt %d/3 failed: %s", attempt, exc)
+            if attempt < 3:
+                time.sleep(5 * attempt)
+    else:
+        return {"error": str(last_exc)}
 
     # Walk down the list until we find a run whose fh=6 dew point image is actually
     # published — the status API can report a run before CDN images are available.
@@ -1723,7 +1732,13 @@ def main() -> None:
     if not RETRO_DATE:
         run_info = _tool_get_available_runs({})
         latest_rh = run_info.get("latest_rh", "")
-        if not latest_rh or not sounding_service_available(latest_rh):
+        if not latest_rh:
+            log.error(
+                "=== Chase Bot exiting — HRRR status API unavailable (%s) ===",
+                run_info.get("error", "no verified run found"),
+            )
+            return
+        if not sounding_service_available(latest_rh):
             log.error("=== Chase Bot exiting — sounding service unavailable ===")
             return
 
