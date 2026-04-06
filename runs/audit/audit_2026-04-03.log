@@ -1,0 +1,430 @@
+2026-04-03 07:50:15,214 [INFO] Logging to /Users/ryan/Development/supercell-syn/runs/audit/audit_2026-04-03.log
+2026-04-03 07:50:15,214 [INFO] === HRRR Availability Audit starting ===
+2026-04-03 07:50:15,214 [INFO] Mode: continuous | Poll interval: 60s | Sounding probe: 38.0, -97.5
+2026-04-03 07:50:15,607 [INFO] Baseline run at startup: 2026040206 — waiting for a newer run
+2026-04-03 07:50:15,642 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 07:51:16,058 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 07:52:16,370 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 07:53:16,788 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 07:54:17,206 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 07:55:17,674 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 07:56:18,039 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 07:57:18,382 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 07:58:18,540 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 07:59:18,690 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:00:19,090 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:01:19,506 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:02:19,829 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:03:20,175 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:04:20,653 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:05:21,094 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:06:21,282 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:07:21,698 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:08:21,744 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:09:22,095 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:35:54,512 [WARNING] Status API error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-03 08:35:54,513 [INFO] No new run yet (latest: unknown) — sleeping 60s
+2026-04-03 08:36:54,905 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:37:55,230 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:38:55,587 [INFO] No new run yet (latest: 2026040206) — sleeping 60s
+2026-04-03 08:39:33,023 [INFO] Interrupted — printing day summary.
+2026-04-03 08:39:34,783 [INFO] Logging to /Users/ryan/Development/supercell-syn/runs/audit/audit_2026-04-03.log
+2026-04-03 08:39:34,783 [INFO] === HRRR Availability Audit starting ===
+2026-04-03 08:39:34,783 [INFO] Mode: continuous | Poll interval: 60s | Sounding probe: 38.0, -97.5
+2026-04-03 08:39:34,864 [INFO] Baseline run at startup: 2026040313 — waiting for a newer run
+2026-04-03 08:39:34,893 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:40:35,247 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:41:35,398 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:42:35,551 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:43:35,884 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:44:36,218 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:45:36,627 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:46:37,028 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:47:37,338 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:48:37,665 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:49:38,000 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:50:38,331 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:51:38,483 [INFO] No new run yet (latest: 2026040313) — sleeping 60s
+2026-04-03 08:52:38,630 [INFO] NEW RUN DETECTED: 2026040314 (at 14:52:38 UTC)
+2026-04-03 08:52:40,420 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 08:52:40,420 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 08:53:41,670 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 08:53:41,671 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 08:54:42,861 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 08:54:42,861 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 08:55:43,929 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 08:55:43,929 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 08:56:45,154 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 08:56:45,154 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 08:57:46,462 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 08:57:46,463 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 08:58:47,653 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 08:58:47,653 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 08:59:48,853 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 08:59:48,853 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:00:50,090 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:00:50,091 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:01:51,304 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:01:51,304 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:02:52,517 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:02:52,518 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:03:53,738 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:03:53,739 [INFO] Run 2026040314 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:04:56,178 [INFO] AVAILABLE: Sounding               at 15:04:53 UTC
+2026-04-03 09:04:56,179 [INFO] Run 2026040314 — pending (6/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 09:05:56,234 [INFO] AVAILABLE: Dew Point fh=06        at 15:05:56 UTC
+2026-04-03 09:05:56,410 [INFO] AVAILABLE: Reflectivity fh=06     at 15:05:56 UTC
+2026-04-03 09:05:56,533 [INFO] Run 2026040314 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 09:06:56,746 [INFO] Run 2026040314 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 09:07:56,958 [INFO] Run 2026040314 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 09:08:57,173 [INFO] Run 2026040314 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 09:09:57,225 [INFO] AVAILABLE: Dew Point fh=09        at 15:09:57 UTC
+2026-04-03 09:09:57,337 [INFO] AVAILABLE: Reflectivity fh=09     at 15:09:57 UTC
+2026-04-03 09:09:57,396 [INFO] Run 2026040314 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 09:10:57,725 [INFO] Run 2026040314 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 09:11:57,837 [INFO] Run 2026040314 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 09:12:57,954 [INFO] Run 2026040314 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 09:13:58,066 [INFO] Run 2026040314 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 09:14:58,125 [INFO] AVAILABLE: Dew Point fh=12        at 15:14:58 UTC
+2026-04-03 09:14:58,180 [INFO] AVAILABLE: Reflectivity fh=12     at 15:14:58 UTC
+2026-04-03 09:14:58,180 [INFO] Run 2026040314: all resources confirmed.
+2026-04-03 09:14:58,314 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:15:58,344 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:16:58,381 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:17:58,448 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:18:58,481 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:19:58,516 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:20:58,665 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:21:59,006 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:22:59,425 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:23:59,842 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:25:00,257 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:26:00,673 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:27:01,037 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:28:01,391 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:29:01,697 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:30:02,028 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:31:02,367 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:32:02,519 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:33:02,850 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:34:03,182 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:35:03,525 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:36:03,858 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:37:04,301 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:38:04,723 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:39:05,140 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:40:05,475 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:41:06,178 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:42:06,329 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:43:06,669 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:44:07,019 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:45:07,434 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:46:07,750 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:47:07,900 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:48:08,228 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:49:08,589 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:50:09,006 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:51:09,422 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:52:09,759 [INFO] No new run yet (latest: 2026040314) — sleeping 60s
+2026-04-03 09:53:10,157 [INFO] NEW RUN DETECTED: 2026040315 (at 15:53:09 UTC)
+2026-04-03 09:53:11,870 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:53:11,870 [INFO] Run 2026040315 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:54:13,231 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:54:13,233 [INFO] Run 2026040315 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:55:14,473 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:55:14,475 [INFO] Run 2026040315 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:56:15,817 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:56:15,817 [INFO] Run 2026040315 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:57:16,990 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:57:16,991 [INFO] Run 2026040315 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:58:18,209 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:58:18,210 [INFO] Run 2026040315 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 09:59:19,422 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 09:59:19,422 [INFO] Run 2026040315 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 12:57:47,237 [INFO] AVAILABLE: Dew Point fh=09        at 18:57:36 UTC
+2026-04-03 12:57:47,294 [INFO] AVAILABLE: Dew Point fh=12        at 18:57:36 UTC
+2026-04-03 12:57:47,347 [INFO] AVAILABLE: Reflectivity fh=06     at 18:57:36 UTC
+2026-04-03 12:57:47,402 [INFO] AVAILABLE: Reflectivity fh=09     at 18:57:36 UTC
+2026-04-03 12:57:47,454 [INFO] AVAILABLE: Reflectivity fh=12     at 18:57:36 UTC
+2026-04-03 12:58:08,439 [WARNING] Sounding check error: HTTPSConnectionPool(host='i1o.pivotalweather.com', port=443): Read timed out. (read timeout=20)
+2026-04-03 12:58:08,440 [INFO] Run 2026040315 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-03 12:59:08,678 [INFO] AVAILABLE: Dew Point fh=06        at 18:59:08 UTC
+2026-04-03 12:59:10,861 [INFO] AVAILABLE: Sounding               at 18:59:08 UTC
+2026-04-03 12:59:10,861 [INFO] Run 2026040315: all resources confirmed.
+2026-04-03 12:59:10,892 [INFO] NEW RUN DETECTED: 2026040318 (at 18:59:10 UTC)
+2026-04-03 12:59:11,916 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 12:59:11,918 [INFO] Run 2026040318 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 13:00:12,987 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 13:00:12,989 [INFO] Run 2026040318 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 13:01:14,249 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 13:01:14,250 [INFO] Run 2026040318 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 13:02:14,306 [INFO] AVAILABLE: Dew Point fh=06        at 19:02:14 UTC
+2026-04-03 13:02:14,466 [INFO] AVAILABLE: Reflectivity fh=06     at 19:02:14 UTC
+2026-04-03 13:02:15,563 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 13:02:15,564 [INFO] Run 2026040318 — pending (5/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 13:03:17,797 [INFO] AVAILABLE: Sounding               at 19:03:15 UTC
+2026-04-03 13:03:17,797 [INFO] Run 2026040318 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 13:04:18,025 [INFO] Run 2026040318 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 13:05:18,082 [INFO] AVAILABLE: Dew Point fh=09        at 19:05:18 UTC
+2026-04-03 13:05:18,195 [INFO] AVAILABLE: Reflectivity fh=09     at 19:05:18 UTC
+2026-04-03 13:05:18,249 [INFO] Run 2026040318 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 13:06:18,365 [INFO] Run 2026040318 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 13:07:18,484 [INFO] Run 2026040318 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 13:08:18,597 [INFO] AVAILABLE: Reflectivity fh=12     at 19:08:18 UTC
+2026-04-03 13:08:18,598 [INFO] Run 2026040318 — pending (1/7): Dew Point fh=12
+2026-04-03 13:09:18,657 [INFO] AVAILABLE: Dew Point fh=12        at 19:09:18 UTC
+2026-04-03 13:09:18,657 [INFO] Run 2026040318: all resources confirmed.
+2026-04-03 13:09:18,785 [INFO] No new run yet (latest: 2026040318) — sleeping 60s
+2026-04-03 13:10:18,822 [INFO] No new run yet (latest: 2026040318) — sleeping 60s
+2026-04-03 13:11:18,858 [INFO] No new run yet (latest: 2026040318) — sleeping 60s
+2026-04-03 13:12:18,896 [INFO] No new run yet (latest: 2026040318) — sleeping 60s
+2026-04-03 13:13:18,942 [INFO] No new run yet (latest: 2026040318) — sleeping 60s
+2026-04-03 13:14:18,985 [INFO] No new run yet (latest: 2026040318) — sleeping 60s
+2026-04-03 13:15:19,019 [INFO] No new run yet (latest: 2026040318) — sleeping 60s
+2026-04-03 15:15:16,194 [INFO] NEW RUN DETECTED: 2026040320 (at 21:15:16 UTC)
+2026-04-03 15:15:16,481 [INFO] AVAILABLE: Dew Point fh=06        at 21:15:16 UTC
+2026-04-03 15:15:16,540 [INFO] AVAILABLE: Dew Point fh=09        at 21:15:16 UTC
+2026-04-03 15:15:16,599 [INFO] AVAILABLE: Dew Point fh=12        at 21:15:16 UTC
+2026-04-03 15:15:16,651 [INFO] AVAILABLE: Reflectivity fh=06     at 21:15:16 UTC
+2026-04-03 15:15:16,707 [INFO] AVAILABLE: Reflectivity fh=09     at 21:15:16 UTC
+2026-04-03 15:15:16,763 [INFO] AVAILABLE: Reflectivity fh=12     at 21:15:16 UTC
+2026-04-03 15:15:19,423 [INFO] AVAILABLE: Sounding               at 21:15:16 UTC
+2026-04-03 15:15:19,423 [INFO] Run 2026040320: all resources confirmed.
+2026-04-03 15:15:19,452 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:16:19,487 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:17:19,524 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:18:19,565 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:19:19,607 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:20:19,641 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:21:19,678 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:22:19,720 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:23:19,757 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:24:19,793 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:25:19,829 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:26:19,865 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:27:19,901 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:28:19,942 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:29:19,979 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:30:20,022 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:31:20,058 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:32:20,094 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:33:20,134 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:34:20,172 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 15:35:20,257 [INFO] No new run yet (latest: 2026040320) — sleeping 60s
+2026-04-03 18:00:58,810 [WARNING] Status API error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-03 18:00:58,811 [INFO] No new run yet (latest: unknown) — sleeping 60s
+2026-04-03 18:56:33,153 [INFO] NEW RUN DETECTED: 2026040400 (at 00:56:32 UTC)
+2026-04-03 18:56:34,795 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 18:56:34,795 [INFO] Run 2026040400 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 18:57:36,116 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 18:57:36,118 [INFO] Run 2026040400 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 18:58:37,463 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 18:58:37,464 [INFO] Run 2026040400 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 18:59:37,520 [INFO] AVAILABLE: Dew Point fh=06        at 00:59:37 UTC
+2026-04-03 18:59:37,677 [INFO] AVAILABLE: Reflectivity fh=06     at 00:59:37 UTC
+2026-04-03 18:59:39,778 [INFO] AVAILABLE: Sounding               at 00:59:37 UTC
+2026-04-03 18:59:39,778 [INFO] Run 2026040400 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 19:00:39,995 [INFO] Run 2026040400 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 19:01:40,212 [INFO] Run 2026040400 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 19:02:40,438 [INFO] Run 2026040400 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 19:03:40,503 [INFO] AVAILABLE: Dew Point fh=09        at 01:03:40 UTC
+2026-04-03 19:03:40,608 [INFO] AVAILABLE: Reflectivity fh=09     at 01:03:40 UTC
+2026-04-03 19:03:40,658 [INFO] Run 2026040400 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 19:04:40,773 [INFO] Run 2026040400 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 19:05:40,884 [INFO] Run 2026040400 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 19:06:40,995 [INFO] Run 2026040400 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 19:07:41,058 [INFO] AVAILABLE: Dew Point fh=12        at 01:07:41 UTC
+2026-04-03 19:07:41,110 [INFO] AVAILABLE: Reflectivity fh=12     at 01:07:41 UTC
+2026-04-03 19:07:41,110 [INFO] Run 2026040400: all resources confirmed.
+2026-04-03 19:07:41,271 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:08:41,305 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:09:41,339 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:10:41,780 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:11:42,116 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:12:42,294 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:13:42,644 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:14:43,025 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:15:43,406 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:16:43,752 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:17:44,109 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:18:44,290 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:19:44,658 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:20:45,109 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:21:45,470 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:22:45,835 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:23:45,869 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:24:46,222 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:25:46,576 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:26:46,934 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:27:47,274 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:28:47,695 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:29:48,112 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:30:48,631 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:31:49,047 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:32:49,463 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:33:49,831 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:34:50,193 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:35:50,378 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:36:50,822 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:37:51,238 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:38:51,601 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:39:51,958 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:40:52,411 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:41:52,780 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:42:53,219 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:43:53,673 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:44:54,359 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:45:54,394 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:46:54,432 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:47:54,473 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:48:54,506 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:49:54,543 [INFO] No new run yet (latest: 2026040400) — sleeping 60s
+2026-04-03 19:50:55,024 [INFO] NEW RUN DETECTED: 2026040401 (at 01:50:54 UTC)
+2026-04-03 19:50:56,779 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 19:50:56,780 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 19:51:58,113 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 19:51:58,115 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 19:52:59,348 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 19:52:59,349 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 19:54:00,592 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 19:54:00,593 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 19:55:01,947 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 19:55:01,948 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 19:56:04,650 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 19:56:04,650 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 19:57:06,047 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 19:57:06,048 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 19:58:07,288 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 19:58:07,289 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 19:59:08,613 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 19:59:08,613 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 20:00:09,845 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 20:00:09,846 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 20:01:11,193 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 20:01:11,193 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 20:02:12,553 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 20:02:12,554 [INFO] Run 2026040401 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 20:03:14,916 [INFO] AVAILABLE: Sounding               at 02:03:12 UTC
+2026-04-03 20:03:14,918 [INFO] Run 2026040401 — pending (6/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 20:04:14,978 [INFO] AVAILABLE: Dew Point fh=06        at 02:04:14 UTC
+2026-04-03 20:04:15,144 [INFO] AVAILABLE: Reflectivity fh=06     at 02:04:14 UTC
+2026-04-03 20:04:15,251 [INFO] Run 2026040401 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 20:05:15,476 [INFO] Run 2026040401 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 20:06:15,684 [INFO] Run 2026040401 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 20:07:15,896 [INFO] Run 2026040401 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 20:08:16,113 [INFO] Run 2026040401 — pending (4/7): Dew Point fh=09, Dew Point fh=12, Reflectivity fh=09, Reflectivity fh=12
+2026-04-03 20:09:16,435 [INFO] AVAILABLE: Dew Point fh=09        at 02:09:16 UTC
+2026-04-03 20:09:16,598 [INFO] AVAILABLE: Reflectivity fh=09     at 02:09:16 UTC
+2026-04-03 20:09:16,666 [INFO] Run 2026040401 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 20:10:16,792 [INFO] Run 2026040401 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 20:11:16,908 [INFO] Run 2026040401 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 20:12:17,424 [INFO] Run 2026040401 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 20:13:17,543 [INFO] Run 2026040401 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 20:14:17,664 [INFO] Run 2026040401 — pending (2/7): Dew Point fh=12, Reflectivity fh=12
+2026-04-03 20:15:17,724 [INFO] AVAILABLE: Dew Point fh=12        at 02:15:17 UTC
+2026-04-03 20:15:17,779 [INFO] AVAILABLE: Reflectivity fh=12     at 02:15:17 UTC
+2026-04-03 20:15:17,779 [INFO] Run 2026040401: all resources confirmed.
+2026-04-03 20:15:17,937 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:16:17,972 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:17:18,008 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:18:18,040 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:19:18,077 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:20:18,108 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:21:18,140 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:22:18,175 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:23:18,216 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:24:18,250 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:25:18,288 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:26:18,331 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:27:18,373 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:28:18,410 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:29:18,770 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:30:19,149 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:31:19,567 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:32:19,932 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:33:20,106 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:34:20,280 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:35:20,620 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:36:21,137 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:37:21,499 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:38:21,868 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:39:22,223 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:40:22,584 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:41:23,016 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:42:23,381 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:43:23,742 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:44:24,033 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:45:24,478 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:46:24,833 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:47:25,184 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:48:25,360 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:49:25,837 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:50:26,253 [INFO] No new run yet (latest: 2026040401) — sleeping 60s
+2026-04-03 20:51:26,670 [INFO] NEW RUN DETECTED: 2026040402 (at 02:51:26 UTC)
+2026-04-03 20:51:28,603 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 20:51:28,604 [INFO] Run 2026040402 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 20:52:29,852 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 20:52:29,853 [INFO] Run 2026040402 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-03 20:53:31,715 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-03 20:53:31,715 [INFO] Run 2026040402 — pending (7/7): Dew Point fh=06, Dew Point fh=09, Dew Point fh=12, Reflectivity fh=06, Reflectivity fh=09, Reflectivity fh=12, Sounding
+2026-04-04 03:37:52,135 [INFO] AVAILABLE: Dew Point fh=09        at 08:09:22 UTC
+2026-04-04 03:37:52,191 [INFO] AVAILABLE: Dew Point fh=12        at 08:09:22 UTC
+2026-04-04 03:37:52,247 [INFO] AVAILABLE: Reflectivity fh=06     at 08:09:22 UTC
+2026-04-04 03:37:52,311 [INFO] AVAILABLE: Reflectivity fh=09     at 08:09:22 UTC
+2026-04-04 03:37:52,364 [INFO] AVAILABLE: Reflectivity fh=12     at 08:09:22 UTC
+2026-04-04 03:49:40,905 [WARNING] Sounding check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-04 03:49:40,905 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 09:54:43,634 [WARNING] Sounding: make_sounding.php returned no image (error: true)
+2026-04-04 09:54:43,635 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:14:39,182 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:15:39,325 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:16:39,479 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:17:39,625 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:18:39,789 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:19:39,960 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:20:40,128 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:21:40,284 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:22:40,435 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:23:40,616 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:24:40,763 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:25:40,920 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:26:41,076 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:27:41,216 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:28:41,367 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:29:41,512 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:30:41,633 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:31:41,794 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:32:41,936 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:33:42,084 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:34:42,237 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:35:42,375 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:36:42,533 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:37:42,678 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:38:42,827 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:39:42,978 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:40:43,131 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:41:43,279 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:42:43,418 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:43:43,575 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 11:44:43,729 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:02:26,511 [WARNING] Sounding check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-04 12:02:26,513 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:03:26,951 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:04:27,088 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:34:09,253 [WARNING] Sounding check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-04 12:34:09,255 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:35:09,715 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:36:09,848 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:37:09,976 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:38:10,109 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:39:10,250 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:40:10,383 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:41:10,510 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:42:10,630 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:43:10,773 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:44:10,911 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 12:51:20,083 [WARNING] Sounding check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-04 12:51:20,085 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-04 18:35:22,309 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
+2026-04-05 00:01:28,561 [WARNING] Sounding check error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-04-05 00:01:28,562 [INFO] Run 2026040402 — pending (2/7): Dew Point fh=06, Sounding
