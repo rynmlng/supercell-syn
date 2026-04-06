@@ -152,17 +152,24 @@ def post_to_x(image_paths: list[str], dry_run: bool = False) -> None:
         media_ids.append(media.media_id)
         log.info("Uploaded media ID: %s", media.media_id)
 
-    try:
-        response = client.create_tweet(text=text, media_ids=media_ids)
-    except tweepy.errors.TweepyException as e:
-        log.error(
-            "create_tweet failed — %s: api_codes=%s api_messages=%s response_body=%s",
-            type(e).__name__,
-            getattr(e, "api_codes", None),
-            getattr(e, "api_messages", None),
-            e.response.text if hasattr(e, "response") else "(no response)",
-        )
-        raise
+    delays = [10, 30, 60]
+    for attempt, delay in enumerate(delays + [None], start=1):
+        try:
+            response = client.create_tweet(text=text, media_ids=media_ids)
+            break
+        except tweepy.errors.TweepyException as e:
+            log.error(
+                "create_tweet attempt %d failed — %s: api_codes=%s api_messages=%s response_body=%s",
+                attempt,
+                type(e).__name__,
+                getattr(e, "api_codes", None),
+                getattr(e, "api_messages", None),
+                e.response.text if hasattr(e, "response") else "(no response)",
+            )
+            if delay is None:
+                raise
+            log.info("Retrying in %ds...", delay)
+            time.sleep(delay)
     if response.data:
         log.info("Posted! ID: %s", response.data["id"])
     else:
