@@ -260,7 +260,7 @@ def main() -> None:
     available = [p for p in image_paths if p]
     if not available:
         log.error("No outlook images available — nothing to post")
-        return
+        sys.exit(1)
 
     log.info("Downloaded %d of 4 outlooks", len(available))
     post_to_x(image_paths, dry_run=args.dry_run)

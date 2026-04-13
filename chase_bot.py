@@ -13,6 +13,7 @@ import logging
 import math
 import os
 import re
+import sys
 import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -1716,7 +1717,7 @@ def main() -> None:
         log.info("=== Chase Bot starting (post-only, date=%s) ===", date_label)
         if not os.path.exists(image_path):
             log.error("No saved image found at %s", image_path)
-            return
+            sys.exit(1)
         with open(caption_path) as f:
             caption = f.read().strip()
         log.info("Loaded caption: %s", caption)
@@ -1746,16 +1747,16 @@ def main() -> None:
                 "=== Chase Bot exiting — HRRR status API unavailable (%s) ===",
                 run_info.get("error", "no verified run found"),
             )
-            return
+            sys.exit(1)
         if not sounding_service_available(latest_rh):
             log.error("=== Chase Bot exiting — sounding service unavailable ===")
-            return
+            sys.exit(1)
 
     image_path, caption = run_agent()
 
     if not image_path:
         log.error("Agent did not generate a map image — nothing to post")
-        return
+        sys.exit(1)
 
     if not caption:
         log.warning("Agent produced no caption — using default")
