@@ -1,0 +1,147 @@
+# Storm Chase Forecast — Monday, April 13, 2026
+
+## Model Run
+- **HRRR Init:** 2026-04-13 13Z
+- **Analysis Window:** fh=6 (19Z/2PM CDT) through fh=12 (01Z/8PM CDT)
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Enhanced Risk (Level 3/5)** centered over **central Iowa / southern Minnesota / northern Illinois** (~44.4°N, -91.2°W)
+- **Slight Risk** extends broadly across the upper Midwest from Nebraska to Wisconsin
+- **Marginal Risk** covers a large swath from the central Plains into the Ohio Valley
+- Thunderstorm area extends from Nebraska south through central Texas along the dry line corridor
+
+---
+
+## Dry Line Analysis (3 frames: fh=6, fh=9, fh=12)
+
+A textbook dry line is evident running **N-S from central Nebraska through central Kansas into central Oklahoma/Texas**:
+
+- **East of the line:** Dew points **60-69°F** (rich Gulf of Mexico moisture return)
+- **West of the line:** Dew points **7-30°F** (extremely dry continental air)
+- **Gradient:** An extraordinary **30-50°F drop** in dew points over ≤75 miles, far exceeding the 20-30°F threshold
+- **Northern extension:** The moisture boundary wraps northward into **western Iowa / eastern Nebraska** (~95-97°W at 42°N latitude), placing it directly in the Enhanced risk area
+- **Movement:** Quasi-stationary to slowly retreating westward through the afternoon window
+- **Eastern edge of dry line at target latitude (~42°N):** Approximately **-95°W to -96°W**
+
+The dry line's northern extension into western/central Iowa is the prime focus area where supercell initiation is expected.
+
+---
+
+## Reflectivity Analysis
+
+### fh=6 (19Z / ~2 PM CDT)
+- Early convective initiation visible in **western-central Iowa** near the Iowa-Nebraska border
+- Cells appearing along/near the moisture boundary with reflectivities reaching 40-50 dBZ
+- Scattered activity also developing across the northern Plains (MT/ND border) — not the primary target
+- **Storm mode: Discrete cells** — no QLCS structure evident
+
+### fh=9 (22Z / ~5 PM CDT)
+- **Strong convective cores (≥50 dBZ, orange/red returns)** have developed in **central Iowa** (~42°N, -93.5°W to -94°W)
+- Cells remain **discrete and isolated** — excellent supercell structure
+- Convection is positioned right along the eastern edge of the moisture gradient, exactly where convergence along the dry line forces ascent
+- No QLCS formation — this is a **discrete supercell regime**
+- Additional scattered convection across western Iowa but the central Iowa cluster is the primary target
+
+---
+
+## Sounding Analysis (3 locations at fh=9 / 22Z)
+
+### Location 1: 42.0°N, 93.5°W (Central Iowa — near Ames)
+| Parameter | Value |
+|---|---|
+| MUCAPE | 4213 J/kg |
+| CINH | -5 J/kg (uncapped) |
+| LCL | 563 m |
+| SFC-1km Shear | 20 kt |
+| SFC-3km Shear | 29 kt |
+| Effective Shear | 31 kt |
+| STP (CIN) | 2.2 |
+| Critical Angle | 84° |
+| Bunkers RM | 252°/26 kt |
+| SARS TOR | 83% |
+| Hazard Type | **TOR** |
+| Supercell Composite | 13.6 |
+
+### Location 2: 42.5°N, 94.0°W (NW of Des Moines — near Fort Dodge)
+| Parameter | Value |
+|---|---|
+| MUCAPE | 4101 J/kg |
+| CINH | 0 J/kg (zero cap) |
+| LCL | 878 m |
+| SFC-1km Shear | 17 kt |
+| SFC-3km Shear | 34 kt |
+| Effective Shear | 31 kt |
+| STP (CIN) | 2.0 |
+| Critical Angle | 90° |
+| Bunkers RM | 250°/27 kt |
+| SARS TOR | 82% |
+| Hazard Type | **TOR** |
+| Supercell Composite | 12.3 |
+
+### Location 3: 41.5°N, 93.0°W (Des Moines area)
+| Parameter | Value |
+|---|---|
+| MUCAPE | 3659 J/kg |
+| CINH | -1 J/kg (uncapped) |
+| LCL | 736 m |
+| SFC-1km Shear | 19 kt |
+| SFC-3km Shear | 23 kt |
+| Effective Shear | 28 kt |
+| STP (CIN) | 1.7 |
+| Critical Angle | 89° |
+| Bunkers RM | 252°/25 kt |
+| SARS TOR | 100% |
+| Hazard Type | **TOR** |
+| Supercell Composite | 9.0 |
+
+### Sounding Synthesis
+- **Bunkers Right Motion (consensus):** 252°/26 kt (FROM 252°, storms propagate ENE toward ~72°)
+- **CAPE:** Extreme — 3600-4200 J/kg with essentially **zero CIN**. The atmosphere is uncapped; explosive convective initiation expected.
+- **Shear:** 28-34 kt effective bulk shear — solidly in the supercell range. SFC-1km shear of 17-20 kt supports low-level mesocyclone development.
+- **Critical Angle:** 84-90° — near-ideal values for tornadic supercells (90° is theoretically optimal).
+- **STP:** 1.7-2.2 — all three locations exceed the significant tornado threshold of 1.0.
+- **SARS:** 82-100% tornado analog match. All soundings flag **TOR** as primary hazard.
+- **Hodograph:** Classic curved/kinked hodograph with strong low-level veering (southerly at surface, southwesterly at 850 hPa, westerly at 500 hPa). The hodograph shape strongly favors right-moving supercells.
+- **Low-Level Jet:** Pronounced 850-925 hPa southerly jet enhancing moisture transport and low-level shear.
+- **PW:** 1.01-1.07 inches — adequate moisture for heavy precipitation.
+- **LCL:** 563-878 m — relatively low LCLs favoring tornadogenesis (sub-1000 m is favorable).
+
+---
+
+## Chase Target Recommendation
+
+### Hatch Area
+- **Location:** 42.0°N, 93.5°W — **Central Iowa (near Ames/Story County)**
+- **Rationale:** This is where discrete supercells are initiating along the dry line's northern extension, within the SPC Enhanced risk area. Extreme CAPE (~4200 J/kg), zero CIN, STP >2, and near-90° critical angles create a textbook tornadic supercell environment. The HRRR shows discrete cells firing here by 22Z with ≥50 dBZ cores.
+
+### Positioning Location
+- **Location:** 42.76°N, 90.09°W — **SW Wisconsin / NW Illinois (near Dubuque)**
+- **Computation:** BRM speed (26 kt) × 7 ≈ 182 miles along the storm motion vector (toward 72° / ENE)
+- **Rationale:** Position well downstream (ENE) of the hatch area along the Bunkers Right storm motion vector. This allows chasers to intercept storms as they mature and propagate ENE through the afternoon.
+
+### Bunkers Right Storm Motion Vector
+- **FROM:** 252° (WSW)
+- **TOWARD:** 72° (ENE)
+- **Speed:** 26 knots
+
+---
+
+## Confidence Assessment
+- **Confidence: HIGH**
+- All ingredients are present and aligned: extreme instability (CAPE >4000), zero cap, strong low-level and deep-layer shear, curved hodographs, near-perfect critical angles, and discrete storm mode along a well-defined dry line within the SPC Enhanced risk area.
+- SARS analog matches strongly favor significant tornadoes (82-100% TOR match).
+- The primary risk is that storms may eventually grow upscale into a line later in the evening (after the daytime chase window), but the afternoon discrete phase (19Z-01Z) is the prime targeting window.
+- **This is a HIGH-END severe weather day with significant tornado potential across central Iowa.**
+
+---
+
+## Timing
+- **First cells:** ~19Z (2 PM CDT) — initial discrete supercells along the dry line in western/central Iowa
+- **Peak activity:** ~22Z (5 PM CDT) — mature supercells tracking ENE through central Iowa
+- **Chase window:** 19Z-01Z (2-8 PM CDT)
+
+---
+
+*Analysis generated from HRRR 13Z 2026-04-13 run. Map saved to chase_2026-04-13.png.*
