@@ -149,30 +149,18 @@ def _latlon_to_pixel(lat: float, lon: float, img_w: int, img_h: int) -> tuple[in
 # Tool implementations
 # ---------------------------------------------------------------------------
 def _tool_get_available_runs(_inp: dict) -> dict:
-    url = "https://www.pivotalweather.com/status_model.php?m=hrrr&s=1"
-    xhr_headers = {
-        "Referer": "https://www.pivotalweather.com/",
-        "X-Requested-With": "XMLHttpRequest",
-        "Accept": "application/json, text/javascript, */*; q=0.01",
-    }
-    last_exc: Exception | None = None
-    for attempt in range(1, 4):
-        try:
-            r = _session.get(url, headers=xhr_headers, timeout=15)
-            r.raise_for_status()
-            runs = sorted(r.json(), key=lambda x: x["rh"], reverse=True)
-            break
-        except Exception as exc:
-            last_exc = exc
-            log.warning("Status API attempt %d/3 failed: %s", attempt, exc)
-            if attempt < 3:
-                time.sleep(5 * attempt)
-    else:
-        return {"error": str(last_exc)}
+    # The Pivotal status API returns an empty body from CI/server IPs, so derive
+    # candidate runs from the current UTC time instead. HRRR publishes fh=6
+    # roughly 50–60 min after the run hour; walking back 8 hours covers any lag.
+    now = datetime.now(timezone.utc)
+    candidates = []
+    for h in range(8):
+        run_time = now - timedelta(hours=h)
+        rh = run_time.strftime("%Y%m%d%H")
+        max_fh = 48 if run_time.hour in (0, 12) else 18
+        candidates.append({"rh": rh, "max_fh": max_fh})
 
-    # Walk down the list until we find a run whose fh=6 dew point image is actually
-    # published — the status API can report a run before CDN images are available.
-    for run in runs[:6]:
+    for run in candidates:
         probe_url = (
             f"https://m2o.pivotalweather.com/maps/models/hrrr"
             f"/{run['rh']}/006/sfctd-imp.conus.png"
@@ -183,10 +171,8 @@ def _tool_get_available_runs(_inp: dict) -> dict:
                 log.info("Verified run %s (fh=6 image available)", run["rh"])
                 return {
                     "latest_rh": run["rh"],
-                    "max_fh": run["fh"],
-                    "recent_runs": [
-                        {"rh": x["rh"], "max_fh": x["fh"]} for x in runs[:6]
-                    ],
+                    "max_fh": run["max_fh"],
+                    "recent_runs": candidates[:6],
                 }
             log.warning(
                 "Run %s fh=6 not yet available (%s) — trying older run",
