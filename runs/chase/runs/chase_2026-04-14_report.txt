@@ -1,0 +1,143 @@
+# Chase Forecast Analysis — Tuesday, April 14, 2026
+
+## Model Run
+- **HRRR Init:** 2026-04-14 12Z
+- **Forward hours analyzed:** fh=6 (18Z), fh=7 (19Z), fh=9 (21Z), fh=12 (00Z)
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Enhanced risk (Level 3)** across eastern Kansas, Missouri, into Illinois/Indiana
+- **Slight risk (Level 2)** extends from Oklahoma/Texas through the Ohio Valley and into the Mid-Atlantic
+- A second **Enhanced risk** area covers central Oklahoma (isolated pocket)
+- The primary threat corridor follows the dry line/cold front from south-central Kansas northeastward into the lower Great Lakes
+
+---
+
+## Dry Line Analysis
+
+Three dew point frames (fh=6, 9, 12) confirm a well-defined dry line:
+
+| Time (fh/valid) | Dry Line Position | West Side Td | East Side Td | Gradient |
+|---|---|---|---|---|
+| fh=6 / 18Z (1 PM CDT) | ~98-99°W in KS | 20-33°F | 60-69°F | ~30°F over 50 mi |
+| fh=9 / 21Z (4 PM CDT) | ~97-98°W in KS | 16-30°F | 58-67°F | ~30°F over 50 mi |
+| fh=12 / 00Z (7 PM CDT) | ~96-97°W in KS | 17-29°F | 62-67°F | ~35°F over 60 mi |
+
+The dry line is oriented roughly N-S through central Kansas, slowly advancing eastward through the afternoon. The sharpest moisture gradient is in the 37-39°N latitude band across south-central to central Kansas. East of the line, dew points reach into the upper 60s (approaching 70°F in south-central OK/TX), providing rich low-level moisture.
+
+---
+
+## Reflectivity / Convective Mode Analysis
+
+- **fh=6 (18Z/1 PM CDT):** Early convective initiation along the dry line in western/central Kansas (~38-39°N, 99-100°W). Cells are mostly weak (25-40 dBZ) with a few approaching 45-50 dBZ. The convection is scattered but forming a loose line.
+- **fh=7 (19Z/2 PM CDT):** Convection intensifying along the dry line. A developing convective line runs from NW Kansas southeastward. The southern extent (~37.5°N) shows more discrete, isolated cells with better separation from the main line.
+- **fh=9 (21Z/4 PM CDT):** The northern portion of the convection becomes more linear (QLCS tendency), but the **southern tail** in south-central Kansas (~37-38°N, ~98°W) maintains discrete cell structure. These tail-end cells are the prime supercell targets. Additional scattered cells firing in the warm sector ahead of the line.
+
+**Storm mode assessment:** The setup favors a QLCS in the northern segment (NW Kansas through NE Kansas) with **discrete supercells at the southern tail** of the line in south-central Kansas. This is a classic "tail-end Charlie" pattern — the most favorable storm mode for isolated, photogenic supercells.
+
+---
+
+## Sounding Analysis
+
+Three soundings were analyzed at fh=9 (21Z/4 PM CDT):
+
+### Location 1: 37.82°N, 98.5°W (near Pratt, KS — dry side)
+- Surface Td: 39°F — ON the dry line / dry side
+- CAPE: SFC=220, ML=69, MU=220 J/kg
+- SRH 0-1km: 48 m²/s², 0-3km: 79 m²/s²
+- Bunkers Right: 247°/31 kt
+- 0-6km shear: 47 kt
+- Critical Angle: 62°
+- **Assessment:** Good shear but insufficient moisture/CAPE. Too dry for sustained convection.
+
+### Location 2: 38.46°N, 99.02°W (near Hays, KS — deep dry side)
+- Surface Td: 33°F — well west of dry line
+- CAPE: SFC=133, ML=40, MU=133 J/kg
+- SRH 0-1km: 43 m²/s², 0-3km: 72 m²/s²
+- Bunkers Right: 247°/38 kt
+- 0-6km shear: 47 kt
+- **Assessment:** Too far west. Minimal instability. Not viable.
+
+### ⭐ Location 3: 37.01°N, 97.98°W (near Wellington/Wichita, KS — moist side)
+- Surface Td: **55°F**, T: 77°F — on the moist side of the dry line
+- CAPE: SFC=186, ML=168, **MU=292 J/kg** — best instability of the three
+- CINH: SFC=-282 (capped), FCST=0 (cap eroding by peak heating)
+- **SRH 0-1km: 176 m²/s²** — excellent for tornadogenesis
+- **SRH 0-3km: 208 m²/s²** — strong mesocyclone potential
+- 0-6km bulk shear: 38 kt
+- Effective shear (EBWD): 38 kt
+- **BRN Shear: 49 m²/s²** — squarely in supercell range (40-100)
+- Bunkers Right: **261°/35 kt** (storms move toward ~081° at 35 kt)
+- **Critical Angle: 64°** — excellent for low-level rotation
+- LCL: 1532m, LFC: 2880m
+- PW: 1.12 inches — good moisture depth
+- MMP: 1.0 — favorable mesocyclone maintenance probability
+- **SARS: 4 loose matches, 50% TOR** — strong tornadic supercell analogs
+- **STP (fixed): 0.1**, with small but nonzero EF2+ tornado probabilities
+- Storm Slinky: tight, elongated — classic supercell updraft signature
+- **Low-level jet:** Strong veering wind profile from SSW at surface through SW at 850 hPa to WSW aloft, providing excellent directional shear and warm air advection
+
+**Assessment:** This is the prime location. Outstanding low-level shear (SRH 0-1km = 176), veering hodograph, favorable critical angle (64°), and sufficient instability (MU CAPE 292, increasing as cap erodes through the afternoon). The SARS 50% TOR analog is significant. This sounding strongly supports discrete supercell development with tornado potential.
+
+---
+
+## Hatch Area & Positioning
+
+### Hatch Area: 37.5°N, 98.2°W — South-central Kansas (near Pratt/Kingman)
+- Located along the dry line where discrete cells are initiating at the southern tail of the developing convective line
+- At the intersection of the dry line moisture gradient and the Enhanced risk area
+- Adequate CAPE on the moist (east) side with excellent low-level shear
+- Cap is eroding through peak heating, allowing discrete initiation rather than explosive linear development
+
+### Positioning Location: ~38.0°N, 93.8°W — West-central Missouri (near Nevada/Vernon County)
+- Computed from BRM 261°/35 kt × 7 hours ≈ 245 miles northeast (toward 081°)
+- This places the chaser downstream in the storm's path with adequate lead time
+- In the Slight-to-Enhanced risk transition zone where storms will mature
+
+### Bunkers Right Storm Motion Vector
+- **Direction (FROM):** 261° (WSW)
+- **Direction (TOWARD):** 081° (ENE)  
+- **Speed:** 35 knots
+- Storms will track from WSW to ENE at ~40 mph
+
+---
+
+## Confidence & Risk Assessment
+
+**Confidence: MODERATE-HIGH**
+
+**Favorable factors:**
+- Well-defined dry line with 30°F+ dew point gradient
+- SPC Enhanced risk overlapping the target area
+- Exceptional low-level shear (SRH 0-1km = 176 m²/s²)
+- Classic tail-end Charlie storm mode (discrete supercells at southern end of QLCS)
+- SARS 50% TOR analogs
+- Favorable critical angle (64°) and veering hodograph
+- Cap eroding through peak heating (FCST CINH = 0)
+
+**Concerns:**
+- Surface-based CAPE is modest (186-292 J/kg) — may limit updraft intensity
+- CINH is initially strong (-282 J/kg SFC) — delayed initiation possible
+- LCL at 1532m is moderate — not ideal for tornado efficiency (prefer <1000m)
+- LFC at 2880m is high — parcels need significant lift to reach free convection
+- Convection could become more linear if cells merge
+
+**Bottom line:** A classic southern Plains spring severe weather setup with a well-defined dry line and excellent wind shear. The modest CAPE is the main limiter, but the outstanding low-level shear (SRH 176) compensates significantly. Discrete supercells at the tail end of the developing QLCS in south-central Kansas are the prime targets, with tornado potential if cells can tap the richer moisture east of the dry line.
+
+---
+
+## Summary
+
+| Parameter | Value |
+|---|---|
+| **Date** | April 14, 2026 |
+| **SPC Risk** | Enhanced (Level 3) |
+| **Hatch Area** | 37.5°N, 98.2°W (south-central Kansas) |
+| **Positioning** | 38.0°N, 93.8°W (west-central Missouri) |
+| **BRM** | 261°/35 kt (toward 081°) |
+| **Storm Mode** | Discrete supercells at tail of QLCS |
+| **Key Shear** | SRH 0-1km: 176 m²/s², 0-6km: 38 kt |
+| **CAPE** | MU 292 J/kg (modest) |
+| **Tornado Risk** | Moderate (SARS 50% TOR, STP 0.1) |
+| **Confidence** | Moderate-High |

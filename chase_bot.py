@@ -365,6 +365,12 @@ def _tool_get_sounding(inp: dict) -> list:
             soup = BeautifulSoup(r.text, "html.parser")
             token_div = soup.find(id="snd_token")
             if not token_div or not token_div.get("data-token"):
+                log.warning(
+                    "snd_token missing — HTTP %s, body length %d, snippet: %r",
+                    r.status_code,
+                    len(r.text),
+                    r.text[:300],
+                )
                 raise ValueError("snd_token missing or empty")
             token = token_div["data-token"]
 
@@ -1626,6 +1632,12 @@ def sounding_service_available(rh: str) -> bool:
             if token_div and token_div.get("data-token"):
                 log.info("Sounding pre-flight: service available (rh=%s)", rh)
                 return True
+            log.warning(
+                "snd_token missing — HTTP %s, body length %d, snippet: %r",
+                r.status_code,
+                len(r.text),
+                r.text[:300],
+            )
             raise ValueError("snd_token missing or empty")
         except Exception as exc:
             if attempt < 3:
