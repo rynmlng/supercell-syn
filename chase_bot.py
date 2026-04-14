@@ -1433,6 +1433,13 @@ CRITICAL CONSTRAINTS:
 - The hatch area must be near the dry line. Supercells initiate at the moisture \
   boundary where warm moist air meets drier air aloft. A hatch area deep in the warm \
   sector (far from the dry line) is wrong.
+- REFLECTIVITY ACCURACY: Read dBZ values strictly from the colorscale legend embedded \
+  in each reflectivity image. The colorscale runs left-to-right: blue/teal ≈ 10–20 dBZ, \
+  green ≈ 20–35 dBZ, yellow ≈ 35–45 dBZ, orange ≈ 45–50 dBZ, red ≈ 50–55 dBZ, \
+  dark red/magenta ≥ 55 dBZ. Do NOT infer or estimate dBZ values beyond what the \
+  colors in the image confirm. If the strongest pixels in an area are green, the \
+  maximum is ~35 dBZ — do not report 45–50 dBZ. Report honestly even if no cells \
+  reach significant thresholds.
 
 Follow this process in order:
 1. Call get_available_runs() to find the latest HRRR run.
@@ -1443,11 +1450,16 @@ Follow this process in order:
    of the dry line's eastern edge (where moisture is still high). If you cannot \
    successfully fetch at least 3 dew point frames, call save_analysis_report() with \
    the reason and stop — do not proceed to generate a map.
-4. Call get_reflectivity() at fh=6 to find the FIRST isolated high-reflectivity cells \
-   (≥50 dBZ) appearing near the dry line during early afternoon. These "poppers" are \
-   the prime supercell candidates. If a QLCS is present, note whether discrete cells \
-   exist at its southern tip (bookend supercell potential) or independently near the \
-   dry line — prefer those over cells embedded in the middle of the linear structure.
+4. Call get_reflectivity() at fh=6 to scan for convective cells near the dry line \
+   during early afternoon. Read the colorscale legend in the image to determine actual \
+   dBZ values — do not assume cells are stronger than the colors show. Note the \
+   strongest cells present, their approximate dBZ, and whether they are isolated or \
+   linear. Cells ≥50 dBZ (orange/red) are prime supercell candidates; cells that are \
+   only green (≤35 dBZ) or yellow (≤45 dBZ) are weak and should be reported as such. \
+   If no significant convection is present in the target area, say so explicitly. If a \
+   QLCS is present, note whether discrete cells exist at its southern tip (bookend \
+   supercell potential) or independently near the dry line — prefer those over cells \
+   embedded in the middle of the linear structure.
 5. Call get_sounding() at 2–3 lat/lon points near the discrete cells found in step 4 \
    (not in the QLCS). Assess the Bunkers Right Motion Vector ('RM'), low-level jet \
    at 850–925 hPa, and hodograph shape for supercell potential.
