@@ -150,10 +150,15 @@ def _latlon_to_pixel(lat: float, lon: float, img_w: int, img_h: int) -> tuple[in
 # ---------------------------------------------------------------------------
 def _tool_get_available_runs(_inp: dict) -> dict:
     url = "https://www.pivotalweather.com/status_model.php?m=hrrr&s=1"
+    xhr_headers = {
+        "Referer": "https://www.pivotalweather.com/",
+        "X-Requested-With": "XMLHttpRequest",
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+    }
     last_exc: Exception | None = None
     for attempt in range(1, 4):
         try:
-            r = _session.get(url, timeout=15)
+            r = _session.get(url, headers=xhr_headers, timeout=15)
             r.raise_for_status()
             runs = sorted(r.json(), key=lambda x: x["rh"], reverse=True)
             break
