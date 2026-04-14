@@ -20,6 +20,7 @@ from datetime import datetime, timedelta, timezone
 from io import BytesIO
 
 import anthropic
+import numpy as np
 import requests
 import tweepy
 from bs4 import BeautifulSoup
@@ -82,6 +83,89 @@ PIVOTAL_HEADERS = {
 # Pivotal Weather CONUS map bounds (from their page JS)
 CONUS_LAT_MIN, CONUS_LAT_MAX = 21.0, 59.01
 CONUS_LON_MIN, CONUS_LON_MAX = -129.0, -64.0
+
+# Reflectivity image layout (1100x850 px, empirically calibrated)
+# Map area occupies the full width; colorscale bar is at y≈840
+_REFMAP_IMG_W = 1100
+_REFMAP_IMG_H = 850
+_REFMAP_TOP_Y = 105  # first pixel row of the map area
+_REFMAP_BOT_Y = 818  # last pixel row of the map area
+_REFMAP_CS_Y = 840  # colorscale bar row
+
+# Colorscale LUT: (dBZ_lower_bound, (R, G, B))
+# Sampled from the embedded colorscale bar; each band spans 5 dBZ
+_REFMAP_DBZ_LUT = [
+    (10, (216, 226, 243)),
+    (15, (138, 168, 218)),
+    (20, (59, 109, 193)),
+    (25, (15, 80, 95)),
+    (30, (118, 155, 124)),
+    (35, (255, 243, 113)),
+    (40, (246, 211, 90)),
+    (45, (228, 148, 45)),
+    (50, (210, 84, 0)),
+    (55, (161, 2, 5)),
+    (60, (160, 55, 175)),
+    (65, (97, 18, 147)),
+]
+_REFMAP_DBZ_COLORS = [(dbz, np.array(rgb, dtype=float)) for dbz, rgb in _REFMAP_DBZ_LUT]
+
+
+def _latlon_to_refpixel(lat: float, lon: float) -> tuple[int, int]:
+    """Convert lat/lon to pixel (x, y) in the reflectivity image."""
+    x = int((lon - CONUS_LON_MIN) / (CONUS_LON_MAX - CONUS_LON_MIN) * _REFMAP_IMG_W)
+    y = int(
+        _REFMAP_TOP_Y
+        + (CONUS_LAT_MAX - lat)
+        / (CONUS_LAT_MAX - CONUS_LAT_MIN)
+        * (_REFMAP_BOT_Y - _REFMAP_TOP_Y)
+    )
+    return x, y
+
+
+def _pixel_to_dbz(arr, x: int, y: int) -> int | None:
+    """Return the dBZ value at pixel (x, y), or None if no data."""
+    if not (0 <= x < _REFMAP_IMG_W and _REFMAP_TOP_Y <= y < _REFMAP_BOT_Y):
+        return None
+    rgb = arr[y, x, :3].astype(float)
+    if all(v > 240 for v in rgb):
+        return None  # white = no reflectivity
+    # Reject achromatic pixels (state borders, text, map frame) — real reflectivity
+    # colors are distinctly chromatic; borders are near-gray (R≈G≈B)
+    if rgb.max() - rgb.min() < 20:
+        return None
+    dists = [np.linalg.norm(rgb - c) for _, c in _REFMAP_DBZ_COLORS]
+    return _REFMAP_DBZ_COLORS[int(np.argmin(dists))][0]
+
+
+def _scan_reflectivity_array(
+    arr,
+    lat_min: float,
+    lat_max: float,
+    lon_min: float,
+    lon_max: float,
+    step_deg: float = 0.5,
+    threshold_dbz: int = 20,
+) -> list[dict]:
+    """Scan the reflectivity image array over a lat/lon grid.
+
+    Returns list of dicts {lat, lon, dbz} for all points ≥ threshold_dbz,
+    sorted descending by dbz.
+    """
+    results = []
+    lat = lat_max
+    while lat >= lat_min:
+        lon = lon_min
+        while lon <= lon_max:
+            x, y = _latlon_to_refpixel(lat, lon)
+            dbz = _pixel_to_dbz(arr, x, y)
+            if dbz is not None and dbz >= threshold_dbz:
+                results.append({"lat": round(lat, 1), "lon": round(lon, 1), "dbz": dbz})
+            lon += step_deg
+        lat -= step_deg
+    results.sort(key=lambda r: r["dbz"], reverse=True)
+    return results
+
 
 MAX_AGENT_TURNS = 30
 
@@ -311,6 +395,33 @@ def _tool_get_reflectivity(inp: dict) -> list:
             }
         ]
     _save_daily_image(b64, f"reflectivity_fh{fh:02d}")
+
+    # Programmatic pixel scan — full CONUS at 0.5° resolution, threshold ≥20 dBZ
+    img_bytes = base64.b64decode(b64)
+    arr = np.array(Image.open(BytesIO(img_bytes)))
+    hits = _scan_reflectivity_array(
+        arr,
+        lat_min=CONUS_LAT_MIN,
+        lat_max=CONUS_LAT_MAX,
+        lon_min=CONUS_LON_MIN,
+        lon_max=CONUS_LON_MAX,
+        step_deg=0.5,
+        threshold_dbz=20,
+    )
+    if hits:
+        scan_lines = [
+            f"  {h['lat']}°N, {h['lon']}°W: {h['dbz']} dBZ" for h in hits[:40]
+        ]
+        scan_text = (
+            f"PIXEL SCAN — rh={rh} fh={fh} (≥20 dBZ returns, sorted by intensity):\n"
+            + "\n".join(scan_lines)
+            + (f"\n  ... and {len(hits)-40} more points" if len(hits) > 40 else "")
+        )
+    else:
+        scan_text = (
+            f"PIXEL SCAN — rh={rh} fh={fh}: No returns ≥20 dBZ anywhere in CONUS."
+        )
+
     return [
         {
             "type": "image",
@@ -320,9 +431,10 @@ def _tool_get_reflectivity(inp: dict) -> list:
             "type": "text",
             "text": (
                 f"HRRR Composite Reflectivity (dBZ) — rh={rh}, fh={fh}h. "
-                "Look for high reflectivities (≥50 dBZ, warm colors) near the dry line. "
-                "Large, isolated cells suggest supercell potential. "
-                "Note the lat/lon of the most promising convective cores."
+                "The image is for visual storm-mode context only. "
+                "Use the PIXEL SCAN below for accurate location and intensity data — "
+                "do NOT report dBZ values or locations that are not in this scan.\n\n"
+                + scan_text
             ),
         },
     ]
@@ -664,8 +776,10 @@ TOOLS = [
         "name": "get_reflectivity",
         "description": (
             "Fetch the Pivotal Weather HRRR Composite Reflectivity (dBZ) chart. "
-            "Use this to find high-reflectivity convective cores (≥50 dBZ) near "
-            "the dry line. Large, isolated cells indicate supercell potential."
+            "Returns both an image (for visual storm-mode context) and a PIXEL SCAN — "
+            "a programmatic list of every lat/lon point with ≥20 dBZ, sorted by intensity. "
+            "Use the pixel scan as ground truth for all location and dBZ claims. "
+            "Do NOT report returns at locations absent from the pixel scan."
         ),
         "input_schema": {
             "type": "object",
@@ -1451,15 +1565,14 @@ Follow this process in order:
    successfully fetch at least 3 dew point frames, call save_analysis_report() with \
    the reason and stop — do not proceed to generate a map.
 4. Call get_reflectivity() at fh=6 to scan for convective cells near the dry line \
-   during early afternoon. Read the colorscale legend in the image to determine actual \
-   dBZ values — do not assume cells are stronger than the colors show. Note the \
-   strongest cells present, their approximate dBZ, and whether they are isolated or \
-   linear. Cells ≥50 dBZ (orange/red) are prime supercell candidates; cells that are \
-   only green (≤35 dBZ) or yellow (≤45 dBZ) are weak and should be reported as such. \
-   If no significant convection is present in the target area, say so explicitly. If a \
-   QLCS is present, note whether discrete cells exist at its southern tip (bookend \
-   supercell potential) or independently near the dry line — prefer those over cells \
-   embedded in the middle of the linear structure.
+   during early afternoon. The tool returns a PIXEL SCAN listing every point with \
+   ≥20 dBZ — use this as ground truth. Only report returns that appear in the scan; \
+   do not infer returns from the image alone. Note the strongest cells (≥50 dBZ), \
+   their lat/lon from the scan, and whether they are isolated or part of a line \
+   (use the image for storm-mode pattern context). If the scan shows nothing ≥20 dBZ \
+   in the target area, say so explicitly. Scan additional forward hours (fh=7, fh=9) \
+   as needed. If a QLCS is present, note whether discrete cells exist at its southern \
+   tip (bookend supercell potential) or independently near the dry line.
 5. Call get_sounding() at 2–3 lat/lon points near the discrete cells found in step 4 \
    (not in the QLCS). Assess the Bunkers Right Motion Vector ('RM'), low-level jet \
    at 850–925 hPa, and hodograph shape for supercell potential.
