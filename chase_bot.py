@@ -202,6 +202,26 @@ def _fetch_image_b64(url: str, extra_headers: dict | None = None) -> str | None:
 # ---------------------------------------------------------------------------
 # Geo math
 # ---------------------------------------------------------------------------
+def _latlon_to_state(lat: float, lon: float) -> str:
+    """Return the US state name for a lat/lon using Natural Earth polygons."""
+    try:
+        import cartopy.io.shapereader as shpreader
+        import shapely.geometry as sgeom
+
+        shpfile = shpreader.natural_earth(
+            resolution="10m", category="cultural", name="admin_1_states_provinces"
+        )
+        point = sgeom.Point(lon, lat)
+        for record in shpreader.Reader(shpfile).records():
+            if record.attributes.get("admin") == "United States of America":
+                if record.geometry.contains(point):
+                    return record.attributes["name"]
+        return "unknown region"
+    except Exception:
+        return "unknown region"
+
+
+# ---------------------------------------------------------------------------
 def _destination_point(
     lat: float, lon: float, bearing_deg: float, distance_miles: float
 ) -> tuple[float, float]:
@@ -723,7 +743,11 @@ def _tool_generate_annotated_map(inp: dict) -> dict:
     return {
         "image_path": out_path,
         "hatch_area": {"lat": hatch_lat, "lon": hatch_lon},
-        "positioning_location": {"lat": round(pos_lat, 4), "lon": round(pos_lon, 4)},
+        "positioning_location": {
+            "lat": round(pos_lat, 4),
+            "lon": round(pos_lon, 4),
+            "state": _latlon_to_state(pos_lat, pos_lon),
+        },
         "storm_vector": {"direction_deg": vector_dir, "speed_knots": vector_spd},
     }
 
@@ -1585,7 +1609,9 @@ Follow this process in order:
    (≤240 characters):
    "Today, Chase recommends positioning in {positioning region}. Hatch area near \
    {hatch region}. SPC {risk} risk with {storm mode}. BRM {dir}°/{spd}kt."
-   - {positioning region} and {hatch region} are plain English place names (e.g. "western Kentucky", "central Arkansas")
+   - {positioning region} must use the state name returned by generate_annotated_map() \
+     (e.g. if the tool returns "state": "Missouri", say "western Missouri" not "eastern Kansas"). \
+     {hatch region} is a plain English place name (e.g. "central Arkansas")
    - {risk} = Enhanced / Moderate / High
    - {storm mode} = brief description (e.g. "discrete supercells firing ahead of the QLCS")
    - BRM direction is the FROM direction (wind convention), speed in knots
