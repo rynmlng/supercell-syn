@@ -139,17 +139,26 @@ def run(start: date, end: date, output_path: str):
         current += timedelta(days=1)
         time.sleep(0.3)  # be polite to SPC servers
 
-    with open(output_path, "w", newline="") as f:
+    import os
+
+    file_exists = os.path.isfile(output_path) and os.path.getsize(output_path) > 0
+    with open(output_path, "a", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
+        if not file_exists:
+            writer.writeheader()
         writer.writerows(rows)
 
     print(f"\nDone. {len(rows)} rows written to {output_path}")
 
 
 if __name__ == "__main__":
-    run(
-        start=date(2025, 3, 1),
-        end=date(2025, 7, 1),
-        output_path="tornado_outlook_history.csv",
-    )
+    import sys
+
+    years = [int(y) for y in sys.argv[1:]] if len(sys.argv) > 1 else [2025]
+    for year in years:
+        print(f"\n=== Running {year} ===")
+        run(
+            start=date(year, 3, 1),
+            end=date(year, 7, 1),
+            output_path="tornado_outlook_history.csv",
+        )
