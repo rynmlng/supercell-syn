@@ -1,0 +1,106 @@
+# Chase Forecast Analysis — Friday, April 17, 2026
+
+## Model Run
+- **HRRR Init:** 2026-04-17 13Z
+- **Analyzed Forward Hours:** fh=6 (19Z/2PM CDT), fh=9 (22Z/5PM CDT), fh=12 (01Z/8PM CDT)
+
+## SPC Day 1 Convective Outlook
+- **Enhanced Risk (Level 3/5)** covering a large swath from eastern Kansas through Missouri, into Iowa and parts of Oklahoma/Arkansas
+- Slight Risk surrounding the Enhanced area, with Marginal Risk extending broadly from Texas to the Great Lakes
+- Issued 1239Z by Smith/Dean, valid 1300Z Apr 17 – 1200Z Apr 18
+
+## Dry Line Analysis
+A textbook dry line is analyzed across all three dew point frames:
+
+- **fh=6 (19Z):** Sharp moisture boundary running N-S through central KS/OK. West of ~98°W: dew points 14-30°F. East of ~97°W: dew points 60-67°F. A **30-40°F gradient over ~50-75 miles** — a classic, well-defined dry line.
+- **fh=9 (22Z):** Dry line remains well-defined at approximately the same longitude (~97.5-98°W). Moisture pooling continues east of the boundary with dew points 60-66°F across eastern Kansas and into Missouri.
+- **fh=12 (01Z):** Dry line shifts slightly eastward but maintains sharp gradient. Rich moisture (65-67°F Td) persists across eastern KS/OK.
+
+**Dry line axis:** ~98°W from central Kansas (~38°N) southward through central Oklahoma (~35°N) into north Texas.
+
+## Reflectivity / Convective Mode Analysis
+
+### fh=6 (19Z / 2 PM CDT) — Early Convective Initiation
+- **38.5°N, 98.5°W: 45 dBZ** — early CI right at the dry line in central Kansas. This is the key initiation signal.
+- A developing N-S convective line from Minnesota through Wisconsin/Iowa, with cells at 42.0°N, 95.0°W (55 dBZ) and numerous 40-55 dBZ returns across 44-48°N.
+- The Kansas cell is **discrete and isolated** from the main QLCS activity to the north.
+
+### fh=9 (22Z / 5 PM CDT) — Peak Afternoon Convection
+- **Discrete supercells near the Kansas dry line:**
+  - 38.5°N, 97.5°W: **55 dBZ** — strongest cell, right at the dry line
+  - 39.0°N, 96.5°W: **55 dBZ** — northeast Kansas
+  - 39.0°N, 95.5°W: **55 dBZ** — northeast Kansas
+  - 39.5°N, 96.0°W: **50 dBZ** — northeast Kansas
+  - 39.0°N, 97.0°W: **45 dBZ**
+  - 38.5°N, 97.0°W: **45 dBZ**
+  - 40.0°N, 95.5°W: **45 dBZ**
+  - 40.0°N, 95.0°W: **45 dBZ**
+- **QLCS to the north:** 41.0°N, 92.0°W (60 dBZ peak) in Iowa, with a line extending through MN/WI
+- The Kansas cells are **discrete and well-separated from the QLCS** to the north — these are the prime chase targets
+- Storm mode: Discrete cells initiating at the dry line and tracking ENE through Kansas into Missouri
+
+## Sounding Analysis
+
+### Sounding 1: 38.47°N, 97.47°W (at the primary dry line cell)
+- **SFC CAPE:** 2057 J/kg | **ML CAPE:** 2012 J/kg | **MU CAPE:** 3022 J/kg
+- **Bunkers Right Motion:** 267°/48 kt (FROM WSW, storms move TOWARD 87° ENE)
+- **SRH 0-3km:** 361 m²/s² — exceptional rotational potential
+- **0-6km Bulk Shear:** 84 kt — excellent deep-layer shear
+- **BRN Shear:** 159 m²/s²
+- **Lapse Rates:** 6.0°C/km (0-3km), 7.1°C/km (3-6km) — steep
+- **LCL:** Very low (~7 mb above surface) — favorable for tornadogenesis
+- Hodograph: Large clockwise curvature through low/mid levels
+
+### Sounding 2: 39.03°N, 96.53°W (NE Kansas, ahead of dry line)
+- **SFC CAPE:** 2032 J/kg | **ML CAPE:** 2131 J/kg | **MU CAPE:** 1871 J/kg
+- **Bunkers Right Motion:** 260°/43 kt
+- **SRH 0-3km:** 332 m²/s²
+- **Supercell Composite:** 1.1 | **Psbl Haz Type:** MRGL SVR
+- **MMP:** 0.97 — very high mesoscale convective probability
+- **LCL Height:** ~1473m — somewhat elevated but still reasonable
+- **Inflow Angle:** 64°
+
+### Sounding 3: 38.47°N, 98.51°W (right on the dry line)
+- **MU CAPE:** 5095 J/kg — extreme instability available aloft
+- **Bunkers Right Motion:** 266°/47 kt
+- **BRN Shear:** 188 m²/s²
+- **Lapse Rates:** 7.6°C/km (3-6km), 8.1°C/km (700-500mb) — extremely steep
+- Right on the dryline with surface Td of 34°F (dry) vs 63°F dewpoint at the surface — classic dry line sounding
+
+### Sounding Summary
+All three soundings consistently show:
+- **CAPE:** 2000-5000+ J/kg — ample instability
+- **Bunkers Right:** ~265°/47 kt (WSW → ENE at ~47 kt average)
+- **Deep-layer shear:** 80-100+ kt 0-6km — highly favorable
+- **SRH 0-3km:** 130-361 m²/s² — supports supercell rotation
+- **Steep lapse rates** through the entire troposphere
+- **Hodograph shape** supports right-moving supercells
+
+## Chase Target & Recommendation
+
+### Hatch Area
+- **Location:** 38.5°N, 98.0°W — **central Kansas** (near Great Bend/Hutchinson area)
+- **Rationale:** This is where the dry line CI is occurring at fh=6, with discrete supercells intensifying to 55 dBZ by fh=9. The hatch area is at the intersection of the dry line boundary, the Enhanced risk area, and the highest instability/shear overlap.
+
+### Positioning Location
+- **Location:** 38.6°N, 93.4°W — **western Missouri**
+- **Rationale:** BRM speed (48 kt) × 7 hours ≈ 336 nm, clamped to 250 miles. Position is ENE of the hatch area along the storm motion vector (87°), allowing chasers to intercept storms as they mature and propagate eastward through eastern Kansas into western Missouri during the late afternoon.
+
+### Storm Motion Vector
+- **Bunkers Right:** FROM 267° / 48 kt (storms move TOWARD 87° ENE)
+- Consistent across all three soundings (260-267° range)
+
+### Risk Assessment
+- **SPC Risk:** Enhanced (Level 3/5)
+- **Primary Threats:** Large hail, damaging winds, tornado potential (low LCLs + strong SRH)
+- **Storm Mode:** Discrete supercells initiating along the dry line in central Kansas, well-separated from the QLCS to the north in Iowa/Minnesota
+- **Confidence:** HIGH — textbook dry line setup with strong shear/instability overlap, discrete convective mode confirmed by HRRR
+
+### Key Concerns
+- The QLCS to the north could expand southward and eventually absorb the discrete cells in late evening — chase window is best during fh=6 through fh=9 (2-5 PM CDT)
+- 0-1km SRH is weak at some locations (2-8 m²/s²) despite strong 0-3km SRH — tornado potential may be more limited than the deep-layer shear suggests, unless low-level jet intensifies into early evening
+- MU CAPE of 5095 J/kg at the dry line suggests extreme hail potential for any cell that can tap the elevated instability
+
+## Map Output
+- Chase forecast map saved to: `/Users/ryan/Development/supercell-syn/runs/chase/runs/chase_2026-04-17.png`
+- Shows hatch area (central Kansas) and positioning location (western Missouri) with BRM vector overlay on HRRR fh=9 composite reflectivity
