@@ -1,0 +1,159 @@
+# Chase Forecast Analysis — Thursday, April 23, 2026
+
+## Model Run
+- **HRRR Init:** 2026-04-23 13Z
+- **Analysis Window:** fh=6 (19Z/2PM CDT) through fh=9 (22Z/5PM CDT)
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Enhanced Risk (orange):** Centered ~35°N, -97°W — central/western Oklahoma
+- **Slight Risk (yellow):** Broad swath from central Kansas through eastern Nebraska, NW Iowa, and into southern Minnesota
+- **Marginal Risk (green):** Extensive coverage across the central Plains and Midwest
+
+The SPC's primary Enhanced risk targets Oklahoma, but the HRRR shows no convective initiation in that area during daytime hours (fh=3 through fh=9). The actual convection develops along the dry line much further north.
+
+---
+
+## Dry Line Analysis
+Three dew point frames analyzed (fh=6, 9, 12):
+
+- **Dry Line Orientation:** N-S through western/central Kansas-Nebraska, approximately -98°W to -97°W
+- **East of dry line:** 60-70°F dew points (rich Gulf moisture surge into central Plains)
+- **West of dry line:** Single digits to 20s°F (arid continental air)
+- **Gradient magnitude:** 40-50°F drop over ~50-75 miles — an extremely sharp dry line
+- **Temporal evolution:** Dry line slowly advances eastward through the afternoon, reaching ~-97°W by 01Z
+
+The moisture is deepest (65-70°F Td) from central Oklahoma through eastern Kansas and into NW Iowa, providing excellent fuel for convective development.
+
+---
+
+## Reflectivity Analysis (Pixel Scan Ground Truth)
+
+### fh=6 (19Z / 2 PM CDT):
+- **No significant convection in the Oklahoma Enhanced risk area**
+- Strongest return near target region: 44.5°N, -95.5°W at 60 dBZ (SW Minnesota)
+- Scattered low-level returns through MN/SD (30-40 dBZ)
+
+### fh=7 (20Z / 3 PM CDT):
+- Convective initiation beginning along the dry line in the upper Midwest
+- 45.0°N, -95.0°W at 50 dBZ (W Minnesota)
+- Multiple 30 dBZ returns developing through MN
+
+### fh=8 (21Z / 4 PM CDT):
+- Line intensifying: 48.0°N, -94.0°W at 55 dBZ; 44.5°N, -95.0°W at 55 dBZ
+- Southern end of line developing: 42.0°N, -96.5°W at 45 dBZ (NE Nebraska)
+- Scattered discrete cells visible in the image along the N-S dry line axis
+
+### fh=9 (22Z / 5 PM CDT) — **Primary Target Frame:**
+- **Strongest cell: 43.0°N, -95.5°W at 60 dBZ** (NW Iowa)
+- Organized N-S convective line from 42°N to 49°N along -93 to -96°W
+- Multiple 45 dBZ cores: 42.5°N/-96.0°W, 43.0°N/-96.0°W, 43.5°N/-95.5°W
+- **Southern end of line (42.0-42.5°N):** Most isolated cells with bookend supercell potential
+- Image confirms developing QLCS with some discrete elements at the southern terminus
+
+### Storm Mode Assessment:
+The primary mode is a **QLCS developing along the dry line**, with the best discrete supercell potential at the **southern bookend** of the line near NE Nebraska/NW Iowa. Cells embedded in the middle of the line (43-48°N) are in the "wash" and not ideal chase targets.
+
+---
+
+## Sounding Analysis
+
+### Sounding 1: 42.98°N, -95.48°W (NW Iowa — near 60 dBZ core)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 2326 J/kg |
+| LCL | 245 m |
+| 0-1km Shear | 18 kt |
+| 0-6km Shear | 49 kt |
+| 0-1km SRH | -92 m²/s² |
+| BRM | 257°/33 kt (FROM) |
+| STP | -1.2 |
+| SHIP | 2.3 |
+| Critical Angle | 39° |
+
+### Sounding 2: 42.02°N, -95.95°W (E Nebraska/W Iowa) — **BEST SOUNDING**
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 2416 J/kg |
+| LCL | 306 m |
+| 0-1km Shear | 24 kt |
+| 0-6km Shear | 57 kt |
+| 0-8km Shear | 73 kt |
+| 0-1km SRH | -162 m²/s² |
+| BRM | 263°/30 kt (FROM) |
+| STP | -2.6 |
+| SHIP | 2.4 |
+| BRN Shear | 80 m²/s² |
+| MMP | 1.0 |
+| SigSvr | 15,960 m³/s³ |
+| Critical Angle | 45° |
+
+### Sounding 3: 42.51°N, -96.05°W (Sioux City area)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 983 J/kg |
+| LCL | 1114 m |
+| 0-6km Shear | 53 kt |
+| 0-1km SRH | -90 m²/s² |
+| BRM | 262°/32 kt (FROM) |
+| STP | -0.5 |
+| SHIP | 0.6 |
+
+### Key Findings:
+1. **Instability:** Excellent — 2400+ J/kg SFC CAPE at the best location with very low LCLs (245-306m)
+2. **Deep-layer shear:** Exceptional — 57-73 kt through 6-8 km, well above supercell thresholds
+3. **Low-level shear:** PROBLEMATIC — All three soundings show **negative SRH** at 0-1km and 0-3km, indicating the low-level hodograph does not favor right-moving supercells
+4. **STP:** Negative at all locations, confirming low tornado potential for right-movers
+5. **Hodograph:** Well-developed clockwise curvature at mid/upper levels, but the low-level wind profile has backing that undermines right-mover dynamics
+6. **BRM consensus:** ~260-263° FROM at 30-33 kt (storms move toward ~80-83° ENE)
+
+---
+
+## Target Selection
+
+### Hatch Area: 42.0°N, -96.0°W (NE Nebraska / NW Iowa border near Sioux City)
+**Rationale:**
+- Located directly along the dry line (moisture boundary at ~-96 to -97°W at this latitude)
+- Southern bookend of the developing QLCS — best chance for discrete cell to break off
+- Excellent CAPE (2416 J/kg) and deep-layer shear (57 kt 0-6km)
+- Within the SPC Slight risk area
+- fh=8-9 shows convective initiation here (42.0°N at 45 dBZ by fh=8)
+
+### Positioning Location: Eastern Iowa (~42.3°N, -91.9°W)
+- ~210 miles ENE of the hatch area along the BRM vector
+- Allows storms to develop and mature as they track toward the chase position
+- BRM 263°/30 kt × 7 hours ≈ 210 miles of travel
+
+### Bunkers Right Motion Vector:
+- **FROM:** 263° (WSW)
+- **TOWARD:** 83° (ENE)
+- **Speed:** 30 knots
+
+---
+
+## Confidence Assessment: MODERATE-LOW
+
+**Positive factors:**
+- Textbook dry line with extreme moisture gradient
+- Excellent CAPE and deep-layer shear
+- HRRR develops strong convection (60 dBZ) along the dry line
+- Very low LCLs favor severe hazards
+
+**Negative factors:**
+- **Negative SRH at all sounding locations** — the low-level wind profile does not favor right-moving supercells
+- **STP is negative** — low tornado potential for right-movers
+- Storm mode is primarily **QLCS**, not discrete supercells
+- The SPC Enhanced risk area (Oklahoma) has **no HRRR convective signal during daytime hours**
+- Target is in the **Slight risk** zone, not the Enhanced zone
+- Confidence in isolated supercells is **low**; the best case scenario is a bookend supercell spinning off the southern end of the QLCS
+
+**Bottom line:** This is a marginal discrete supercell chase day despite impressive thermodynamics. The negative SRH profile means right-movers will struggle. The best play is to position for the southern bookend of the developing QLCS where a discrete supercell could emerge. Large hail and damaging winds are the primary threats rather than tornadoes.
+
+---
+
+## Map
+Chase forecast map saved to: chase_2026-04-23.png
+- Hatch area (red circle): 42.0°N, -96.0°W — NE Nebraska/NW Iowa (Sioux City)
+- Positioning location (blue circle): 42.3°N, -91.9°W — eastern Iowa
+- Base map: HRRR Composite Reflectivity fh=9 (22Z / 5 PM CDT)
