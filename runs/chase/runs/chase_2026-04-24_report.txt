@@ -1,0 +1,151 @@
+# Chase Forecast Analysis — Friday, April 24, 2026
+
+## Model Run
+- **HRRR Run:** 2026042414 (14Z cycle), 18 forward hours available
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Enhanced Risk (Level 3)** centered ~33.4°N, -95.2°W — northeast Texas / southeast Oklahoma
+- **Slight Risk (Level 2)** extends broadly from the southern Plains across the lower Mississippi Valley into the Midwest/Ohio Valley
+- **Additional Slight Risk** area over the upper Midwest (IA/MN/WI) associated with a separate QLCS
+- **Marginal Risk** areas across much of the eastern CONUS
+
+---
+
+## Dry Line Analysis (3 frames: fh=3, fh=6, fh=9)
+
+### fh=3 (17Z / 12 PM CDT):
+- Moisture tongue of 60–72°F dew points extends across east Texas, Oklahoma, and into Arkansas
+- West of ~98°W, dew points plunge rapidly to 20s–30s°F across the high plains
+- Dry line runs roughly N-S through central TX/OK, approximately at -98 to -99°W
+
+### fh=6 (20Z / 3 PM CDT):
+- Dry line sharpens. East of ~-97.5°W: 60–67°F dew points (rich Gulf moisture). West of ~-98°W: 25–33°F (arid continental air)
+- Gradient tightest across north-central TX into southern OK — a 30°F+ drop within 50–75 miles
+- Moisture axis shifts slightly eastward compared to fh=3
+
+### fh=9 (23Z / 6 PM CDT):
+- Similar structure, moisture continuing slow eastward advance
+- Dry line eastern edge (where Td ≥ 60°F) approximately at -97 to -97.5°W across OK/TX
+- In SE Oklahoma (34–35°N), dew points of 67–73°F east of -95°W, rapidly mixing to sub-40°F west of -98°W
+- The dry line convergence zone across OK/TX remains the primary focus for convective initiation
+
+---
+
+## Reflectivity Analysis
+
+### fh=6 (20Z / 3 PM CDT):
+- **QLCS** extends from MO/IL southward through Arkansas
+- Strongest returns: **55 dBZ** at 36.0°N/-90.0°W (NE Arkansas) and 40.0°N/-77.5°W (PA, not target)
+- 50 dBZ returns at 36.0/-90.5, 35.5/-91.0, 35.5/-90.5 (central/NE Arkansas, within QLCS)
+- 45 dBZ scattered along the QLCS through MO/AR: 35.5/-93.0, 35.5/-92.0, 35.5/-91.5, 35.0/-92.5
+- **No discrete cells near the OK/TX dry line at this time**
+
+### fh=7 (21Z / 4 PM CDT):
+- QLCS continues, with 50 dBZ returns at 36.0/-90.5, 36.0/-89.5, 35.0/-91.5
+- Western flank activity at 45 dBZ near 36.0/-92.5 (NW Arkansas)
+- Still no discrete cells near the dry line
+
+### fh=8 (22Z / 5 PM CDT):
+- QLCS persists through AR/MO
+- 45 dBZ at 37.0/-93.0 (SW Missouri) — possibly discrete development on the NW flank of the line
+- No returns near the OK dry line
+
+### fh=9 (23Z / 6 PM CDT):
+- **KEY FINDING:** A **discrete 45 dBZ cell appears at 36.0°N, -95.5°W** — NE Oklahoma, near the dry line! This cell is separate from the main QLCS further east
+- QLCS continues with 55 dBZ at 35.0/-91.5 and 35.0/-91.0 (central AR)
+- 40 dBZ at 37.0/-93.0 and -92.5 (SW Missouri, possible bookend or discrete cell)
+- The QLCS southern tip extends to approximately 34.5°N in AR
+
+### Storm Mode Assessment:
+- The primary storm mode is a **QLCS** propagating through MO/AR
+- A **discrete cell** fires near the dry line in NE Oklahoma by fh=9
+- The area between the dry line (~-97.5°W) and the QLCS (~-91 to -93°W) is open warm sector with extreme thermodynamic instability — ideal for discrete supercell development, particularly in SE Oklahoma where the Enhanced risk is centered
+
+---
+
+## Sounding Analysis (fh=9)
+
+### Location 1: NE Oklahoma (36.03°N, -95.47°W) — Near discrete cell
+| Parameter | Value |
+|-----------|-------|
+| CAPE (SFC/ML/MU) | 1646 / 1005 / 1646 J/kg |
+| CINH | 0 J/kg |
+| LCL | 703 m |
+| BRM | 319°/20 kt (FROM) → 139°/20 kt (TOWARD) |
+| SRH 0-1km / 0-3km | 2 / 89 m²/s² |
+| Shear 0-6km | 27 kt |
+| STP (cin/fix) | 0.0 / 0.0 |
+| Supercell Composite | 0.1 |
+| Psbl Haz Type | MRGL SVR |
+| Critical Angle | 102° |
+
+- Moderate instability with no cap. Modest shear. Marginal severe potential. The existing cell may produce some hail but unlikely to become a significant supercell.
+
+### Location 2: SE Oklahoma (34.48°N, -95.02°W) — Enhanced risk center ⭐ PRIMARY TARGET
+| Parameter | Value |
+|-----------|-------|
+| CAPE (SFC/ML/MU) | 3451 / 3082 / 3951 J/kg |
+| CINH | 0 J/kg |
+| LCL | 816 m |
+| **BRM** | **289°/27 kt (FROM) → 109°/27 kt (TOWARD)** |
+| SRH 0-1km / 0-3km | 46 / 155 m²/s² |
+| SRH Effective Inflow | 87 m²/s² |
+| Shear 0-6km | 36 kt |
+| **STP (cin/fix)** | **1.1 / 0.8** |
+| **Supercell Composite** | **6.2** |
+| **Psbl Haz Type** | **TOR** |
+| SARS TOR / SIG | 29% / 64% |
+| SARS Sig Hail | 2.50", 1.75" matches |
+| SHIP | 2.0 |
+| PW | 1.11 in |
+| 850-500mb LR | 7.2°C/km |
+| Critical Angle | 22° |
+
+- **Explosive environment.** Nearly 4000 J/kg MUCAPE with zero CIN. STP >1.0 indicates significant tornado potential. Supercell Composite of 6.2 strongly supports discrete supercells. The hodograph shows strong clockwise curvature with 155 m²/s² 0-3km SRH. Multiple SARS supercell analogs matched. Low-level jet evident at 850–925 hPa enhancing low-level shear. This is a high-end supercell environment.
+
+### Location 3: W. Arkansas (34.96°N, -92.54°W) — Behind QLCS
+| Parameter | Value |
+|-----------|-------|
+| CAPE (SFC/ML/MU) | 489 / 307 / 489 J/kg |
+| CINH | -113 J/kg |
+| STP | 0.0 |
+| SC | 0.5 |
+| Psbl Haz Type | NONE |
+
+- Environment is convectively worked-over by the QLCS. Very low instability, strong cap. Not a viable chase target.
+
+---
+
+## Target Recommendation
+
+### Hatch Area: SE Oklahoma (35.0°N, -95.5°W)
+- Within the SPC Enhanced Risk area
+- Near the dry line convergence zone (~100 miles east of the dry line eastern edge at -97.5°W)
+- Explosive thermodynamic environment: CAPE 3500-4000 J/kg, zero CIN, TOR-type sounding
+- Discrete supercell initiation expected as afternoon heating maximizes and low-level convergence intensifies along the dry line
+- HRRR already showing discrete cell development at 36°N/-95.5°W by fh=9; initiation should extend southward into the Enhanced risk area
+
+### Bunkers Right Storm Motion: 109° (TOWARD) at 27 kt
+- Right-moving supercells will track toward the ESE
+- This places them on a path from SE Oklahoma into western/central Arkansas
+
+### Positioning Location: Central Arkansas (34.07°N, -92.38°W)
+- ~189 miles downstream (ESE) from the hatch area along the BRM vector
+- Allows the chaser to intercept storms as they mature and move into the rich moisture axis
+- Road network favorable in this area for maneuvering
+
+### Confidence: MODERATE-HIGH
+- **For:** Extreme instability, Enhanced risk, strong STP/SRH, discrete initiation signal in HRRR, classic dry line setup
+- **Against:** Discrete cells haven't fired in the Enhanced risk core yet in the HRRR by fh=9 (only at 36°N); the QLCS may interfere with the warm sector environment; critical angle is somewhat low (22°) at the SE OK sounding. Timing could be later than the HRRR suggests.
+
+### Primary Hazards:
+- Significant tornadoes (STP 1.1)
+- Large to very large hail (SARS: 2.50" match)
+- Damaging winds
+
+---
+
+## Summary
+Today features an **Enhanced Risk** centered over NE Texas/SE Oklahoma with an explosive thermodynamic environment (CAPE near 4000 J/kg) overlapping strong low-level shear (SRH 155 m²/s²). A north-south dry line through central OK provides the convergence focus for discrete supercell initiation. The HRRR shows a discrete cell firing in NE Oklahoma by 23Z, ahead of a QLCS progressing through Arkansas. The SE Oklahoma environment is TOR-typed with STP of 1.1 and a Supercell Composite of 6.2. Chase teams should position in central Arkansas along the BRM vector (ESE at 27 kt) to intercept right-moving supercells as they mature through the evening hours.
