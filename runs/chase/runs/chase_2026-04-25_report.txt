@@ -1,0 +1,161 @@
+# Chase Forecast Analysis — Saturday, April 25, 2026
+
+## Model Run
+- **HRRR Init:** 2026-04-25 14Z
+- **Analysis Window:** fh=4 through fh=10 (18Z–00Z / 1 PM – 7 PM CDT)
+
+---
+
+## SPC Outlook
+- **Moderate Risk (Level 4/5)** centered near **34.8°N, -96.0°W** — central Oklahoma
+- **Enhanced Risk** extends from north-central Texas through central Oklahoma into southern Kansas
+- **Slight Risk** covers a larger swath from Texas to Missouri/Arkansas
+- **Marginal Risk** extends into the Southeast and mid-Atlantic
+
+This is a significant severe weather day with SPC highlighting the Oklahoma/north Texas corridor.
+
+---
+
+## Dry Line Analysis
+
+Three dew point frames analyzed (fh=4, fh=7, fh=10):
+
+- **fh=4 (18Z / ~1 PM CDT):** Sharp dry line from SW Kansas through western Oklahoma into north-central Texas. East of line: 60–75°F dew points (rich Gulf moisture). West of line: 10–25°F. Transition occurs along ~98–99°W in Oklahoma. A 30–40°F dewpoint gradient over ~50–75 miles.
+
+- **fh=7 (21Z / ~4 PM CDT):** Dry line sharpens further. Eastern edge near ~97.5–98.5°W in central Oklahoma. Dew points 63–66°F east of line, teens/20s west. Very tight gradient.
+
+- **fh=10 (00Z / ~7 PM CDT):** Dry line remains well-defined with slight eastward push. Rich 63–70°F moisture pooling in south-central OK and north-central TX. Dryline oriented N-S through western/central Oklahoma.
+
+**Dry line is well-defined and perfectly aligned with the SPC Moderate Risk axis.**
+
+---
+
+## Reflectivity Analysis
+
+### fh=5 (19Z / ~2 PM CDT)
+- Cells in South Dakota: 44.5°N, -97.0°W at 55 dBZ; 44.0°N, -97.5°W at 45 dBZ
+- West-central Kansas: 39.0°N, -99.0°W at 45 dBZ
+- **No significant returns in Oklahoma at this time**
+
+### fh=7 (21Z / ~4 PM CDT)
+- SD cluster continues: 43.5°N, -97.5°W at 45 dBZ
+- West-central NE: 41.0°N, -99.0°W at 30 dBZ
+- **Still quiet in Oklahoma** — pre-convective environment building
+
+### fh=9 (23Z / ~6 PM CDT) — KEY FRAME
+- **42.5°N, -97.5°W: 55 dBZ** — NE Nebraska (but no CAPE, see sounding)
+- **35.0°N, -98.5°W: 45 dBZ** — **West-central Oklahoma! Discrete cell on the dry line!** This is within the SPC Moderate Risk.
+- 40.0°N, -98.5°W: 35 dBZ — south-central Nebraska
+- 43.0°N, -98.0°W: 35 dBZ — SD
+
+The Oklahoma cell at 35.0°N, -98.5°W is discrete, sits directly on the dry line, and is within the SPC Moderate Risk area. Visual inspection of the reflectivity image confirms this cell appears isolated — not embedded in a QLCS. No organized line structure is present in Oklahoma at this time.
+
+---
+
+## Sounding Analysis
+
+### Location 1: 35.0°N, -98.5°W (West-central OK — ON the dry line)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 2992 J/kg |
+| MU CAPE | 2992 J/kg |
+| CIN | -5 J/kg |
+| LCL | 1600 m |
+| LFC | 2059 m |
+| PW | 0.95" |
+| 0-1km SRH | 29 m²/s² |
+| 0-3km SRH | 137 m²/s² |
+| Eff SRH | 77 m²/s² |
+| Eff Shear (EBWD) | 49 kt |
+| **Bunkers Right** | **289°/21 kt** |
+| STP (cin) | 0.6 |
+| SHIP | 2.5 |
+| Supercell Composite | 4.6 |
+| Critical Angle | 49° |
+| SARS | 43% TOR, 81% SIG |
+| Hazard Type | MRGL TOR |
+
+Hodograph shows classic curved shape with good directional shear through the low levels. BRM moves ESE at 21 kt. Environment is strongly favorable for supercells with marginal tornado potential.
+
+### Location 2: 35.5°N, -97.5°W (Central OK — just east of dry line, warm sector)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 3235 J/kg |
+| MU CAPE | 3235 J/kg |
+| CIN | 0 J/kg |
+| LCL | 1047 m |
+| LFC | 1047 m (LFC=LCL!) |
+| PW | 1.08" |
+| 0-1km SRH | 65 m²/s² |
+| 0-3km SRH | 163 m²/s² |
+| Eff SRH | 96 m²/s² |
+| Eff Shear (EBWD) | 54 kt |
+| **Bunkers Right** | **280°/20 kt** |
+| STP (cin) | 1.5 |
+| SHIP | 3.5 |
+| Supercell Composite | 6.2 |
+| Critical Angle | 67° |
+| SARS | 40% TOR, 86% SIG |
+| MMP | 0.98 |
+| Hazard Type | **TOR** |
+
+**This is an exceptional sounding.** 3235 J/kg CAPE with zero CIN = explosive convective potential. LCL=LFC=1047m means parcels go straight to free convection with no inhibition. STP of 1.5 with TOR hazard type flags significant tornado potential. Critical angle of 67° and SRH values support mesocyclone development. The warm sector environment east of the dry line is where initiated storms will intensify.
+
+### Location 3: 42.5°N, -97.5°W (NE Nebraska)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 4 J/kg |
+| CIN | -784 J/kg |
+| Hazard Type | NONE |
+
+**Completely unfavorable.** Despite reflectivity returns, there is no thermodynamic support for severe convection. The strong returns here are likely elevated/forced convection without surface-based instability. NOT a chase target.
+
+---
+
+## Target Selection & Rationale
+
+### Hatch Area: 35.0°N, -98.5°W (West-central Oklahoma)
+- Discrete 45 dBZ cell initiates here on the dry line by fh=9 (23Z / 6 PM CDT)
+- Sits within the SPC Moderate Risk area
+- Right on the dry line's eastern edge where 60°F+ dew points meet arid air
+- CAPE ~3000 J/kg, minimal CIN, SRH values support mesocyclone formation
+- Cell will propagate ESE into the extreme instability environment (3235 J/kg CAPE, zero CIN, TOR hazard type)
+
+### Positioning Location: South-central Oklahoma (~34.3°N, -96.1°W)
+- Computed from BRM 289°/21 kt × 7 hours = ~147 nm downstream
+- Allows intercepting the supercell as it moves ESE off the dry line into peak instability
+
+### Bunkers Right Storm Motion: 289°/21 kt (FROM) → 109° (TOWARD) at 21 kt
+- Storms will move ESE at approximately 24 mph
+- Good chase speeds — not too fast, allowing repositioning
+
+---
+
+## Confidence & Risk Assessment
+
+**Confidence: HIGH**
+
+Strengths:
+- SPC Moderate Risk = high-end day
+- Extreme CAPE (3000–3200 J/kg) with zero CIN
+- Sharp dry line providing forced lift for initiation
+- Strong deep-layer shear (50+ kt effective bulk shear)
+- STP values 0.6–1.5 supporting tornado potential
+- SARS analogs strongly favor significant severe weather
+- Discrete cell mode on the dry line (not QLCS)
+
+Concerns:
+- Initiation timing is somewhat late (23Z / 6 PM CDT) — monitoring earlier fh for possible earlier CI
+- LCL at 1600m on the dry line (drops to 1047m in warm sector) — tornado potential maximizes as storm moves east
+- Nebraska cells lack thermodynamic support despite reflectivity returns
+
+### Storm Mode: Discrete supercells firing along the dry line in west-central Oklahoma
+- No QLCS present in the target area
+- Isolated, discrete cell structure confirmed in reflectivity
+- Environment strongly favors supercell with significant tornado potential
+
+---
+
+## Summary
+
+Today is a high-end severe weather day across central Oklahoma. A well-defined dry line extends N-S through western Oklahoma with extreme instability (3200+ J/kg CAPE, zero CIN) pooling in the warm sector to the east. The HRRR shows a discrete cell firing on the dry line near Chickasha/Anadarko, OK by 6 PM CDT. The warm sector sounding flags TOR hazard type with STP=1.5 and a critical angle of 67°. Position in south-central Oklahoma to intercept supercells propagating ESE off the dry line into the peak instability corridor.
