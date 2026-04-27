@@ -1660,7 +1660,7 @@ def run_agent() -> tuple[str | None, str | None]:
         with client.messages.stream(
             model="claude-opus-4-6",
             max_tokens=10000,
-            thinking={"type": "adaptive", "budget_tokens": 8000},
+            thinking={"type": "adaptive"},
             system=SYSTEM,
             tools=TOOLS,
             messages=messages,

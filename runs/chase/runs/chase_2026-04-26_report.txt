@@ -1,0 +1,115 @@
+# Storm Chase Forecast — Sunday, April 26, 2026
+
+## SPC Outlook
+SPC Day 1 Convective Outlook issued 1341Z features a **Moderate Risk (Level 4/5)** centered over south-central Oklahoma (~34.8°N, -96.0°W), surrounded by an Enhanced Risk extending into south-central Kansas. This is a high-impact severe weather day with significant tornado, hail, and wind threats across the southern Plains.
+
+## Dry Line Analysis
+Three HRRR dew point frames (fh=6, fh=9, fh=12) confirm a well-defined dry line running N-S through western/central Oklahoma and Kansas:
+
+- **fh=6 (18Z / 1 PM CDT):** Sharp gradient from 27°F in western OK to 58-65°F in central OK. In TX, 25-30°F west of -99°W jumping to 65-74°F east of -97°W. Dry line eastern edge at approximately **-97.5°W to -98°W**.
+- **fh=9 (21Z / 4 PM CDT):** Dry line tightens. At 37°N latitude: ~33°F at -98°W, ~46°F at -97°W, ~58°F at -96°W. Steepest gradient between -98°W and -97°W — a 25°F drop over ~50 miles.
+- **fh=12 (00Z / 7 PM CDT):** Gradient persists with dry line shifting slightly east. Moisture continues to surge north with 60-68°F dew points across central OK/KS.
+
+## Reflectivity Analysis
+
+### fh=6 (18Z / 1 PM CDT)
+- **55 dBZ at 41.0°N, -97.0°W** (south-central Nebraska) — strong cell right on the dry line
+- **50 dBZ at 41.5°N, -97.5°W** (south-central Nebraska) — developing cluster
+- **40 dBZ cluster** at 42.0-42.5°N, -97.0°W (NE) — line forming
+- No significant returns (≥20 dBZ) in the Oklahoma Moderate Risk area at this hour
+
+### fh=7 (19Z / 2 PM CDT)
+- **50 dBZ at 41.0°N, -98.0°W** — strong cell on the dry line in NE
+- **45 dBZ cluster** at 41.5-42.5°N, -97.0°W — line organizing
+- Still no significant returns in OK
+
+### fh=9 (21Z / 4 PM CDT) — PRIMARY ANALYSIS FRAME
+- **55 dBZ at 40.5°N, -96.0°W and -95.5°W** (SE Nebraska) — QLCS developing
+- **50 dBZ at 42.0°N, -95.5°W** (western Iowa) — line extending north
+- **45 dBZ at 37.0°N, -96.0°W** (south-central Kansas near Wichita) — **KEY: Discrete cell at the southern tip of the developing line, near the dry line**
+- **45 dBZ cluster** from 41-44.5°N across NE/SD/KS — QLCS organizing
+
+### fh=12 (00Z / 7 PM CDT)
+- **60 dBZ at 36.0°N, -94.5°W** (NE Oklahoma near Tulsa) — **extremely strong cell, likely bookend supercell at southern tip of QLCS**
+- **55 dBZ at 40.5°N, -94.0°W** (SW Iowa) — main QLCS line
+- **45 dBZ at 37.5°N, -96.5°W** (south-central Kansas) — new cell along dry line
+- Line extends from MN through IA
+
+### Storm Mode Assessment
+The HRRR depicts a developing QLCS from SD through NE into KS, progressing eastward through the afternoon. Critically, the **southern terminus of this line** produces discrete cells: 45 dBZ at 37°N/-96°W at fh=9, evolving into a 60 dBZ supercell at 36°N/-94.5°W by fh=12. This is a classic bookend supercell pattern at the southern end of the QLCS. Additionally, the 45 dBZ return at 37.5°N/-96.5°W at fh=12 suggests **new discrete initiation along the dry line**, separate from the QLCS.
+
+## Sounding Analysis
+
+### Location 1: 37.01°N, -96.97°W (South-central Kansas) — BEST TARGET
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 2018 J/kg |
+| ML CAPE | 2163 J/kg |
+| MU CAPE | 2286 J/kg |
+| CIN (SFC/ML) | -22 / -7 J/kg |
+| LCL | **230m** (extremely low) |
+| 0-1km SRH | **180 m²/s²** |
+| 0-3km SRH | **278 m²/s²** |
+| 0-6km Bulk Shear | 44 kt |
+| STP (cin) | **2.4** |
+| STP (fix) | 1.8 |
+| SHIP | 1.5 |
+| Bunkers Right | **250°/20 kt** |
+| Critical Angle | 107° |
+| SARS | 33% TOR, 63% SIG |
+| Psbl Haz Type | **TOR** |
+
+**Assessment:** Outstanding tornado environment. Ultra-low LCL (230m), strong low-level SRH, minimal cap, and STP=2.4 all favor tornadic supercells. The 0-6km shear of 44 kt supports organized supercells. The BRM of 250/20 indicates storms move ENE at 20 kt — manageable for chasing.
+
+### Location 2: 36.04°N, -96.47°W (North-central Oklahoma)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 1513 J/kg |
+| CIN (SFC) | **-161 J/kg** (strongly capped) |
+| 0-1km SRH | **254 m²/s²** |
+| 0-3km SRH | **437 m²/s²** |
+| STP (cin) | **0.0** (cap prevents storms) |
+| Bunkers Right | 256°/19 kt |
+
+**Assessment:** Extreme wind shear but strongly capped at fh=9. The cap may break by fh=12-15 (7-10 PM CDT), but that pushes into evening/night. Not ideal for daytime chasing.
+
+### Location 3: 34.99°N, -96.98°W (Central Oklahoma, near Norman)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | **4741 J/kg** (extreme!) |
+| CIN | **0 J/kg** (completely uncapped) |
+| LCL | 1043m (somewhat high) |
+| 0-1km SRH | 72 m²/s² (moderate) |
+| SHIP | **3.8** (very significant hail) |
+| STP (cin) | 1.5 |
+| Bunkers Right | 268°/20 kt |
+| SARS | 50% TOR, 82% SIG |
+
+**Assessment:** Extreme instability and no cap — but higher LCLs and lower low-level SRH reduce tornado efficiency compared to the Kansas location. The SHIP of 3.8 indicates massive hail potential. This is more of a "golf ball+ hail and damaging wind" environment, though tornadoes are still possible.
+
+## Chase Strategy
+
+### Hatch Area: 36.0°N, -97.5°W (Northern Oklahoma, on the dry line)
+This location sits right on the dry line boundary where the steepest dew point gradient exists (~25°F drop over 50 miles). It is within the Enhanced risk area, near the northern boundary of the Moderate risk. Discrete cells are firing along the dry line from KS southward into this region. The environment features:
+- Moderate-to-strong CAPE (2000-3000+ J/kg)
+- Minimal convective inhibition
+- Very low LCLs (230m at 37°N)
+- Strong 0-1km SRH (180+ m²/s²)
+- STP ≥ 2.0
+
+### Positioning Location: Northeastern Oklahoma (~36.67°N, -95.13°W)
+The BRM of 250°/20kt (TOWARD 070° ENE) places the positioning location approximately 140 miles ENE of the hatch area. This is in northeastern Oklahoma, downstream of the developing supercells. Chasers should position here by mid-afternoon and wait for discrete cells to approach from the WSW along the dry line.
+
+### Bunkers Right Storm Motion
+- **FROM direction:** 250° (WSW)
+- **TOWARD direction:** 070° (ENE)
+- **Speed:** 20 knots
+- **Positioning distance:** ~140 miles ENE of hatch area (20 kt × 7 hours, within 75-250 mile clamp)
+
+### Key Risks and Confidence
+- **Confidence: HIGH** for discrete supercell formation along the dry line in the KS/OK corridor
+- The QLCS developing in NE/KS could complicate the picture if it surges southward too quickly, potentially gobbling up discrete cells
+- The southern end of the QLCS is the most likely location for a strong, isolated bookend supercell
+- Tornado threat is significant, especially along the dry line where LCLs are lowest
+- Large to very large hail is likely across the entire risk area (SHIP up to 3.8)
+- Storm motions of ~20 kt are manageable for chasing on the OK road network
