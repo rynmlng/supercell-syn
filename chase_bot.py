@@ -1699,6 +1699,11 @@ def run_agent() -> tuple[str | None, str | None]:
                     }
                 )
             messages.append({"role": "user", "content": tool_results})
+        elif response.stop_reason == "max_tokens":
+            log.warning("max_tokens hit on turn %d — continuing", turn + 1)
+            messages.append(
+                {"role": "user", "content": [{"type": "text", "text": "Continue."}]}
+            )
         else:
             log.warning("Unexpected stop_reason: %s", response.stop_reason)
             break
