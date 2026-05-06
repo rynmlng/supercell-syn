@@ -1,0 +1,121 @@
+# Storm Chase Forecast — Wednesday, May 6, 2026
+
+## HRRR Model Run
+- **Run:** 2026050613 (13Z May 6, 2026)
+- **Max forward hour:** 18
+
+## SPC Day 1 Convective Outlook
+- **Enhanced risk** (Level 3) centered over **Mississippi** (~32.8°N, -89.0°W)
+- Slight risk extends from eastern Texas through Alabama/Georgia
+- Broad thunderstorm risk across the Deep South and Southeast
+
+## Dry Line / Moisture Boundary Analysis
+Three dew point frames analyzed (fh=6, fh=9, fh=12):
+
+- **fh=6 (19Z / 2 PM CDT):** Rich Gulf moisture (75-77°F Td) along the Gulf Coast from Louisiana through Alabama. Sharp northward gradient through Mississippi: 65-72°F in central MS dropping to 40-50°F in northern MS/Tennessee over ~100 miles. The eastern edge of high moisture (≥60°F Td) extends through central Mississippi at ~33°N.
+- **fh=9 (22Z / 5 PM CDT):** Pattern holds. 59-68°F Td in central MS dropping to 40s-50s°F across northern AL/TN. Moisture boundary remains near 33-34°N.
+- **fh=12 (01Z / 8 PM CDT):** Boundary persists and sharpens slightly across northern MS/AL.
+
+**Key finding:** The primary moisture boundary runs WSW-ENE through **northern Mississippi at approximately 33-34°N**. This is confirmed by the sounding at 34°N showing essentially zero CAPE (10 J/kg) and extreme CIN (-448 J/kg), while 33°N shows 1756 J/kg CAPE and minimal CIN (-15 J/kg). The boundary is extremely sharp — the atmosphere transitions from a vigorous tornado environment to completely stable over just ~60 miles.
+
+## Reflectivity Analysis
+
+### fh=6 (19Z / 2 PM CDT):
+- **Central Mississippi cells:** 33.0°N, -89.0°W: 45 dBZ; 32.5°N, -89.5°W: 45 dBZ
+- **QLCS through Tennessee/Kentucky:** 36.5°N, -88.5°W: 45 dBZ; 36.5°N, -86.0°W: 45 dBZ; 36.5°N, -84.0°W: 45 dBZ
+- **Northern Arkansas convection:** 36.5°N, -92.0°W: 40 dBZ; 35.5°N, -93.5°W: 40 dBZ
+- The Mississippi cells at 32.5-33°N are **south of and separate from** the main QLCS line through Tennessee — potential discrete supercells
+
+### fh=7 (20Z / 3 PM CDT):
+- Strong cells developing in Louisiana: 32.0°N, -93.5°W: 55 dBZ; 31.5°N, -93.0°W: 55 dBZ; 31.5°N, -91.0°W: 55 dBZ
+- QLCS continues across Tennessee: 36.0°N, -86.0°W: 45 dBZ
+- Convection progressing eastward
+
+### fh=9 (22Z / 5 PM CDT):
+- **Mississippi cells intensify significantly:**
+  - 32.5°N, -88.5°W: **55 dBZ** (near Meridian, MS)
+  - 32.5°N, -91.0°W: **55 dBZ** (western MS)
+  - 32.0°N, -92.5°W: **55 dBZ** (NE Louisiana)
+  - 33.0°N, -88.0°W: **50 dBZ** (eastern MS, near Columbus)
+  - 34.0°N, -89.0°W: 45 dBZ; 34.5°N, -87.5°W: 45 dBZ (northern MS/AL)
+- QLCS core: 36.5°N, -85.5°W: 55 dBZ (central TN/KY)
+- **Storm mode:** Multiple cells across MS appear discrete/semi-discrete, positioned south of the main QLCS band. The southern-most cells near 32-33°N are the best chase targets — they are near the moisture boundary, in the Enhanced risk area, and have room to develop as discrete supercells.
+
+## Sounding Analysis
+
+### Sounding 1: 33.0°N, -89.0°W (Central Mississippi) — fh=6 (19Z) ⭐ PRIMARY TARGET
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 1756 J/kg |
+| ML CAPE | 1597 J/kg |
+| FCST CAPE | 2335 J/kg |
+| SFC CIN | -15 J/kg (minimal cap) |
+| LCL | 372 m (very low — tornado favorable) |
+| LFC | 867 m |
+| EL | 11,795 m |
+| 0-1km SRH | 108 m²/s² |
+| 0-3km SRH | 192 m²/s² |
+| 0-6km Shear | 55 kt |
+| BRN Shear | 59 m²/s² |
+| **STP** | **1.9** (significant tornado threat) |
+| SHIP | 1.2 |
+| Supercell | 6.7 |
+| Critical Angle | 65° |
+| **Bunkers Right** | **265°/34 kt** (FROM convention; storm moves toward ~85° ENE) |
+| SARS | 57% TOR |
+| Psbl Haz Type | **TOR** |
+| PW | 1.84 in |
+
+**Assessment:** Textbook supercell/tornado environment. Nearly uncapped, with robust CAPE, very low LCL, strong SRH, and excellent hodograph curvature. STP of 1.9 strongly supports significant tornado potential. SARS analogs show 57% tornado match.
+
+### Sounding 2: 32.5°N, -88.5°W (Eastern Mississippi) — fh=9 (22Z)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 1714 J/kg |
+| SFC CIN | -5 J/kg (essentially no cap!) |
+| LCL | 286 m (extremely low!) |
+| 0-3km SRH | 133 m²/s² |
+| 0-6km Shear | 72 kt |
+| **STP** | **1.4** |
+| **Bunkers Right** | **260°/30 kt** (FROM; toward ~80° E) |
+| SARS | 67% TOR |
+| Critical Angle | 69° |
+| PW | 2.05 in |
+
+**Assessment:** Very similar tornado-favorable environment. Even lower LCL (286 m) and higher PW (2.05 in). SARS analogs show 67% tornado match — highest of all three soundings.
+
+### Sounding 3: 34.0°N, -89.0°W (Northern Mississippi) — fh=6 (19Z)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 10 J/kg |
+| SFC CIN | -448 J/kg |
+| LFC | 6,122 m |
+| STP | 0.0 |
+| Bunkers Right | 264°/38 kt |
+| Psbl Haz Type | MRGL SVR |
+
+**Assessment:** Completely stable — on the cool/dry side of the moisture boundary. **Confirms the boundary is between 33-34°N.** Any storms initiating here would have no instability to work with.
+
+## Chase Target Summary
+
+### Hatch Area: 33.0°N, -89.0°W — Central Mississippi
+- Right at the moisture boundary (60-70°F Td, sharp gradient to north)
+- 45 dBZ cells already present at fh=6 (19Z / 2 PM CDT)
+- SPC Enhanced risk area
+- CAPE 1756 J/kg, STP 1.9, LCL 372 m
+- Discrete cells south of the QLCS line through Tennessee
+
+### Bunkers Right Storm Motion: 265°/34 kt (FROM) → 85° ENE (TOWARD)
+- Positioning distance: 34 kt × 7 = 238 miles (within 75-250 mile clamp range)
+
+### Positioning Location: ~33.2°N, -84.9°W — Western Georgia
+- Approximately 238 miles ENE of the hatch area
+- Allows interception as storms propagate eastward through the afternoon
+
+### Confidence: HIGH
+- SPC Enhanced risk aligned with moisture boundary
+- HRRR shows discrete cells initiating at the boundary by early afternoon
+- Both soundings in the target area show strong supercell/tornado parameters (STP 1.4-1.9)
+- Sharp moisture boundary confirmed by soundings (1756 J/kg at 33°N vs 10 J/kg at 34°N)
+- Good hodograph curvature with sufficient 0-3km SRH for mesocyclone development
+- Primary risk: QLCS could overtake discrete cells and merge into line convection by evening
