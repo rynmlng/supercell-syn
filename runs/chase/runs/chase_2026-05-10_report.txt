@@ -1,0 +1,158 @@
+# Storm Chase Forecast — Sunday, May 10, 2026
+
+## Model Run
+- **HRRR Run:** 2026-05-10 13Z
+- **Forward hours analyzed:** fh=6 (19Z/2PM CDT) through fh=8 (21Z/4PM CDT)
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Moderate Risk (Level 4):** Small area centered over central Texas (~31.8°N, -99°W)
+- **Enhanced Risk (Level 3):** Broader area from central Texas into south-central Oklahoma
+- **Slight Risk (Level 2):** Extending from eastern Texas through Arkansas and the Mid-South
+- **Marginal Risk (Level 1):** Broad area from the Southern Plains through the Southeast and up the East Coast
+
+This is a significant severe weather day with a Moderate risk — relatively rare and indicating high-end severe potential.
+
+---
+
+## Dry Line Analysis (3 frames: fh=6, fh=7, fh=8)
+
+A well-defined dry line was identified running N-S from the Texas Panhandle southward through west-central Texas:
+
+| Frame | Valid Time | Dry Line Position | Gradient |
+|---|---|---|---|
+| fh=6 | 19Z (2PM CDT) | ~-98 to -99°W at 31-35°N | 40°F+ drop over ~75mi |
+| fh=7 | 20Z (3PM CDT) | ~-98 to -99°W, steady | 35-40°F drop |
+| fh=8 | 21Z (4PM CDT) | ~-98 to -99°W, steady | 35-40°F drop |
+
+**Key observations:**
+- East of the dry line: Dew points 60-75°F (rich Gulf moisture, deep green on imagery)
+- West of the dry line: Dew points in the single digits to 20s°F (arid, tan on imagery)
+- The transition is remarkably sharp — a 40°F+ dew point drop across ≤75 miles
+- The dry line position remained steady across all three frames, indicating a quasi-stationary boundary ideal for sustained convective initiation
+- The eastern edge of the dry line (where Td ≥60°F) sits near -97 to -98°W through central TX/OK
+
+---
+
+## Reflectivity Analysis
+
+### fh=6 (19Z / 2PM CDT) — Initial Convective Development
+Returns in target area (OK/TX):
+- 35.0°N, -99.5°W: 45 dBZ — western OK, right on the dry line
+- 35.0°N, -98.0°W: 45 dBZ — central OK, near the dry line
+- 35.5°N, -96.5°W: 45 dBZ — central OK
+- 35.5°N, -96.0°W: 45 dBZ — central OK
+- 35.0°N, -94.5°W: 40 dBZ — eastern OK
+
+Early afternoon shows convective initiation along the dry line in Oklahoma, with multiple cells reaching 45 dBZ. The cells appear as a loose cluster, semi-discrete in nature.
+
+### fh=7 (20Z / 3PM CDT) — Intensification
+Returns in target area:
+- **35.0°N, -97.5°W: 55 dBZ** — strongest cell in central OK
+- 35.0°N, -94.5°W: 50 dBZ — eastern OK
+- 36.0°N, -97.0°W: 45 dBZ — north-central OK
+- 35.0°N, -99.0°W: 45 dBZ — western OK, on dry line
+- 34.5°N, -97.5°W: 45 dBZ — south-central OK
+- Multiple 45 dBZ returns from 34-36°N across OK
+
+Convection intensifies significantly. The Oklahoma cluster strengthens with a 55 dBZ core. However, the Oklahoma cells appear to be organizing into a developing convective cluster east of the dry line.
+
+### fh=8 (21Z / 4PM CDT) — Discrete Cell Fires in W-Central TX
+Returns in target area:
+- **33.5°N, -100.5°W: 55 dBZ** — DISCRETE cell in W-central TX, RIGHT ON the dry line
+- 35.0°N, -97.5°W: 50 dBZ — Oklahoma cluster continues
+- 35.0°N, -98.5°W: 45 dBZ — western OK
+- 34.5°N, -97.0°W: 45 dBZ — south-central OK
+- 31.0°N, -102.0°W: 45 dBZ — west TX (Permian Basin)
+- 28.0°N, -97.0°W: 50 dBZ — south TX (separate activity)
+
+**Critical finding:** A new discrete supercell candidate fires at 33.5°N, -100.5°W (near Aspermont/Stamford, TX) at 55 dBZ. This cell is:
+1. Isolated — not embedded in a line or cluster
+2. Right on the dry line — the initiation mechanism
+3. Within the SPC Moderate risk area
+4. In a region of excellent supercell parameters (see sounding analysis below)
+
+---
+
+## Sounding Analysis
+
+### Primary Target: 33.5°N, -100.5°W (West-Central Texas — fh=7/20Z)
+**This is the recommended hatch area.**
+
+| Parameter | Value | Assessment |
+|---|---|---|
+| MU CAPE | 2110 J/kg | Excellent instability |
+| SFC CAPE | 342 J/kg | Moderate (strong cap present) |
+| SFC CIN | -286 J/kg | Strong cap, needs forcing to break |
+| 0-3km SRH | 319 m²/s² | Outstanding — classic supercell/tornado environment |
+| Effective SRH | 287 m²/s² | Excellent |
+| EBWD (Eff. Shear) | 53 kt | Strong deep-layer shear |
+| Supercell Composite | 12.1 | Extreme — strongly favors supercells |
+| BRN Shear | 124 m²/s² | Very strong, supercell-favorable |
+| Bunkers Right Motion | 286°/25 kt | Storm moves toward ~106° (ESE) at 25 kt |
+| Storm Slinky Angle | 68° | Relatively tight — organized updraft |
+| LCL Height | 414m (SFC) | Low LCL — favorable for tornadoes if surface-based |
+| SARS | 69% significant | Strong analog matches to significant severe events |
+| Hazard Type | SVR | Severe |
+
+**Hodograph shape:** Classic curved hodograph with significant clockwise turning in the low levels, transitioning to stronger westerly/northwesterly flow aloft. The deviation of the Bunkers Right motion well to the right of the mean wind confirms strong right-mover potential.
+
+**Low-level jet:** Wind barbs on the Skew-T show veering with height through the lowest levels (SSE at surface to S/SSW at 850 hPa), with speeds increasing to ~30-40 kt at 850 hPa. This low-level jet enhances the low-level shear and moisture transport from the Gulf.
+
+**Key concern:** Surface-based CIN is large (-286 J/kg), meaning the cap must be broken by strong forcing. The dry line provides this forcing — the convergence along the dryline boundary is the mechanism to overcome the cap and tap the elevated instability (MU CAPE 2110). The HRRR confirms this works, producing the 55 dBZ cell at fh=8.
+
+### Comparison Soundings:
+
+**35.0°N, -99.0°W (Western Oklahoma):**
+- MU CAPE: 512 J/kg (much weaker)
+- 0-3km SRH: 213 m²/s² (good but lower)
+- Supercell Composite: 1.2 (marginal)
+- Hazard type: MRGL SVR
+- Assessment: Weaker instability, environment supports severe but not high-end supercells
+
+**35.0°N, -97.5°W (Central Oklahoma):**
+- MU CAPE: 36 J/kg (virtually none)
+- 0-3km SRH: 60 m²/s² (weak)
+- Supercell Composite: 0.0
+- Hazard type: NONE
+- Assessment: Despite 55 dBZ returns, the local environment shows negligible instability. The ongoing convection here is likely mechanically driven or driven by residual elevated instability, not a sustainable supercell environment. **Not recommended.**
+
+---
+
+## Chase Recommendation
+
+### Hatch Area: 33.5°N, -100.5°W (West-Central Texas, near Aspermont/Stamford)
+- **Rationale:** Discrete 55 dBZ cell fires right on the dry line at fh=8 (21Z/4PM CDT). Supercell Composite of 12.1, MU CAPE 2110, 0-3km SRH 319 m²/s². SARS analogs match 69% significant severe. Located within the SPC Moderate risk area.
+
+### Positioning Location: ~32.8°N, -97.6°W (North-Central Texas, near Fort Worth)
+- **Rationale:** Bunkers Right Motion is 286°/25 kt (toward 106° ESE). Positioning distance = 25 × 7 = 175 miles ESE of the hatch area. This allows the chaser to wait in the storm's expected path and intercept as the discrete supercell propagates ESE off the dry line.
+
+### Bunkers Right Storm Motion Vector
+- **Direction (FROM):** 286° (WNW)
+- **Direction (TOWARD):** 106° (ESE)
+- **Speed:** 25 knots
+
+### Confidence: HIGH
+- SPC Moderate risk with Supercell Composite 12.1
+- Discrete cell confirmed on the dry line in HRRR reflectivity
+- Outstanding deep-layer and low-level shear
+- SARS analogs strongly support significant severe weather
+- Primary uncertainty: strength of the surface cap, but dry line forcing appears sufficient per HRRR output
+
+### Storm Mode: Discrete supercells firing along the dry line in west-central Texas
+- The Oklahoma convection is trending toward a cluster/line and is less favorable
+- The isolated W-TX cell has the best combination of isolation + environment + proximity to the dry line
+- Watch for additional discrete initiation along the dry line from 31-34°N as the afternoon progresses
+
+---
+
+## Timeline (CDT)
+- **1-2 PM:** Early convective initiation along the dry line in Oklahoma (45 dBZ). Scattered cells.
+- **2-3 PM:** Oklahoma cells intensify to 55 dBZ, beginning to cluster. Still semi-discrete.
+- **3-4 PM:** **PRIMARY TARGET** — Discrete supercell fires at 33.5°N, -100.5°W in west-central TX at 55 dBZ. This is the optimal intercept window.
+- **4-7 PM:** Expect the discrete cell to propagate ESE along the BRM vector (106°/25kt), tracking from the Stamford area toward the Abilene-to-DFW corridor. Additional cells may fire along the dry line.
+
+---
+
+*Analysis generated from HRRR 13Z run, May 10, 2026. Map saved to chase_2026-05-10.png.*
