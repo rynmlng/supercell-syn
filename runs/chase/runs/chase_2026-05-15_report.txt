@@ -1,0 +1,137 @@
+# Storm Chase Forecast — Friday, May 15, 2026
+
+## Model Run
+- **HRRR Init:** 2026-05-15 16Z (latest available)
+- **Max Forward Hour:** 18
+
+## SPC Day 1 Convective Outlook
+- **Moderate Risk (Level 4):** Central Iowa (~42°N, -93.5°W)
+- **Enhanced Risk (Level 3):** NE Kansas through Missouri into Iowa
+- **Slight Risk (Level 2):** Broad area from central KS/OK through the entire central Plains
+- **Marginal Risk (Level 1):** Very large area across the central and northern Plains
+
+This is a significant severe weather day with a rare Moderate risk centered over Iowa.
+
+## Dry Line Analysis
+Three dew point frames were successfully retrieved (fh=2/18Z, fh=5/21Z, fh=8/00Z).
+
+A well-defined dry line runs N-S through central Kansas and Nebraska, approximately along **-97.5°W to -98°W**:
+- **East of the dry line:** Surface dew points 60-68°F (rich Gulf moisture), with the highest values (65-68°F) from central OK through eastern KS into western MO
+- **West of the dry line:** Dew points plummet to 10-25°F across western KS/NE — arid High Plains air
+- **Gradient:** 30-40°F dew point drop over approximately 50-75 miles — a classic, well-defined dry line
+- The dry line remains **nearly stationary** through the afternoon/evening period (18Z-00Z), with only a slight westward retreat by 00Z
+
+The eastern edge of the dry line (where dew points first exceed 55-60°F) is consistently near **-97°W** in Nebraska, making this the prime convective initiation zone.
+
+## Reflectivity Analysis (Convective Initiation)
+
+### fh=2 (18Z / 1 PM CDT)
+- Very little convective activity in the target area
+- Weak return at **37.5°N, -98.0°W** (30 dBZ) — south-central KS near the dry line
+- Scattered weak returns in MO (38°N, -93.5°W at 30 dBZ and 37°N, -94.5°W at 30 dBZ)
+- No significant convection yet in the Enhanced/Moderate risk area
+
+### fh=4 (20Z / 3 PM CDT)
+- Still no significant returns in the Central Plains target area
+- Pixel scan shows all strong returns in Pacific NW and offshore Atlantic
+
+### fh=5 (21Z / 4 PM CDT)
+- Similar to fh=4 — no significant convection in the Plains
+- CI has not yet occurred along the dry line
+
+### fh=7 (23Z / 6 PM CDT) ⭐ FIRST SIGNIFICANT CI
+- **43.0°N, -97.0°W: 45 dBZ** — **Discrete cell firing on the dry line in SE South Dakota!**
+- **33.5°N, -99.0°W: 40 dBZ** — Cell in north-central Texas
+- **34.0°N, -103.5°W: 35 dBZ** — Cell in eastern New Mexico
+- The SE SD cell at 43°N, -97°W is the primary target — it appears discrete and isolated on the image, right on the dry line
+
+### fh=8 (00Z / 7 PM CDT)
+- **43.0°N, -96.5°W: 45 dBZ** — The SE SD cell has moved slightly east (tracking ESE as expected)
+- **42.5°N, -97.5°W: 45 dBZ** — A second discrete cell has developed on the dry line in NE Nebraska
+- **35.5°N, -100.5°W: 35 dBZ** — TX panhandle activity
+- **32.5°N, -101.5°W: 45 dBZ** — West TX cell
+- The primary target cells at 43°N and 42.5°N are discrete and firing along the dry line, consistent with supercell initiation
+
+**Storm Mode Assessment:** The cells developing along the dry line in NE Nebraska/SE South Dakota are **discrete** — not embedded in any QLCS. No organized line convection is evident in the target area at any forward hour. These are isolated cells with clear separation, firing individually along the dry line boundary. This is an ideal storm mode for chase targeting.
+
+## Sounding Analysis
+
+### Location 1: 43.0°N, -97.0°W (SE South Dakota — right on the dry line cell)
+- **Bunkers Right Motion:** 295°/27 kt (FROM; storms move ESE at 27 kt)
+- **MLCAPE:** 169 J/kg | **MUCAPE:** 708 J/kg
+- **MLCIN:** -67 J/kg — significant cap
+- **LCL:** 2306 m — high (dry boundary layer right on the dry line)
+- **SRH 0-3km:** 104 m²/s²
+- **Supercell Composite:** -0.1 (not supportive at this exact point — too dry)
+- **STP:** 0.0 | **SHIP:** 0.2
+- **Critical Angle:** 31°
+- **Assessment:** This is right on the dry edge. Limited moisture but strong lapse rates (8.4 C/km 850-500mb). Cells that initiate here will rapidly move ESE into better moisture.
+
+### Location 2: 42.5°N, -97.5°W (NE Nebraska — slightly west of dry line)
+- **Bunkers Right Motion:** 296°/27 kt
+- **MLCAPE:** 563 J/kg | **MUCAPE:** 839 J/kg
+- **MLCIN:** -59 J/kg
+- **LCL:** 2587 m | **LFC:** 2829 m
+- **SRH 0-3km:** 156 m²/s² — good!
+- **Supercell Composite:** 1.9
+- **STP:** 0.0 | **SHIP:** 0.4
+- **Critical Angle:** 42°
+- **BRN Shear:** 41 m²/s²
+- **850-500mb LR:** 8.1 C/km — steep
+- **Psbl Haz Type:** MRGL SVR
+- **Assessment:** Transition zone environment. Decent shear, modest CAPE, still somewhat dry. Better than Location 1 but not yet the sweet spot.
+
+### Location 3: 42.0°N, -96.0°W (NW Iowa — warm sector, east of dry line) ⭐ BEST ENVIRONMENT
+- **Bunkers Right Motion:** 287°/21 kt
+- **MLCAPE:** 2497 J/kg | **MUCAPE:** 2730 J/kg — **EXPLOSIVE**
+- **MLCIN:** -6 J/kg — **virtually uncapped!**
+- **LCL:** 2293 m | **LFC:** 2350 m
+- **SRH 0-3km:** 104 m²/s²
+- **Supercell Composite:** **5.0** — highly favorable
+- **STP (cin):** 0.0 | **SHIP:** 1.9
+- **Critical Angle:** **72°** — excellent for tornadic supercells
+- **MeanW:** 10.5 g/kg — rich low-level moisture
+- **850-500mb LR:** 8.6 C/km — very steep
+- **MMP:** 1.0 | **ESP:** 1.3
+- **SARS Supercell:** 33% TOR (36 loose matches)
+- **SARS Significant Hail:** 65% SIG (114 loose matches, 2.75" hail analog)
+- **Psbl Haz Type:** **SVR**
+- **Low-Level Jet:** Winds at 850-925 hPa show 25-30+ kt from the SSE, backing with height — classic warm sector low-level jet enhancing SRH
+- **Hodograph:** Large, curved hodograph with strong directional shear in the lowest 3 km, speed shear through the mid-levels
+- **Assessment:** This is a **classic supercell environment**. Enormous CAPE, no cap, steep lapse rates, strong critical angle, and SARS analogs matching both tornadic supercells and significant hail events. Any discrete cell moving into this environment will rapidly intensify.
+
+## Synthesis & Chase Strategy
+
+### The Setup
+A textbook dry line setup across the central Plains. The dry line sits at ~-97.5°W through NE Nebraska/SE South Dakota. East of the dry line, an incredibly unstable air mass is in place over NW Iowa — 2700+ J/kg CAPE with essentially no cap, steep mid-level lapse rates (8.6 C/km), and strong wind shear with a 72° critical angle.
+
+### Hatch Area: 43.0°N, -97.0°W (NE Nebraska / SE South Dakota)
+- Discrete cells fire along the dry line starting around 23Z (6 PM CDT, fh=7)
+- First cell appears at 43.0°N, -97.0°W at 45 dBZ
+- A second cell develops at 42.5°N, -97.5°W by 00Z
+- **Storm mode:** Discrete supercells — no QLCS in the target area
+
+### Bunkers Right Motion Vector
+- **295°/27 kt** (FROM convention; storms move TOWARD ~115° ESE at 27 kt)
+- Storms initiating on the dry line will track ESE into the rich warm sector
+- 7-hour positioning distance: 27 kt × 7 = 189 nautical miles ≈ 217 statute miles downstream
+
+### Positioning Location: Central Iowa (~41.8°N, -93.7°W)
+- This is in the heart of the SPC **Moderate risk** area
+- The NW Iowa environment (42°N, -96°W) has Supercell Composite of 5.0 and SARS analogs showing 33% tornado potential
+- Storms will cross through this rich environment as they mature
+
+### Confidence Level: **HIGH**
+- Clear discrete cell initiation along a well-defined dry line
+- Explosive instability downstream with essentially no CIN
+- Strong wind shear with excellent critical angle
+- SARS analogs support significant severe weather
+- The main caveat is that CI occurs somewhat late (23Z/6 PM CDT), limiting the daytime chase window to about 2-3 hours before dark
+
+### Hazards
+- **Large Hail:** SARS analog shows 65% SIG with 2.75" hail match — very large hail likely
+- **Tornadoes:** 33% TOR in SARS, critical angle of 72° — tornado threat is real but not dominant
+- **Damaging Winds:** BRN Shear of 25 m²/s² and MUCAPE of 2730 J/kg support strong downdraft potential
+
+## Summary
+This is a high-confidence chase day targeting discrete supercells initiating along the dry line in NE Nebraska/SE South Dakota around 6 PM CDT. Storms will rapidly intensify as they move ESE into the explosive warm sector environment over NW/central Iowa. The SPC Moderate risk is well-placed. Position in central Iowa to intercept these supercells as they mature. Primary threats are very large hail and possible tornadoes.
