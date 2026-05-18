@@ -1,0 +1,109 @@
+# Storm Chase Forecast — Monday, May 18, 2026
+
+## SPC Outlook
+- **Moderate Risk (Level 4/5)** centered over northeast Kansas (~39.3°N, -96.6°W)
+- **Enhanced Risk** ring extending from central Kansas through Missouri and into Iowa
+- **Slight Risk** covers a broad swath from Oklahoma through Illinois/Indiana
+- Forecasters: Gleason/Marsh, issued 1244Z
+
+## Dry Line Analysis
+**HRRR 13Z run, analyzed at fh=6 (19Z), fh=9 (22Z), fh=12 (01Z)**
+
+A sharp, well-defined dry line runs north-to-south from central Nebraska through central Kansas (~98-99°W) into central Oklahoma. The gradient is extreme:
+- **East of dry line (97-98°W)**: Dewpoints 65-73°F (rich Gulf moisture)
+- **West of dry line (99-100°W)**: Dewpoints 30-43°F (arid continental air)
+- **Gradient**: ~30°F drop over approximately 50-75 miles
+
+The dry line remained nearly stationary through all three analysis times, providing a persistent focus for convective initiation. The eastern edge of the dry line (where moisture is highest) sits at approximately 97-98°W across Kansas.
+
+## Reflectivity Analysis
+
+### fh=6 (19Z / 2 PM CDT)
+- **Primary cell: 40.0°N, -98.5°W at 65 dBZ** — discrete supercell right along the dry line in south-central Nebraska (near Holdrege, NE). This is the strongest return in the entire CONUS scan.
+- Secondary returns near the QLCS: 40.5°N/-91.0°W (60 dBZ), 40.0°N/-93.0°W (55 dBZ) — these are embedded in a broader convective band from Kansas to Iowa.
+- Band of convection stretches from western Kansas/Nebraska east through Iowa/Illinois, but the strongest discrete cell is at the western dry line boundary.
+
+### fh=9 (22Z / 5 PM CDT)
+- **Primary cell persists: 40.0°N, -98.0°W at 60 dBZ** — moved slightly east (0.5° longitude in 3 hours), still discrete along the dry line
+- **New cell: 39.5°N, -99.0°W at 55 dBZ** — second discrete cell along the dry line in north-central Kansas
+- QLCS band continues east: 40.5°N/-90.0°W (65 dBZ), 38.5°N/-89.5°W (65 dBZ) — line convection in Iowa/Illinois
+- Multiple cells along the dry line in NE/KS are showing isolated, discrete character — not embedded in the QLCS
+
+## Sounding Analysis
+
+### Sounding 1: 40.0°N, -98.5°W (fh=6, at the 65 dBZ cell)
+- **Bunkers Right Motion: 230°/47 kt** (FROM 230°, moving toward NE)
+- MU CAPE: 2042 J/kg | FCST CAPE: 330 J/kg
+- Supercell Composite: 7.9
+- SHIP: 1.2
+- SFC-1km SRH: 359 m²/s² | SFC-3km SRH: 555 m²/s²
+- Effective Inflow SRH: 195 m²/s²
+- BRN Shear: 328 m²/s²
+- LCL: 825m | LFC: same
+- Steep lapse rates: 7.6°C/km (850-500mb range)
+- Strong veering hodograph with clockwise curvature
+- Low-level jet evident at 850-925 hPa
+- **Hazard Type: SVR**
+
+### Sounding 2: 39.5°N, -99.0°W (fh=6, at the secondary cell)
+- **Bunkers Right Motion: 228°/48 kt**
+- MU CAPE: 1258 J/kg | FCST CAPE: 716 J/kg
+- Supercell Composite: 3.4
+- SHIP: 0.7
+- SFC-1km SRH: 244 m²/s² | SFC-3km SRH: 436 m²/s²
+- BRN Shear: 303 m²/s²
+- LCL: 857m
+- Steep lapse rates: 8.0°C/km
+- Classic Supercell profile on hodograph
+- **Hazard Type: NONE** (lower instability here at the dry line edge)
+
+### Sounding 3: 39.5°N, -98.0°W (fh=9, peak heating)
+- **Bunkers Right Motion: 238°/52 kt**
+- MU CAPE: 2150 J/kg | FCST CAPE: 1066 J/kg
+- **Supercell Composite: 16.3** (extremely favorable!)
+- SHIP: 1.3
+- SFC-1km SRH: 65 m²/s² | SFC-3km SRH: 396 m²/s²
+- Effective Inflow SRH: 378 m²/s²
+- Effective Bulk Wind Difference: 66 kt
+- BRN Shear: 307 m²/s²
+- **LCL: 702m** (low — favorable for tornadoes)
+- Steep lapse rates: 8.5°C/km (700-500mb), 6.5°C/km (850-500mb)
+- Mean PW: 1.42 inches
+- Classic Supercell profile indicated
+- **Hazard Type: SVR**
+
+## Storm Mode Assessment
+- **Discrete supercells along the dry line** are the primary target
+- The 65 dBZ cell at 40.0°N, -98.5°W at fh=6 is an early-firing discrete supercell right on the dry line boundary
+- By fh=9, a second cell develops at 39.5°N, -99.0°W — multiple discrete cells along the boundary
+- A QLCS extends eastward from Kansas into Iowa/Illinois, but the dry line cells are isolated and ahead of (west of) the main line
+- The supercell composite of 16.3 at fh=9 indicates extreme supercell potential
+- With LCL at 702m and BRM at 238°/52kt, classic supercells capable of significant severe weather (large hail, tornadoes) are expected
+
+## Target Recommendation
+
+### Hatch Area: 39.5°N, -98.5°W (North-Central Kansas)
+- Right along the dry line where discrete cells are initiating (65 dBZ at fh=6)
+- Within the SPC Moderate risk area
+- Sharp moisture gradient provides lifting focus
+- MU CAPE >2000 J/kg on the moist side
+- Supercell composite 7.9-16.3 across the area
+
+### Positioning Location: 41.77°N, -94.78°W (Southwestern Iowa)
+- 250 miles northeast of hatch area along BRM vector (050°)
+- Computed as BRM speed (47kt) × 7 = 329 miles, clamped to max 250 miles
+- Allows intercepting storms as they mature and track NE through the peak Moderate risk corridor
+- In the moist sector with surface dewpoints in the upper 50s to low 60s
+
+### Bunkers Right Storm Motion: 230°/47 kt (FROM convention)
+- Storms will track from WSW to ENE at ~47 knots
+- Right-movers will deviate slightly right (more southeasterly origin)
+- 4-6km SR wind of 193/15 kt supports mesocyclone maintenance
+
+## Confidence Level: HIGH
+- SPC Moderate risk day with well-defined dry line
+- HRRR shows strong discrete supercells initiating along the dry line by early afternoon
+- Extreme supercell composite parameters (16.3)
+- Excellent deep shear and hodograph curvature
+- Low LCL heights (702m) favorable for tornadogenesis
+- Multiple discrete cells firing — not just a single marginal opportunity
