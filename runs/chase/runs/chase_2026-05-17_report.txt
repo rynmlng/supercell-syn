@@ -1,0 +1,107 @@
+# Storm Chase Forecast — Sunday, May 17, 2026
+
+## SPC Day 1 Convective Outlook
+- **Enhanced (Level 3)** risk centered over central Kansas / southern Nebraska (~41.2°N, -98.0°W)
+- **Slight (Level 2)** risk extending east into Iowa, Missouri, Illinois, and north into South Dakota
+- **Marginal (Level 1)** risk broad across the central/eastern CONUS
+- No Moderate or High risk areas today
+
+## Dry Line Analysis (HRRR 13Z Run)
+Four successful dew point frames analyzed (fh=3, 4, 5, 6 → 16Z–19Z):
+- **Sharp N-S oriented dry line** from the TX Panhandle through western Kansas into western Nebraska and South Dakota
+- **West of dry line** (~-100°W and west): Dew points 30–40°F (arid)
+- **East of dry line** (~-98°W and east): Dew points 60–68°F (humid)
+- Transition zone: ~20–30°F dewpoint drop over ~50–75 miles, centered near **-99°W** in Kansas/Nebraska
+- Dry line holds relatively steady through the afternoon, with minor eastward mixing
+
+## Reflectivity Analysis
+
+### Early Afternoon (fh=3–6, 16Z–19Z, 13Z run):
+- Most significant convection across the **northern Plains** (Montana, Dakotas, Saskatchewan) — a large QLCS/MCS complex
+- Discrete cells developing along the dry line in **central South Dakota** (~45.5°N, -100°W at fh=5: 45 dBZ)
+- **No significant CI in Kansas or Nebraska** during early afternoon
+- Isolated 40 dBZ return in NE Oklahoma/SW Missouri (36°N, -94°W at fh=6) — far east of dry line
+
+### Mid-Afternoon (fh=7, 20Z, 13Z run):
+- Discrete cell at **44.0°N, -99.5°W: 45 dBZ** — south-central SD, near the dry line
+- Cells in ND at 46–47°N, -98 to -99°W: 40–45 dBZ
+- Still no CI in the Enhanced risk area (Kansas/Nebraska)
+
+### Late Afternoon (fh=9, 21Z, 12Z run):
+- **Strongest cell: 45.0°N, -98.0°W: 60 dBZ** — south-central SD at the dry line
+- Supporting cells at 45–47°N along -98 to -99°W at 40–45 dBZ
+- This cell appears to be at the **southern tip of the advancing QLCS** — potential bookend supercell
+- Cell at 41.0°N, -104.0°W: 45 dBZ — SE Wyoming (elevated, not primary target)
+
+### Early Evening (fh=12, 00Z, 12Z run):
+- **New discrete cells emerge in Nebraska**: 41.5°N, -97.5°W: 55 dBZ; 42.0°N, -97.5°W: 50 dBZ
+- SD cells propagate east: 44.0–44.5°N, -97.0 to -97.5°W: 55 dBZ
+- Multiple cells along 41.5–44.5°N, -97 to -97.5°W — suggesting a developing line but with discrete elements, particularly at the southern end
+
+## Sounding Analysis (12Z Run, fh=9 / 21Z)
+
+### Location 1: 45.01°N, 98.04°W (at the 60 dBZ cell, south-central SD)
+- **SFC CAPE: 260 J/kg** — very low; ML CAPE: 45 J/kg
+- Surface: 62°F / Td 61°F — cool, modified air near/behind convective system
+- SRH 0-1km: 28 m²/s² | SRH 0-3km: 76 m²/s²
+- Supercell Composite: 0.0 | STP: 0.0 | SHIP: 0.0
+- BRM: 245°/21 kt
+- **Assessment: NOT a surface-based supercell environment.** Cell is likely elevated/forced.
+
+### Location 2: 43.48°N, 98.47°W (southern SD, south of active cells)
+- **SFC CAPE: 0 J/kg** — completely stable
+- Surface: 58°F / Td 57°F — cool sector
+- SRH 0-3km: 282 m²/s² (high shear but no buoyancy)
+- Supercell Composite: 0.0 | STP: 0.0
+- BRM: 251°/27 kt
+- **Assessment: Stable, no convective potential.**
+
+### Location 3: 41.46°N, 97.47°W (central Nebraska — warm sector ahead of dry line) ⭐
+- **SFC CAPE: 4,383 J/kg** | ML CAPE: 3,308 J/kg | MU CAPE: 4,383 J/kg
+- CIN: 0 — uncapped
+- LCL: 651 m | LFC: 651 m (surface-based)
+- Surface: 78°F / Td 69°F — hot and very moist (PW: 1.32 in, MeanW: 14.7 g/kg)
+- **SRH 0-1km: 142 m²/s²** | **SRH 0-3km: 360 m²/s²** — exceptional
+- EHI 0-1km: 3.9 | EHI 0-3km: 9.9
+- **Supercell Composite: 27.2** — extremely high
+- **STP (fixed): 2.5** | STP (cin): 1.4 | SHIP: 2.3
+- **Critical Angle: 81°** — very favorable for tornadogenesis
+- BRN Shear: 81 m²/s²
+- MMP: 0.98 | SigSvr: 60,198 m³/s³
+- **BRM: 228°/29 kt** (storms move from 228° toward 048° at 29 kt)
+- Hodograph: Strong clockwise curvature in lowest 3 km with backed surface winds
+- Low-level jet: Strong southerly flow at 850–925 hPa
+- SARS: **58% TOR** (115 loose matches)
+- Sounding analogs: 20 May 1960 (Topeka — SIG), 22 May 2004 (AIH — WEAK)
+- **Possible Hazard Type: TOR**
+- **Assessment: EXCEPTIONAL supercell/tornado environment.** One of the most favorable soundings possible.
+
+## Chase Target Decision
+
+### Scenario:
+A large QLCS/MCS is advancing southeast across the northern Plains (MT→ND→SD). Discrete cells are initiating along the dry line at ~-99°W in south-central SD by early-mid afternoon (18–20Z). These SD cells have minimal surface-based CAPE (260 J/kg) and are likely elevated/forced by the larger system. However, the warm sector ahead of the dry line in central Nebraska features extreme instability (CAPE 4383 J/kg) and shear (SRH 142/360 m²/s²), with STP 2.5 indicating significant tornado potential.
+
+As the dry line advances eastward and the QLCS outflow boundary approaches from the north, explosive discrete supercell development is expected in central Nebraska by late afternoon/early evening (00Z / 7 PM CDT). The 12Z HRRR fh=12 confirms this with 55 dBZ cells at 41.5°N, -97.5°W. This is the primary chase target.
+
+### Hatch Area: 41.5°N, 99.0°W — Central Nebraska at the dry line
+- Within the SPC Enhanced risk area (centroid at 41.2°N, -98.0°W)
+- At the dry line (~-99°W) where convergence provides CI mechanism
+- CAPE: 4,383 J/kg | STP: 2.5 | Supercell Composite: 27.2
+- Tornadic supercell potential: HIGH
+
+### Bunkers Right Storm Motion: FROM 228° (toward 048°) at 29 knots
+- Storms will move toward the northeast at ~33 mph
+- Positioning location: ~203 miles northeast of hatch = **northwestern Iowa** (~43.4°N, -96.0°W)
+
+### Storm Mode:
+Discrete supercells expected to fire along the dry line in central Nebraska ahead of the advancing QLCS. The southern end of the QLCS may also produce bookend supercells. High tornado potential given STP 2.5 and SARS 58% TOR analogs.
+
+### Confidence: MODERATE-HIGH
+- High confidence in the thermodynamic environment (extreme CAPE + shear)
+- Moderate confidence in CI timing (HRRR shows CI by 00Z; could be earlier with dry line mixing)
+- Some uncertainty in storm mode (discrete vs. rapid upscale growth into QLCS)
+
+### Key Risks:
+1. CI timing may be later than ideal for daytime chasing (00Z = 7 PM CDT), though still before sunset (~8:45 PM CDT in May)
+2. Rapid upscale growth possible as cells merge with the advancing QLCS from the north
+3. Storm motion at 29 kt is moderate — manageable for chasing on Nebraska roads

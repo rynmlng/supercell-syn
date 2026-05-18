@@ -1,0 +1,168 @@
+# Chase Forecast Analysis — Saturday, May 16, 2026
+
+## Model Run
+- **HRRR Init:** 2026-05-16 12Z
+- **Max Forward Hour:** 48h
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Moderate Risk (Level 4):** Centered over western Kansas (~38–39°N, -99 to -101°W)
+- **Enhanced Risk (Level 3):** Surrounding the Moderate area, extending from the Texas/Oklahoma panhandles through Kansas into southern Nebraska
+- **Slight Risk (Level 2):** Spanning broadly from the southern Plains through Missouri, Iowa, Illinois; secondary area over Tennessee/North Carolina
+- **Marginal Risk (Level 1):** Extending across much of the central and eastern US
+- **Forecasters:** Gleason/Bentley
+
+---
+
+## Dry Line Analysis
+Three dew point frames analyzed (fh=6/18Z, fh=9/21Z, fh=12/00Z):
+
+- A **sharp, well-defined dry line** runs N-S through the central Plains along approximately **-99°W to -98°W** in Kansas and Oklahoma
+- **West of the line:** Dew points 5–22°F (arid, tan shading)
+- **East of the line:** Dew points 47–66°F (moist, green/teal shading)
+- **Gradient:** ~30–40°F drop over ~50–75 miles — a classic strong dry line
+- The line is nearly stationary from fh=6 through fh=12, with only a slight eastward push by evening
+- The dry line aligns perfectly with the SPC Moderate risk area in western Kansas
+
+---
+
+## Reflectivity Analysis
+
+### fh=6 (18Z / 1 PM CDT)
+- **No convective returns ≥20 dBZ** in the Kansas/Oklahoma/Nebraska target area
+- All pixel scan returns are in Canada, Pacific Northwest, or far offshore
+- Dry line CI has not yet occurred
+
+### fh=7 (19Z / 2 PM CDT)
+- Still **no returns** in the target area (central Plains)
+- All returns remain in Canada/PNW
+
+### fh=8 (20Z / 3 PM CDT)
+- 39.5°N, -87.5°W: 55 dBZ — western Indiana (far east of target, separate system)
+- 40.0°N, -88.0°W: 45 dBZ — central Illinois
+- Still **no returns along the Kansas/Oklahoma dry line**
+
+### fh=9 (21Z / 4 PM CDT)
+- 43.0°N, -104.0°W: 45 dBZ — first cell near Black Hills/NW Nebraska area
+- No returns in western Kansas within the Moderate risk area
+- The NW Nebraska cell is on the dry side with essentially zero CAPE (confirmed by sounding)
+
+### fh=12 (00Z / 7 PM CDT)
+- **Significant convection develops across the region:**
+  - 41.5°N, -95.5°W: **60 dBZ** (western Iowa)
+  - 41.0°N, -102.5°W: **50 dBZ** (western Nebraska, near dry line)
+  - 43.5–41.5°N, -102.5°W: **45 dBZ** — discrete cells along western NE dry line
+  - 43.0–42.0°N, -93.0°W: **55 dBZ** — cluster in central Iowa
+  - 41.5°N, -96.0°W: 45 dBZ, 41.0°N, -97.5°W: 45 dBZ — central/eastern NE
+- The HRRR shows delayed CI along the dry line; convection initiates late afternoon and intensifies through the evening
+- Western Nebraska cells appear **discrete and isolated** along the dry line
+- Iowa cells are further into the warm sector (less ideal for targeting)
+
+**Key Finding:** The HRRR is slow to initiate convection in the Moderate risk area of western Kansas, which is common for dry-line setups where mesoscale forcing is difficult for models to resolve. The SPC Moderate risk and thermodynamic environment strongly support supercell development in this corridor.
+
+---
+
+## Sounding Analysis
+
+### Location 1: Western Nebraska (42.03°N, -102.04°W) — fh=9/21Z
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 420 J/kg |
+| ML CAPE | 134 J/kg |
+| CIN | 0 J/kg |
+| LCL | 3258 m |
+| PW | 0.63" |
+| BRM | 290°/12 kt |
+| SRH-1km | 1 m²/s² |
+| SRH-3km | 13 m²/s² |
+| SC | -0.0 |
+| STP | 0.0 |
+
+**Assessment:** On the dry side of the dry line (Td=33°F). Extremely low CAPE, negligible SRH, very high LCL. Poor supercell potential. Psbl Haz Type: NONE.
+
+### Location 2: Western Kansas (38.53°N, -99.54°W) — fh=9/21Z ⭐ BEST
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | **1803 J/kg** |
+| ML CAPE | 1408 J/kg |
+| MU CAPE | 1803 J/kg |
+| CIN | 0 J/kg |
+| LCL | 3108 m |
+| LFC | 3108 m |
+| EL | 11,616 m |
+| PW | **1.02"** |
+| BRM | **293°/8 kt** |
+| SRH-1km | 15 m²/s² |
+| SRH-3km | 66 m²/s² |
+| Eff Shear | 50 m²/s² |
+| SC | **1.4** |
+| SHIP | 0.8 |
+| SARS | 14% SIG (36 loose matches) |
+| Critical Angle | 41° |
+| Lapse Rate (700-500) | 8.4°C/km |
+| Lapse Rate (Sfc-3km) | 10.0°C/km |
+
+**Assessment:** Excellent environment for supercells. High CAPE (~1800 J/kg), zero CIN (uncapped), very steep lapse rates, and a Supercell Composite of 1.4. SHARPpy classifies this as "Classic Supercell" storm type, marginally severe. Surface dew point of 50°F places this right at the dry line gradient. BRM is slow at 8 kt (storms will be slow-movers). LCL is high (3108m) limiting tornado potential, but large hail and damaging winds are well-supported. 36 SARS loose matches including significant severe.
+
+### Location 3: NW Nebraska (43.01°N, -103.54°W) — fh=9/21Z
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 24 J/kg |
+| CIN | **-182 J/kg** |
+| LCL | 2690 m |
+| LFC | 4545 m |
+| PW | 0.36" |
+| BRM | 288°/22 kt |
+| SRH-3km | 122 m²/s² |
+| SC | 0.0 |
+
+**Assessment:** Despite excellent shear (BRN=59, SRH-3km=122), zero CAPE and extreme CIN make sustained supercells impossible here. On the cold/dry side of the boundary. Psbl Haz Type: NONE.
+
+---
+
+## Chase Target Recommendation
+
+### Hatch Area
+- **Location:** Western Kansas, near **38.5°N, -99.5°W** (WaKeeney/Ness City area)
+- **Rationale:** 
+  - Centered in the SPC **Moderate risk** area
+  - Right along the dry line with strong moisture gradient
+  - Best thermodynamic environment: CAPE 1803 J/kg, SC=1.4, zero CIN
+  - Steep lapse rates (8.4°C/km 700-500, 10.0°C/km sfc-3km)
+  - PW of 1.02" supports precipitation efficiency
+
+### Bunkers Right Storm Motion
+- **FROM 293° at 8 kt** (TOWARD 113° / ESE)
+- Storms will be slow-moving, which enhances hail risk but allows chasers time to position
+
+### Positioning Location
+- **Central Kansas, ~38.1°N, -98.2°W** (near Great Bend/Hoisington area)
+- 75 miles ESE of the hatch area (clamped from 56-mile BRM×7 calculation)
+- Positioned in the moist sector ahead of the dry line, ready to intercept storms as they develop and move ESE
+
+### Storm Mode Expectation
+- **Discrete supercells** initiating along the dry line during late afternoon (21Z-00Z)
+- High CAPE and steep lapse rates favor large hail and strong updrafts
+- Supercell Composite of 1.4 with "Classic Supercell" classification
+- LCL at 3108m is high, limiting significant tornado potential
+- Slow storm motion (8 kt) will aid chasability
+- HRRR shows CI delayed until late afternoon, which is typical for dry line setups where mesoscale forcing triggers convection at specific points along the boundary
+
+### Confidence Level
+- **High confidence** in environment supporting supercells (CAPE, shear, dry line)
+- **Moderate confidence** in exact CI timing/location along the dry line
+- **Lower confidence** in tornado potential (high LCL, modest low-level SRH)
+
+### Key Threats
+1. Large hail (primary) — steep lapse rates, high CAPE, SHIP=0.8
+2. Damaging winds — strong updraft/downdraft potential
+3. Isolated tornado possible but less likely given high LCL
+
+---
+
+## Map Output
+- Chase forecast map saved to: `/Users/ryan/Development/supercell-syn/runs/chase/runs/chase_2026-05-16.png`
+- Hatch area: 38.5°N, -99.5°W (western Kansas)
+- Positioning: 38.069°N, -98.231°W (central Kansas)
+- BRM: 113° TOWARD / 293° FROM at 8 kt
