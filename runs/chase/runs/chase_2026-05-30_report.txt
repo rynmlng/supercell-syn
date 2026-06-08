@@ -1,0 +1,185 @@
+# Storm Chase Forecast — Saturday, May 30, 2026
+
+## HRRR Model Run
+- **Run:** 2026-05-30 17Z
+- **Max Forward Hour:** 18
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Moderate Risk (Level 4)** in north-central Oklahoma / south-central Kansas (~36–37°N, -97 to -99°W)
+- **Enhanced Risk (Level 3)** surrounding Moderate area, extending through central Kansas (~38–40°N)
+- **Slight Risk** covering broad area from Nebraska through Texas
+- **Marginal Risk** across the eastern CONUS and southern Plains
+
+Our hatch area at 39°N, -98.5°W is positioned within the Enhanced Risk zone, very near the northern boundary of the Moderate Risk area.
+
+---
+
+## Dry Line Analysis (3 frames: fh=1, fh=4, fh=7)
+
+A textbook dry line is analyzed across the central Plains:
+
+### fh=1 (18Z / 1 PM CDT):
+- Western KS/OK: Dew points 10–35°F (arid air from TX/NM panhandle)
+- Eastern KS/OK: Dew points 60–72°F (rich Gulf moisture)
+- Dry line eastern edge: approximately **-98°W to -97°W** in KS/OK
+- Gradient: **40–50°F drop over ~50–75 miles** — extremely sharp
+
+### fh=4 (21Z / 4 PM CDT):
+- Dry line has mixed slightly eastward
+- Western OK: 12–22°F, central KS: 29–44°F, eastern side: 65–72°F
+- Sharp gradient maintained at -98°W to -97°W
+
+### fh=7 (00Z / 7 PM CDT):
+- Dry line continues slow eastward progression
+- Western OK: 10–14°F, central KS: 31–43°F, eastern side: 64–68°F
+- Boundary still well-defined at -98°W to -97°W
+
+**Summary:** The dry line is oriented N-S from Nebraska through Kansas into Oklahoma/Texas, with the moisture boundary (eastern edge) at approximately -98°W to -97°W. This is a classic late-May dry line setup aligned perfectly with the Moderate/Enhanced risk corridor.
+
+---
+
+## Reflectivity Analysis
+
+### fh=3 (20Z / 3 PM CDT):
+- **No significant returns in the KS/OK target area.** Convective initiation has not yet occurred.
+- Strongest returns: Montana/Wyoming upslope convection and East Coast systems (not relevant).
+
+### fh=4 (21Z / 4 PM CDT):
+- Still **no significant returns in the target area.**
+- Isolated returns in Montana, Wyoming, West Texas (31.5°N, -102.5°W: 50 dBZ) — not near dry line moisture.
+
+### fh=5 (22Z / 5 PM CDT):
+- **First significant cell appears on the dry line:** 40.0°N, -100.0°W: **55 dBZ**
+- This is in south-central Nebraska, right at the dry line boundary
+- Cell appears **discrete and isolated** on the image — not part of a QLCS
+
+### fh=6 (23Z / 6 PM CDT) — **PRIMARY ANALYSIS FRAME**:
+- **40.0°N, -99.0°W: 65 dBZ** — Intense discrete supercell on the dry line (south-central NE)
+- **38.5°N, -97.5°W: 55 dBZ** — Strong discrete cell in central Kansas
+- 40.5°N, -99.5°W: 45 dBZ — Supporting cell near the 65 dBZ core
+- 39.5°N, -98.5°W: 45 dBZ — Additional cell along the dry line
+- 39.5°N, -98.0°W: 45 dBZ — Additional cell along the dry line
+- 38.5°N, -98.0°W: 45 dBZ — Additional cell in central Kansas
+
+**Storm Mode Assessment:**
+The reflectivity image at fh=6 shows **multiple discrete cells firing along the dry line** from ~38.5°N to 40.5°N, oriented roughly N-S along the -98.5°W to -99.0°W corridor. These are NOT embedded in a QLCS — they are isolated, discrete returns consistent with supercell initiation along the dry line convergence boundary. No QLCS is present in the target area. This is the ideal storm mode for chaseable supercells.
+
+---
+
+## Sounding Analysis (fh=6 / 23Z)
+
+### Sounding 1 — 40.0°N, -98.95°W (near the 65 dBZ cell)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 3439 J/kg |
+| ML CAPE | 3072 J/kg |
+| SFC CIN | 0 J/kg |
+| LCL | 1488 m |
+| SRH 0-1km | 42 m²/s² |
+| SRH 0-3km | 142 m²/s² |
+| Eff Inflow SRH | 99 m²/s² |
+| Bunkers Right | FROM 233° / 8 kt |
+| Supercell Composite | 4.7 |
+| STP (cin) | 0.6 |
+| SARS | 38% TOR, 56% SIG |
+| Critical Angle | 161° |
+| Psbl Hazard | SVR |
+
+**Assessment:** Strong supercell environment with significant CAPE and adequate shear. Lower SRH than further south but no CIN — storms fire easily here. Significant hail and wind threat; tornado potential is present but lower than further south.
+
+### Sounding 2 — 38.47°N, -97.47°W (near the 55 dBZ cell)
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 3947 J/kg |
+| ML CAPE | 3679 J/kg |
+| SFC CIN | -82 J/kg |
+| ML CIN | -35 J/kg |
+| LCL | 780 m (SFC) |
+| SRH 0-1km | 119 m²/s² |
+| SRH 0-3km | 255 m²/s² |
+| Eff Inflow SRH | 251 m²/s² |
+| Bunkers Right | FROM 249° / 9 kt |
+| Supercell Composite | 0.0 (CIN suppressed) |
+| STP (cin) | 0.0 |
+| Psbl Hazard | NONE |
+
+**Assessment:** Very high CAPE and excellent low-level SRH, but significant CIN (-82 SFC) is suppressing the effective layer computation. The very low SFC LCL (780m) is favorable for tornadoes once CIN erodes. As the cap breaks (FCST CIN = 0), this environment could become explosive. The BRM of 249/9 kt is the fastest of the three soundings.
+
+### ★ Sounding 3 — 39.03°N, -98.51°W (BEST — on the dry line)
+| Parameter | Value |
+|-----------|-------|
+| **SFC CAPE** | **5374 J/kg** |
+| ML CAPE | 4178 J/kg |
+| FCST CAPE | 5001 J/kg |
+| SFC CIN | -34 J/kg |
+| FCST CIN | 0 J/kg |
+| LCL | 711 m (SFC) |
+| **SRH 0-1km** | **110 m²/s²** |
+| **SRH 0-3km** | **230 m²/s²** |
+| Eff Inflow SRH | 218 m²/s² |
+| EHI | 7.3 |
+| **Bunkers Right** | **FROM 236° / 3 kt** |
+| **Supercell Composite** | **18.3** |
+| **STP (cin)** | **2.5** |
+| STP (fix) | 1.8 |
+| SHIP | 1.9 |
+| **SARS** | **61% TOR, 60% SIG** |
+| Critical Angle | 135° |
+| BRN Shear | 36 m²/s² |
+| 850-500mb LR | 7.9 C/km |
+| MMP | 0.85 |
+| SigSvr | 58121 m³/s³ |
+| **Psbl Hazard** | **TOR** |
+
+**Assessment:** This is an EXCEPTIONAL tornado supercell environment:
+- **Extreme instability** (CAPE >5000 J/kg) with steep mid-level lapse rates (7.9 C/km)
+- **Very low LCL** (711m SFC) — favorable for tornado development
+- **Strong low-level shear** (SRH 0-3km = 230) with a strongly curved hodograph
+- **Nearly stationary storms** (BRM 3 kt) — maximizes tornado damage potential and rainfall
+- **STP of 2.5** — well above the significant tornado threshold of 1.0
+- **SARS 61% TOR** — sounding analogs strongly favor tornado development
+- **Supercell composite of 18.3** — extreme supercell potential
+- CIN is minimal and eroding (FCST CIN = 0) — storms will fire as heating continues
+
+The very slow Bunkers Right Motion (3 kt toward 056°) indicates these storms will be nearly stationary, training over the same areas. This is dangerous for both tornadoes (long-track potential) and flash flooding.
+
+---
+
+## Target Selection
+
+### Hatch Area: 39.0°N, -98.5°W — Central Kansas (near Russell/Hays area)
+**Justification:**
+1. Located directly on the dry line boundary (-98.5°W)
+2. Within the Enhanced risk area, near the Moderate risk boundary
+3. Best sounding environment of the three analyzed (STP 2.5, SARS 61% TOR)
+4. Multiple discrete cells initiating along the dry line from 38.5°N to 40.5°N
+5. 45 dBZ returns already appearing at this latitude at fh=6 (39.5°N, -98.5°W and -98.0°W)
+
+### Positioning Location: 39.6°N, -97.3°W — North-central Kansas
+- 75 miles NE of the hatch area (clamped minimum due to very slow 3 kt BRM)
+- This is approximately near Concordia or Clay Center, KS
+- Positioned on the moisture-rich side of the dry line (dew points 60-67°F)
+- Allows the chaser to see storms approaching from the SW/WSW along the dry line
+
+### Bunkers Right Storm Motion Vector:
+- **FROM:** 236° (SSW)
+- **TOWARD:** 056° (NE)
+- **Speed:** 3 knots
+- Storms will be nearly stationary — ideal for intercept but dangerous for tornado duration
+
+---
+
+## Risk Assessment
+- **Primary Threat:** Significant tornadoes (STP 2.5, SARS 61% TOR)
+- **Secondary Threats:** Very large hail (SHIP 1.9), damaging winds (SigSvr >58000)
+- **Storm Mode:** Discrete supercells initiating along the dry line — ideal for chasing
+- **Confidence:** HIGH — textbook late-May Plains setup with extreme instability (CAPE >5000), strong low-level shear (SRH 230), and a well-defined dry line as the initiation focus. The Moderate risk from SPC confirms the significance of this event.
+- **Timing:** CI begins ~22Z (5 PM CDT), intensifying through 23Z-01Z (6-8 PM CDT)
+- **Caution:** Nearly stationary storms (3 kt BRM) create enhanced flash flood and long-track tornado risk. Multiple cells may merge after ~01Z.
+
+---
+
+## Map
+Saved to: `/Users/ryan/Development/supercell-syn/runs/chase/runs/chase_2026-05-30.png`

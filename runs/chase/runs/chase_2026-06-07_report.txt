@@ -1,0 +1,120 @@
+# Chase Forecast Analysis — Sunday, June 7, 2026
+
+## 1. SPC Outlook
+- **Enhanced risk** (Level 3/5) centered over western North Dakota / South Dakota (~46.9°N, -102°W)
+- Slight risk extends into Nebraska, Iowa, Minnesota
+- Additional Slight risk over Missouri/Arkansas
+- Marginal risk covers a broad swath of the central and southern Plains
+
+## 2. Dry Line Analysis
+Three dew point frames analyzed (fh=6, fh=9, fh=12):
+- A prominent dry line extends through the **northern Plains**, roughly along **101–106°W** at 46–48°N latitude
+- Dew points transition sharply from **60–66°F** (humid, green) on the east side to **28–37°F** (arid, tan) on the west side — a **25–35°F drop over ~50–75 miles**
+- The dry line persists and slightly sharpens through the afternoon window
+- At 47°N, the steepest moisture gradient is around **103–106°W**
+- This aligns directly with the Enhanced risk area
+
+## 3. Reflectivity / Convective Evolution
+### fh=6 (18Z / 1 PM CDT):
+- No significant returns in the Enhanced risk area (western Dakotas)
+- Active convection elsewhere: Kansas (39°N, -97°W: 55 dBZ), SE South Dakota (43°N, -96°W: 50 dBZ)
+- These cells are in the Slight risk area and far east of the dry line
+
+### fh=7 (19Z / 2 PM CDT):
+- Still no CI in western Dakotas
+- NW Iowa intensifying (42.5°N, -95.5°W: 60 dBZ) — but far from dry line
+
+### fh=8 (20Z / 3 PM CDT):
+- Central South Dakota cell (44°N, -97°W: 45 dBZ) — potential early CI near dry line fringe
+- Western Dakotas still quiet
+
+### fh=9 (21Z / 4 PM CDT):
+- No significant returns in the 45–48°N, 100–106°W corridor
+- Convection continuing to develop in Iowa/Missouri corridor (QLCS tendencies)
+
+### fh=10 (22Z / 5 PM CDT) — FIRST CI IN ENHANCED AREA:
+- **47.5°N, -106.0°W: 45 dBZ** — first cell fires right along the dry line in western ND!
+- **47.5°N, -106.5°W: 40 dBZ** — companion cell
+- **48.5°N, -107.0°W: 35 dBZ** — additional cell to the north
+- These appear as **discrete, isolated cells** along the dry line boundary — NOT embedded in a line
+
+### fh=12 (00Z / 7 PM CDT):
+- Cells have strengthened dramatically and moved east:
+  - **48.5°N, -104.5°W: 55 dBZ**
+  - **47.0°N, -104.0°W: 55 dBZ**
+  - Multiple 45 dBZ cells from 103.5°W to 105.5°W
+- Still daylight at 48°N in early June (sunset ~9:30 PM CDT)
+- Cells remain **discrete** — not a QLCS
+
+## 4. Sounding Analysis
+
+### Sounding 1: 47.53°N, -105.05°W (fh=10, 22Z)
+| Parameter | Value |
+|-----------|-------|
+| SBCAPE | 1366 J/kg |
+| CIN | -50 J/kg |
+| LCL | 1874 m |
+| BRM | 254°/25 kt |
+| SRH 0-3km | 149 m²/s² |
+| Supercell Composite | 2.7 |
+| 3km Lapse Rate | 8.3 C/km |
+| SARS TOR | 34% |
+| Hazard | MRGL SVR |
+
+### Sounding 2: 47.02°N, -104.05°W (fh=10, 22Z) — BEST ENVIRONMENT
+| Parameter | Value |
+|-----------|-------|
+| SBCAPE | **2774 J/kg** |
+| CIN | **-3 J/kg** (virtually uncapped) |
+| LCL | 1846 m |
+| BRM | 256°/23 kt |
+| SRH 0-3km | 119 m²/s² |
+| Supercell Composite | **5.5** |
+| SHIP | **2.1** |
+| 3km Lapse Rate | **9.0 C/km** |
+| SARS TOR | 42% |
+| SARS SIG Hail | **79%** |
+| Hazard | **SVR** |
+
+### Sounding 3: 48.52°N, -104.45°W (fh=12, 00Z)
+| Parameter | Value |
+|-----------|-------|
+| SBCAPE | 2403 J/kg |
+| CIN | 0 J/kg (uncapped) |
+| LCL | 1735 m |
+| BRM | 251°/25 kt |
+| SRH 0-3km | 25 m²/s² |
+| Supercell Composite | 1.8 |
+| SHIP | 1.6 |
+| Hazard | SVR |
+
+### Key Sounding Takeaways:
+- **Bunkers Right Motion consistently ~254°/25 kt** across all soundings (storms move from WSW toward ENE)
+- **Extremely steep mid-level lapse rates** (8.1–9.0 C/km) — classic northern Plains setup
+- **High CAPE** (2000–2800 J/kg) with minimal CIN — explosive convective potential
+- **Primary threat: LARGE/SIGNIFICANT HAIL** (SHIP 2.1, SARS 79% SIG hail match)
+- **Low tornado threat** — SRH 0-1km near zero, STP = 0. Supercells will be hail-dominant
+- Hodograph shows good clockwise curvature in 0-6km layer supporting right-moving supercells
+
+## 5. Target Selection
+
+### Hatch Area: 47.5°N, -105.0°W (western North Dakota)
+- Located right along the dry line where cells initiate at fh=10
+- Within the SPC Enhanced risk area
+- Discrete supercell mode confirmed
+- CAPE/shear overlap maximized
+
+### Positioning Location: ~48.1°N, -101.4°W (north-central North Dakota)
+- Computed as BRM speed × 7 = 175 miles downstream of hatch area
+- Toward 74° (ENE) from the hatch area
+- Allows chaser to intercept maturing supercells as they move off the dry line
+
+## 6. Confidence Assessment
+- **HIGH confidence** in supercell mode (SCP 5.5, steep lapse rates, uncapped CAPE)
+- **HIGH confidence** in hail threat (SHIP 2.1, 79% SARS SIG match)
+- **LOW confidence** in tornado threat (STP 0, weak low-level SRH)
+- **MODERATE confidence** in timing — cells don't initiate until ~22Z (5 PM CDT), later than ideal but still well within daylight at 48°N in June
+- QLCS activity in Iowa/Missouri is separate and not targeted
+
+## 7. Summary
+Classic northern Plains dry-line supercell setup. Discrete cells fire along the dry line in western North Dakota around 5 PM CDT, maturing and tracking ENE through the evening with significant hail as the primary hazard. Environment strongly supports supercells (SCP 5.5) but lacks the low-level shear for significant tornado threat. Position in north-central North Dakota to intercept eastward-moving storms.
