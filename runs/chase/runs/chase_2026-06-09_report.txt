@@ -1,0 +1,122 @@
+# Storm Chase Forecast — Tuesday, June 9, 2026
+
+## Model Run
+- **HRRR Init:** 2026-06-09 13Z
+- **Forward hours analyzed:** fh=6 through fh=12 (19Z–01Z / 2 PM – 8 PM CDT)
+
+## SPC Day 1 Convective Outlook
+- **Enhanced (Level 3)** risk from southern South Dakota through central Nebraska and central Kansas — this is the primary target zone
+- Small **Moderate (Level 4)** pocket in north-central Texas / southwest Oklahoma
+- **Slight (Level 2)** risk flanking the Enhanced area through the central Plains
+- Large **Marginal** risk across the broader central and eastern US
+
+## Dry Line Analysis
+A textbook dry line was identified across all three dew point frames (fh=6, fh=9, fh=12):
+
+- **fh=6 (19Z / 2 PM CDT):** Sharp N-S dry line from NE through KS to OK. Dew points drop from 62–75°F on the east side to 25–36°F on the west side. Eastern edge of the dry line runs approximately along **-99°W to -98°W** in KS/NE, and **-98°W to -99°W** in OK.
+- **fh=9 (22Z / 5 PM CDT):** Dry line holds position with minor eastward nudge. Gradient intensifies — 70°F+ moisture pooling in eastern KS/OK, teens to 20s°F across the TX/OK panhandle. Strongest gradient remains centered near -99°W to -100°W.
+- **fh=12 (01Z / 8 PM CDT):** Dry line continues slow eastward progression. Still sharply defined with a 30°F+ drop across ~75 miles.
+
+The dry line's eastern edge (where moisture is still high and CI is most likely) runs through the **-100°W to -102°W** corridor across western Kansas and eastern Colorado.
+
+## Reflectivity / Convective Initiation Timeline
+
+### fh=6 (19Z / 2 PM CDT)
+- **No significant returns along the dry line in KS/NE/OK.** CI has not yet occurred in the target area.
+- Strongest returns elsewhere: 50 dBZ in the Gulf (28°N, -92°W), 45 dBZ in the NW US and Ohio Valley.
+
+### fh=7 (20Z / 3 PM CDT)
+- **Early CI detected:** 39.5°N, -103.5°W at 40 dBZ and 40.0°N, -103.5°W at 35 dBZ — eastern Colorado, right on the dry line.
+- These are the first discrete cells firing along the boundary.
+
+### fh=8 (21Z / 4 PM CDT)
+- **38.5°N, -103.0°W: 45 dBZ** — Growing discrete cell on the CO/KS border, directly on the dry line.
+- **37.0°N, -104.5°W: 45 dBZ** — Southern Colorado (Trinidad area), also on the boundary.
+- Cells are discrete and isolated at this stage.
+
+### fh=9 (22Z / 5 PM CDT)
+- **37.5°N, -103.5°W: 45 dBZ** — SE Colorado, discrete cell near the KS/OK panhandle junction.
+- Convection visible spreading along the dry line across western KS/eastern CO in the image.
+- Cells appear scattered and discrete — not yet organized into a line.
+
+### fh=10 (23Z / 6 PM CDT)
+- **39.5°N, -101.0°W: 55 dBZ** — NW Kansas (Colby/Oakley area). Strong discrete supercell!
+- **41.5°N, -101.0°W: 50 dBZ** — SW Nebraska (North Platte area). Another strong cell.
+- **39.0°N, -101.5°W: 45 dBZ** — Adjacent cell in NW Kansas.
+- Cells have propagated ~100 miles east from their CI points, consistent with eastward storm motion.
+
+### Storm Mode Assessment
+- Convection initiates as **discrete cells** along the dry line in eastern CO around 3–4 PM CDT.
+- Cells remain discrete through the early-to-mid afternoon, growing to supercell strength (55 dBZ) by 6 PM CDT.
+- **No QLCS** is present in the target area during the daytime hours. The convection is isolated and discrete.
+- This is a **classic dry line supercell setup** for the western Kansas / eastern Colorado corridor.
+
+## Sounding Analysis
+
+### Sounding 1: 38.48°N, -101.51°W at fh=8 (21Z)
+- Located near the dry side of the dry line
+- SFC CAPE: 533 J/kg — modest, limited by dry air
+- LCL: 4116m — extremely high (dry environment)
+- Surface dew point: 39°F — too dry
+- RM: 277°/20 kt
+- **Assessment:** On the dry side of the boundary; not suitable for sustained convection.
+
+### Sounding 2: 39.47°N, -101.04°W at fh=8 (21Z) — PRIMARY TARGET
+- **SFC CAPE: 1493 J/kg** — robust instability
+- **CINH: 0** — completely uncapped
+- LCL: 3355m, LFC: 3355m (co-located)
+- **Bunkers Right Motion: 272°/21 kt** (FROM convention; storms move TOWARD ~092°/east)
+- SRH: 1km=20, 3km=60, Eff Inflow=44
+- **Supercell Composite: 0.9**
+- Critical Angle: 109° — favorable for mesocyclone development
+- Steep lapse rates: 3-6km AGL = 8.5°C/km, 850-500mb = 9.1°C/km
+- MMP: 0.85 — strong microburst potential (dry slots mixing in)
+- Surface: 97°F / 49°F dew point
+- PW: 0.85 in
+- **Hazard Type: MRGL SVR / Classic Supercell** indicated on the SHARPpy hazard type diagram
+- **Assessment:** This is the best environment — adequate CAPE, zero CIN, favorable hodograph shape with backing low-level winds, and steep mid-level lapse rates. Classic supercell with hail potential.
+
+### Sounding 3: 37.53°N, -101.04°W at fh=9 (22Z)
+- **SFC CAPE: 1349 J/kg** — good instability
+- **CINH: 0** — uncapped
+- LCL: 3538m, LFC: 3538m
+- **Bunkers Right Motion: 237°/13 kt** (FROM; storms move toward ~057°/NE)
+- SRH: 1km=40, 3km=76, Eff Inflow=79 — stronger helicity here
+- **Supercell Composite: 1.7** — highest of all three soundings
+- Critical Angle: 91°
+- Steep lapse rates: 850-500mb = 9.3°C/km
+- MMP: 1.0
+- Surface: 100°F / 49°F dew point
+- **Hazard Type: MRGL SVR / Classic Supercell**
+- **Assessment:** Even better supercell composite (1.7) with higher SRH, but slower storm motion (13 kt). The stronger low-level wind shear here suggests enhanced mesocyclone potential but with slower cell propagation.
+
+## Hatch Area & Positioning
+
+### Hatch Area: 39.0°N, -102.5°W (Eastern CO / Far Western KS Border)
+- Right on the dry line where CI begins at fh=7-8
+- Within the SPC Enhanced risk area
+- Discrete cells are initiating here and tracking east-southeast
+
+### Positioning Location: ~38.89°N, -99.77°W (West-Central Kansas)
+- Computed from BRM: 21 kt × 7 = 147 miles east of hatch area
+- This places the chaser near the WaKeeney/Ness City area of west-central Kansas
+- Storms initiating at 3–4 PM CDT on the dry line will arrive at this longitude by approximately 5–6 PM CDT
+- Excellent road network along I-70 and US-283 for north-south repositioning
+
+### Bunkers Right Storm Motion Vector
+- **FROM: 272° at 21 kt** (wind convention)
+- **TOWARD: 092° (east) at 21 kt**
+- Storms move nearly due east across western Kansas
+
+## Confidence & Risk Assessment
+- **Confidence: MODERATE-HIGH** for discrete supercell development along the dry line
+- CAPE is adequate (1300–1500 J/kg) though not extreme
+- Zero CIN ensures rapid convective initiation once heating maximizes
+- Steep lapse rates (9+ C/km) support large hail potential
+- Supercell composite values of 0.9–1.7 support classic supercell mode
+- STP = 0 at all locations (tornado potential is low; LCLs too high for significant tornado threat)
+- Primary hazards: **large hail and damaging winds** from discrete supercells
+- The dry line is well-defined and cells initiate cleanly along it — this is a classic High Plains chase setup
+
+## Summary
+Today features a textbook dry line supercell setup across western Kansas and eastern Colorado within the SPC Enhanced risk area. Discrete cells fire along the dry line beginning around 3 PM CDT in eastern Colorado and mature into supercells tracking east across NW Kansas by early evening. Position near west-central Kansas (WaKeeney/Ness City corridor) along I-70 to intercept eastward-moving discrete supercells. Primary threats are large hail from classic supercells in a steep lapse rate environment.
