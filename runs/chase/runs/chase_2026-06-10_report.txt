@@ -1,0 +1,156 @@
+# Storm Chase Forecast — Wednesday, June 10, 2026
+
+## Model Run
+- **HRRR Init:** 2026-06-10 13Z
+- **Analysis Window:** fh=5 through fh=11 (18Z–00Z, ~1 PM – 7 PM CDT)
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Enhanced Risk (Level 3)** centered over eastern Iowa (~42.4°N, -91.9°W), extending from eastern Nebraska through Iowa, Wisconsin, and Illinois
+- **Slight Risk** surrounds the Enhanced area across the broader upper Midwest
+- **Marginal Risk** extends from the northern Plains through the central US and mid-Atlantic
+- No Moderate or High risk issued
+
+---
+
+## Dry Line / Moisture Boundary Analysis
+Three dew point frames examined (fh=5/18Z, fh=8/21Z, fh=11/00Z):
+
+### Classic Dry Line (Western Plains)
+- A sharp moisture boundary runs N-S from Texas through Kansas and into Nebraska along **-97°W to -99°W**
+- West side: 10-30°F dew points (arid High Plains)
+- East side: 50-65°F transitioning rapidly to 70°F+
+- Gradient: 30-40°F drop over ~50-75 miles — classic dry line signature
+- The dry line remained quasi-stationary across all three frames
+
+### Central Iowa Moisture Gradient (Target Area)
+- A secondary moisture gradient runs through central Iowa roughly along **-93°W to -95°W**
+- Western Iowa (~-96°W): dew points ~50-54°F
+- Central Iowa (~-93°W): dew points ~63-67°F
+- Eastern Iowa: dew points 70-75°F
+- This gradient represents the warm front / surface trough interaction zone where CI occurs
+- The SPC Enhanced risk and convective initiation are focused along this boundary, NOT the classic dry line in western KS/NE
+
+---
+
+## Reflectivity Analysis (Pixel Scan Ground Truth)
+
+### fh=5 (18Z, ~1 PM CDT)
+- **44.0°N, -91.5°W: 60 dBZ** — Western Wisconsin, early convection
+- **41.5°N, -92.0°W: 45 dBZ** — Central Iowa, cells initiating
+- Scattered returns through WI/MN, nothing significant near the classic dry line in KS/NE
+
+### fh=6 (19Z, ~2 PM CDT)
+- **44.5°N, -90.5°W: 60 dBZ** — Western Wisconsin
+- **45.0°N, -91.0°W: 55 dBZ** — NW Wisconsin
+- **41.0°N, -93.0°W: 40 dBZ** — Central Iowa, discrete cell developing
+- Convection remains organized in western WI; Iowa cells are beginning to ramp up
+
+### fh=7 (20Z, ~3 PM CDT) ← PRIMARY TARGET FRAME
+- **47.5°N, -92.5°W: 65 dBZ** — Northern Minnesota (QLCS segment)
+- **45.0°N, -89.5°W: 65 dBZ** — Central Wisconsin (QLCS segment)
+- **42.0°N, -92.5°W: 55 dBZ** — Central Iowa — **DISCRETE CELL, TARGET**
+- **41.5°N, -91.5°W: 50 dBZ** — Eastern Iowa — **DISCRETE CELL**
+- The Wisconsin/Minnesota convection appears more linear (QLCS pattern)
+- The Iowa cells at 42.0-41.5°N are developing SOUTH of the main line, discrete and isolated
+
+### fh=8 (21Z, ~4 PM CDT)
+- **43.0°N, -94.0°W: 55 dBZ** — North-central Iowa
+- **42.5°N, -93.0°W: 50 dBZ** — Central Iowa
+- **46.5°N, -90.0°W: 55 dBZ** — Northern Wisconsin (line convection)
+- Iowa cells continue to intensify and remain discrete from the QLCS
+
+### Storm Mode Assessment
+- A QLCS extends from northern Minnesota through Wisconsin (65 dBZ cores)
+- **Discrete supercells** are developing in central Iowa (42.0°N, -92.5°W at fh=7; 42.5-43.0°N, -93.0 to -94.0°W at fh=8) SOUTH of the main line and independent from the QLCS
+- These discrete cells are near the moisture boundary in central Iowa and are the preferred chase target
+
+---
+
+## Sounding Analysis
+
+### Sounding 1: 42.03°N, -93.01°W (Central Iowa — BEST TARGET)
+| Parameter | Value |
+|-----------|-------|
+| CAPE (SFC/ML/MU) | 4304 / 2810 / 4304 J/kg |
+| CIN (SFC) | 0 J/kg |
+| LCL | 560 m |
+| LFC | 560 m |
+| Bunkers Right (RM) | 254°/40 kt (FROM WSW) |
+| SRH 0-1km | 132 m²/s² |
+| SRH 0-3km | 126 m²/s² |
+| EHI 0-1km | 3.5 |
+| Supercell Composite | 10.8 |
+| STP (fixed) | 2.7 |
+| STP (cin) | 1.7 |
+| SHIP | 1.8 |
+| Critical Angle | 63° |
+| PW | 1.81 in |
+| SARS | 58% TOR |
+| Psbl Haz Type | TOR |
+| Sfc Td / T | 75°F / 82°F |
+
+**Assessment:** Outstanding supercell/tornado environment. Extreme CAPE (4304), zero CIN, very low LCL (560m), excellent SRH (132), and all composite parameters strongly favor significant tornadoes. The SARS system matches 58% tornado analogs. The hodograph shows strong veering through the low levels with a critical angle of 63°. The 850-925 hPa jet is well-defined at 25-30 kt from the SSE, enhancing low-level convergence.
+
+### Sounding 2: 43.03°N, -94.05°W (North-Central Iowa)
+| Parameter | Value |
+|-----------|-------|
+| CAPE (SFC) | 3184 J/kg |
+| CIN | 0 |
+| LCL | 1555 m |
+| BRM | 259°/40 kt |
+| SRH 0-1km | 38 m²/s² |
+| STP | 0.3 |
+| Psbl Haz Type | SVR |
+
+**Assessment:** High CAPE but very high LCL (1555m) and weak low-level shear (SRH 38). Marginally favorable for supercells but not tornado-favorable. Severe hail risk dominates.
+
+### Sounding 3: 42.47°N, -91.99°W (Eastern Iowa)
+| Parameter | Value |
+|-----------|-------|
+| CAPE (SFC) | 3036 J/kg |
+| LCL | 420 m |
+| BRM | 251°/46 kt |
+| SRH 0-1km | 113 m²/s² |
+| STP | 1.9 |
+| Psbl Haz Type | TOR |
+
+**Assessment:** Good environment with very low LCL and strong SRH, but slightly lower CAPE than Sounding 1. SARS matches 34% SIG. A good secondary target.
+
+---
+
+## Hatch Area & Positioning
+
+### Hatch Area: 42.0°N, -93.0°W (Central Iowa, near Ames/Marshalltown)
+**Rationale:**
+- Discrete supercells developing here by fh=7 (55 dBZ at 42.0°N, -92.5°W)
+- Exceptional environment: CAPE 4304, SRH 132, STP 2.7, 58% SARS TOR
+- Near the moisture gradient in central Iowa (~60-70°F dew points transitioning from 50s to the west)
+- In the heart of the SPC Enhanced risk area
+- Isolated from the QLCS in Wisconsin/Minnesota
+
+### Positioning Location: ~42.9°N, -88.25°W (Southeastern Wisconsin)
+- Computed from BRM 74° (toward ENE) at 40 kt × 7 hours ≈ 280 miles from hatch area
+- Clamped to max 250 miles per tool constraints
+- Located in southeastern Wisconsin, ahead and to the northeast of the hatch area along the storm motion vector
+- Allows approach from a position where the right-moving supercells will track toward
+
+### Bunkers Right Storm Motion
+- **FROM:** 254° (WSW)
+- **TOWARD:** 74° (ENE)
+- **Speed:** 40 kt
+
+---
+
+## Confidence & Risks
+- **Confidence: HIGH** for discrete supercells with significant tornado potential
+- The main risk is that cells could congeal into the QLCS as it surges southeast — if this happens, isolated storm structure degrades
+- The very low CIN (0 J/kg) means explosive CI is likely, but also that the area may quickly become contaminated with multiple storms
+- 40 kt storm motion is fast — chasers will need to stay ahead and mobile
+- If the discrete Iowa cells remain isolated from the Wisconsin line, this is a high-end chase day
+
+---
+
+## Summary
+A significant severe weather event across the upper Midwest with an SPC Enhanced risk over Iowa. A QLCS extends through Wisconsin/Minnesota, but discrete supercells are developing in central Iowa (42°N, -93°W) near the moisture boundary. The environment is explosive: CAPE exceeding 4000 J/kg, 0 CIN, low LCLs, and strong low-level shear (SRH 132, STP 2.7). SARS matches 58% tornado analogs. Hatch area placed in central Iowa near Marshalltown. Position in southeastern Wisconsin along the BRM vector to intercept rightward-moving supercells tracking ENE at 40 kt.
