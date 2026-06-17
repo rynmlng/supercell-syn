@@ -1,0 +1,151 @@
+# Chase Forecast Analysis — Saturday, June 13, 2026
+
+## Model Data
+- **HRRR Run:** 2026061312 (12Z Saturday)
+- **Max Forward Hour Available:** 48h
+
+## SPC Day 1 Convective Outlook
+- **Enhanced (Level 3)** risk centered near 38.4°N, -94.6°W (eastern Kansas / western Missouri)
+- Surrounded by broad **Slight (Level 2)** risk from Nebraska through Missouri, Illinois, and into the Ohio Valley
+- **Marginal (Level 1)** extending from the southern Plains through the Southeast
+- Issued 1253Z by forecasters Guyer/Broyles
+
+## Dry Line Analysis
+Three dew point frames analyzed (fh=6, fh=9, fh=12):
+
+- **Dry line orientation:** N-S through central Kansas and Oklahoma, approximately along **-97°W to -96°W**
+- **West of dry line:** Dew points 20-40°F (arid) across western Kansas, Colorado, and the Texas Panhandle
+- **East of dry line:** Dew points 60-78°F (humid) through eastern Kansas, Missouri, Oklahoma, and Arkansas
+- **Gradient magnitude:** ~20-25°F change over ~75-100 miles — a well-defined dry line
+- **Temporal evolution:** The dry line advances slightly eastward through the afternoon (fh=6 to fh=12), pushing from ~-97°W to ~-96°W at the 38°N latitude by evening
+
+## Reflectivity Analysis
+
+### fh=6 (18Z / 1 PM CDT)
+- **38.5°N, -91.5°W: 60 dBZ** — strong cell in eastern Missouri
+- 39.0°N, -90.5°W: 55 dBZ — west-central Illinois
+- 42.0°N, -94.5°W: 45 dBZ — central Iowa
+- No significant returns (≥20 dBZ) in the -96 to -98°W range near the dry line in Kansas at this latitude
+
+### fh=7 (19Z / 2 PM CDT)
+- 38.5°N, -90.5°W: 55 dBZ — eastern Missouri (cell tracking ENE from fh=6)
+- 38.0°N, -91.5°W: 50 dBZ — east-central Missouri
+- 42.5°N, -93.0°W: 45 dBZ — central Iowa
+- Light returns developing in central Kansas below 20 dBZ threshold
+
+### fh=8 (20Z / 3 PM CDT) ⭐ KEY FRAME
+- **38.5°N, -93.0°W: 60 dBZ** — new intense cell in west-central Missouri (near Warrensburg/Sedalia)
+- 38.5°N, -90.0°W: 55 dBZ — eastern Missouri (earlier cell tracking east)
+- 39.0°N, -89.5°W: 50 dBZ — central Illinois
+- 38.0°N, -93.0°W: 45 dBZ — west-central Missouri (secondary cell)
+- 44.0°N, -95.5°W: 40 dBZ — southern Minnesota
+- Storm mode: Semi-discrete cells developing along the moisture boundary, not a continuous QLCS
+
+### fh=9 (21Z / 4 PM CDT)
+- **39.0°N, -93.0°W: 60 dBZ** — strongest cell in west-central Missouri (tracking slightly N from fh=8)
+- 38.0°N, -93.0°W & -92.5°W: 55 dBZ — additional strong cells in central Missouri
+- 41.5°N, -96.0°W: 40 dBZ — eastern Nebraska
+- 44.0°N, -94.5°W: 40 dBZ — southern Minnesota
+- Storm mode: Multiple semi-discrete cells in Missouri; a separate line developing in Iowa/Nebraska
+
+## Storm Mode Assessment
+- Cells develop along the dry line in east-central Kansas and rapidly intensify as they move east into the rich moisture pool (Td 65-72°F) of western Missouri
+- The HRRR shows **semi-discrete supercells** in Missouri rather than a continuous QLCS
+- The strongest returns (60 dBZ) are consistently in the 38-39°N, -93°W corridor
+- Separate linear convection developing in Iowa/Nebraska/Minnesota — this is a different target area to avoid
+- The Missouri cells show the best discrete character and are firmly within the Enhanced risk zone
+
+## Sounding Analysis
+
+### Sounding 1: 38.46°N, -96.02°W (near dry line, east-central KS) — fh=8
+| Parameter | Value |
+|-----------|-------|
+| MUCAPE | 2334 J/kg |
+| ML CAPE | 1401 J/kg |
+| LCL (SFC) | 1819 m |
+| CINH (ML) | -49 J/kg |
+| SRH 1km | 43 m²/s² |
+| Eff Shear | 25 kt |
+| Bulk Shear 3km | 14 kt |
+| BRN Shear | 21 m²/s² |
+| Supercell Comp | 1.1 |
+| STP (cin) | 0.0 |
+| SHIP | 1.1 |
+| BRM | 294°/14 kt |
+| Surface | T=91°F, Td=65°F |
+| Lapse Rate (Sfc-3km) | 8.6°C/km |
+| Hazard | MRGL SVR |
+
+**Assessment:** Moderate instability with steep low-level lapse rates but high LCL (1819m) and limited low-level shear. Marginal supercell environment at the dry line itself. CIN present on ML parcel.
+
+### Sounding 2: 38.5°N, -93.96°W (KS-MO border) — fh=8 ⭐ BEST ENVIRONMENT
+| Parameter | Value |
+|-----------|-------|
+| MUCAPE | 2872 J/kg |
+| SFC CAPE | 2872 J/kg |
+| LCL (SFC) | 956 m |
+| CINH (ML) | -8 J/kg |
+| SRH 1km | 68 m²/s² |
+| Eff Shear | 51 kt |
+| Bulk Shear 3km | 40 kt |
+| BRN Shear | 27 m²/s² |
+| Supercell Comp | **2.5** |
+| STP (cin) | 0.3 |
+| STP (fix) | 0.4 |
+| SHIP | 0.8 |
+| BRM | **312°/15 kt** |
+| Surface | T=84°F, Td=71°F |
+| Critical Angle | 146° |
+| SARS | **44% TOR, 28% SIG** |
+| Hazard | **SVR** |
+
+**Assessment:** Excellent supercell environment. High CAPE (2872 J/kg) with very low LCL (956m) favorable for tornadoes. Strong effective shear (51 kt) and good SRH (68 m²/s²). Supercell composite of 2.5 with 44% tornado SARS analogs. Critical angle of 146° is very favorable for rotating updrafts. Low-level jet evident at 850-925 hPa. This is a classic supercell setup.
+
+### Sounding 3: 39.03°N, -92.99°W (west-central MO, near storms) — fh=9
+| Parameter | Value |
+|-----------|-------|
+| MUCAPE | 1861 J/kg |
+| ML CAPE | 516 J/kg |
+| LCL (SFC) | 608 m |
+| CINH (ML) | -119 J/kg |
+| SRH 1km | 83 m²/s² |
+| Eff Shear | 24 kt |
+| BRM | 310°/18 kt |
+| Supercell Comp | 0.9 |
+| STP (fix) | 0.8 |
+| Critical Angle | 150° |
+| Hazard | MRGL SVR |
+
+**Assessment:** Environment contaminated by nearby convection (high CINH, reduced MLCAPE). However, SRH 1km is excellent at 83 m²/s² and STP (fixed) of 0.8 suggests ongoing tornado potential. Surface-based parcel still has 1861 J/kg CAPE. Storms already in this environment may maintain supercell characteristics.
+
+## Chase Target
+
+### Hatch Area: 38.5°N, -96.0°W (East-Central Kansas, near Emporia)
+- Located along the dry line boundary where dew points transition from 40s to 60s°F
+- Cells initiate here and intensify rapidly as they track ESE into the moisture-rich warm sector
+- Within the Enhanced risk zone
+
+### Positioning Location: 37.47°N, -94.58°W (Southwestern Missouri, near Joplin)
+- Computed as BRM speed (15 kt) × 7 = 105 miles from hatch area toward 132° (SSE)
+- This puts the chaser ahead of storms as they propagate from the dry line through the best instability/shear overlap zone
+- Rich low-level moisture (Td 70-72°F) and strong shear (51 kt effective) in this corridor
+
+### Bunkers Right Storm Motion Vector
+- **Direction:** FROM 312° (NW) / TOWARD 132° (SSE)
+- **Speed:** 15 knots
+- Storms will track from the dry line in east-central Kansas toward the SE into western/central Missouri through the afternoon
+
+## Confidence Assessment
+- **Moderate-High Confidence** in discrete supercell mode based on:
+  - HRRR showing semi-discrete cells, not continuous QLCS
+  - SPC Enhanced risk with tornado parameters (SARS 44% TOR)
+  - Excellent shear/instability overlap (SCC 2.5, CAPE 2872, Eff Shear 51 kt)
+  - Low LCL (956m) and favorable critical angle (146°)
+- **Primary concern:** Cells may cluster or evolve into a line by evening; target the early afternoon discrete phase
+- **Secondary concern:** The dry line at -96°W is somewhat west of where the strongest detected cells appear (-93°W); storms may initiate at sub-scan thresholds near the dry line and mature rapidly as they move east
+
+## Timing
+- **Initiation:** ~18-19Z (1-2 PM CDT) along the dry line in east-central Kansas
+- **Peak intensity:** 20-21Z (3-4 PM CDT) as cells reach western Missouri with 55-60 dBZ returns
+- **Chase window:** 19-22Z (2-5 PM CDT) for best discrete supercell potential
+- Position near Joplin, MO area by 19Z and intercept cells as they approach from the NW
