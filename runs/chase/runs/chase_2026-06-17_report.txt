@@ -1,0 +1,102 @@
+# Storm Chase Forecast — Wednesday, June 17, 2026
+
+## SPC Outlook
+SPC Day 1 Convective Outlook issued 1300Z features a **Moderate Risk** (Level 4/5) centered ~40.5°N, -87.8°W (central Indiana) with an **Enhanced Risk** envelope centered ~40.2°N, -88.8°W extending from eastern Kansas through Missouri, Illinois, Indiana, and Ohio. This is a High-End severe weather day across the Upper Midwest and Great Lakes.
+
+## Dry Line / Moisture Boundary Analysis
+Three dew point frames were analyzed (fh=6, fh=9, fh=12) from the 14Z HRRR run:
+
+- **fh=6 (19Z / ~2 PM CDT):** A pronounced moisture boundary runs NW-SE from central Iowa through western Illinois. Dew points transition from upper 40s–low 50s°F north/west of ~41–42°N to 65–72°F south/east. A classic warm-frontal moisture gradient. Further west, a dry line exists across western Kansas (20s–30s°F to 50s°F) but is outside the risk area.
+- **fh=9 (22Z / ~5 PM CDT):** The moisture boundary sharpens. At 40°N latitude, dew points drop from ~70°F at -89°W to ~52°F at -93°W to ~49°F at -95°W — a 20°F+ gradient across ~150 miles. The boundary's eastern edge (where moisture is still rich) sits near -91°W.
+- **fh=12 (01Z / ~8 PM CDT):** Boundary persists with similar position, dew points of 70–75°F in the warm sector (central IL/MO) and 45–50°F on the dry side (western Iowa/NE Kansas).
+
+**Key moisture boundary position:** ~-93°W to -91°W at 40°N latitude, running NW-SE.
+
+## Reflectivity Analysis (Pixel Scan Ground Truth)
+
+### fh=5 (18Z / ~1 PM CDT)
+- A convective line already active across **southern Wisconsin / northern Illinois** (42–43.5°N, 87–90°W) with multiple 45–50 dBZ returns and a peak of **55 dBZ at 43.0°N, -87.5°W** (near Milwaukee).
+- Additional 50 dBZ returns at 42.0°N/-89.5°W and 41.5°N/-90.0°W (Quad Cities area).
+- This is a developing QLCS oriented SW-NE.
+
+### fh=6 (19Z / ~2 PM CDT)
+- QLCS continues across northern IL/WI. New **55 dBZ cell at 42.5°N, -92.0°W** (central Iowa) — potentially discrete near the moisture boundary.
+- QLCS cells: 50 dBZ at 42.0°N/-90.5°W, 42.5°N/-87.5°W, 42.0°N/-87.5°W, 41.5°N/-89.0°W.
+- Line extends with 45 dBZ returns across 43–46°N (Wisconsin).
+
+### fh=7 (20Z / ~3 PM CDT)
+- QLCS expands eastward. 50 dBZ cells at 44.0°N/-88.0°W, 43.5°N/-85.0°W, 42.5°N/-86.0°W (Michigan).
+- 45 dBZ at 42.0°N/-90.5°W and 42.0°N/-89.5°W — QLCS tail end.
+- No discrete cells yet near 40°N in the warm sector.
+
+### fh=9 (22Z / ~5 PM CDT) — **KEY FRAME**
+- **Peak cell: 60 dBZ at 41.5°N, -88.5°W** — southern tip of the QLCS in north-central Illinois (near Joliet/Aurora). Bookend supercell potential.
+- **50 dBZ at 41.5°N, -90.0°W** — Quad Cities area, SW end of QLCS.
+- **50 dBZ at 40.0°N, -93.5°W** — **DISCRETE CELL in northern Missouri**, near the moisture boundary. This is the prime isolated supercell target.
+- QLCS line extends from 41.5–42.5°N across 87–90°W with 45 dBZ returns.
+- Additional 55 dBZ at 45.0°N/-91.5°W and 44.0°N/-86.0°W (WI and MI, part of larger convective complex).
+
+**Storm Mode Assessment:** The primary convective mode is a QLCS across northern Illinois/southern Wisconsin. However, a **discrete cell is firing at 40.0°N, -93.5°W** in northern Missouri at fh=9, well separated from the QLCS (~250 miles SW). This discrete cell is along the moisture boundary and represents the best isolated supercell chase target.
+
+## Sounding Analysis
+
+### Sounding 1: 41.04°N, -89.53°W (fh=6) — North-Central Illinois (near QLCS)
+- SFC CAPE: 1023 J/kg | ML CAPE: 986 | FCST CAPE: 1993
+- CIN: -27 (SFC), 0 (FCST) — cap eroding
+- LCL: 184m — very low, favorable for tornadoes
+- SRH 0-1km: 134 | 0-3km: 199 | Eff Inflow: 202
+- Supercell Composite: 4.8 | STP (cin): 1.3 | STP (fix): 0.9
+- **BRM: 274°/46 kt** (FROM convention; storms move toward ~094°)
+- Hodograph: curved low-level, straight mid-level. Critical Angle: 40°.
+- Assessment: Moderate supercell environment but storms here are embedded in the QLCS. Not ideal for isolated chase.
+
+### Sounding 2: 40.52°N, -87.98°W (fh=6) — Central Illinois (Moderate Risk Centroid)
+- SFC CAPE: 551 J/kg | ML CAPE: 128 — **low instability**
+- SRH 0-1km: **475** | 0-3km: **964** — extreme shear
+- Supercell Composite: 3.3 | STP (fix): 1.7
+- **BRM: 241°/40 kt** (toward ~061°)
+- Critical Angle: 92° — near-perpendicular inflow
+- Assessment: Extreme shear but very low CAPE. Likely right on the warm front with strong low-level jet. Unfavorable for isolated supercells due to CAPE deficit.
+
+### Sounding 3: 40.0°N, -91.02°W (fh=6) — Western Illinois (Near Moisture Boundary) ⭐ **BEST**
+- SFC CAPE: **3101 J/kg** | ML CAPE: 2639 | MU CAPE: 3101
+- CIN: -2 (SFC) — essentially uncapped
+- LCL: 1166m | LFC: 1395m
+- SRH 0-1km: 214 | 0-3km: 331 | Eff Inflow: 332
+- **Supercell Composite: 20.6** — extremely high
+- **STP (fix): 3.6** | STP (cin): 1.4 — significant tornado potential
+- **BRM: 268°/46 kt** (FROM convention; storms move toward ~088°, nearly due east)
+- SHIP: 1.7 | BRN Shear: 84 m²/s²
+- LR 700-500mb: **8.1°C/km** — very steep mid-level lapse rates
+- DCAPE: 1176 — strong downdraft potential
+- SARS: **71% TOR, 76% SIG** — sounding analogs strongly support significant tornadoes
+- Psbl Haz Type: **Classic Supercell, TOR**
+- Low-level jet: ~229°/39 kt at 850 hPa — vigorous southwesterly LLJ
+- Hodograph: Strong clockwise curvature through the low levels with straight-line extension aloft. Critical Angle: 59°.
+- Assessment: **Outstanding supercell/tornado environment.** The combination of 3100+ J/kg CAPE, 8.1°C/km lapse rates, 332 m²/s² effective SRH, and STP of 3.6 makes this one of the most favorable environments on the map. The discrete cell at 40°N/-93.5°W will move into this environment.
+
+## Chase Target Recommendation
+
+### Hatch Area: 40.0°N, -93.0°W (Northern Missouri / SE Iowa)
+- Located along the moisture boundary where dew points transition from 50s to 70s°F
+- Discrete 50 dBZ cell confirmed at 40.0°N, -93.5°W at fh=9, isolated from the QLCS
+- Within the Enhanced Risk area
+- As this cell moves east at ~46 kt, it enters the explosive CAPE/shear environment documented by Sounding 3
+
+### Positioning Location: 40.0°N, -88.3°W (Central Illinois)
+- Computed from BRM × 7 hours = 250 miles east of hatch area
+- State: Illinois (per generate_annotated_map tool)
+- This positions the chaser in central Illinois where the discrete supercell will mature in the Moderate/Enhanced risk overlap zone
+- Rich moisture (dew points 70°F+), steep lapse rates, and extreme SRH create a favorable intercept environment
+
+### Bunkers Right Motion Vector
+- **FROM 268° at 46 knots** (SHARPpy convention)
+- Storms move toward ~088° (nearly due east) at 46 kt
+- Fast storm motion requires positioning well ahead
+
+## Confidence & Caveats
+- **HIGH confidence** in significant severe weather today — Moderate Risk with extreme parameters
+- **MODERATE confidence** in discrete cell at 40°N/-93.5°W remaining isolated. Risk that it merges with QLCS as it moves east.
+- The QLCS across northern Illinois (41.5–43°N) is the dominant storm mode; the 60 dBZ bookend cell at 41.5°N/-88.5°W at fh=9 also warrants monitoring
+- If the discrete cell fails to maintain isolation, fall back to the QLCS southern tip for bookend supercell potential
+- STP values of 3.6 and SARS 71% TOR / 76% SIG indicate significant tornado threat — maintain safe distance and monitor radar continuously
