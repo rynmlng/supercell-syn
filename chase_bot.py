@@ -1624,6 +1624,183 @@ target and note low confidence in the storm mode description.
 """
 
 
+def run_agent_resumed() -> tuple[str | None, str | None]:
+    """Resume an interrupted run using data already saved in last_run/.
+
+    Skips all data fetching:
+    - Dew point images are read from disk and re-sent as-is (no Pivotal API call).
+    - Reflectivity pixel scans are re-computed locally from saved PNGs (free).
+    - Reflectivity images are NOT re-sent to the API (saves the most tokens).
+    - SPC outlook is re-fetched (small, required for risk area context).
+    """
+    import glob as _glob
+
+    global _sounding_counter
+    _sounding_counter = 0
+
+    dp_files = sorted(_glob.glob(os.path.join(LAST_RUN_DIR, "dew_point_fh*.png")))
+    ref_files = sorted(_glob.glob(os.path.join(LAST_RUN_DIR, "reflectivity_fh*.png")))
+
+    if not dp_files:
+        log.error(
+            "Resume: no dew point images found in %s — cannot resume", LAST_RUN_DIR
+        )
+        return None, None
+    if not ref_files:
+        log.error(
+            "Resume: no reflectivity images found in %s — cannot resume", LAST_RUN_DIR
+        )
+        return None, None
+
+    run_info = _tool_get_available_runs({})
+    latest_rh = run_info.get("latest_rh", "")
+    if not latest_rh:
+        log.error("Resume: could not determine HRRR run")
+        return None, None
+
+    log.info(
+        "Resume: rh=%s, dew_point files=%d, reflectivity files=%d",
+        latest_rh,
+        len(dp_files),
+        len(ref_files),
+    )
+
+    content: list = []
+
+    # SPC outlook
+    content.extend(_tool_get_spc_outlook({}))
+
+    # Dew point images from disk
+    for path in dp_files:
+        m = re.search(r"dew_point_fh(\d+)", path)
+        fh = int(m.group(1)) if m else 0
+        with open(path, "rb") as f:
+            b64 = base64.standard_b64encode(f.read()).decode()
+        content.append(
+            {
+                "type": "image",
+                "source": {"type": "base64", "media_type": "image/png", "data": b64},
+            }
+        )
+        content.append(
+            {
+                "type": "text",
+                "text": (
+                    f"HRRR 2m AGL Dew Point — rh={latest_rh}, fh={fh}h. "
+                    "Identify the dry line: sharp 20-30°F dewpoint drop over ~75 miles."
+                ),
+            }
+        )
+
+    # Pixel scans re-computed locally — no reflectivity images re-sent
+    scan_blocks = []
+    for path in ref_files:
+        m = re.search(r"reflectivity_fh(\d+)", path)
+        fh = int(m.group(1)) if m else 0
+        arr = np.array(Image.open(path))
+        hits = _scan_reflectivity_array(
+            arr,
+            CONUS_LAT_MIN,
+            CONUS_LAT_MAX,
+            CONUS_LON_MIN,
+            CONUS_LON_MAX,
+            step_deg=0.5,
+            threshold_dbz=20,
+        )
+        if hits:
+            lines = [f"  {h['lat']}°N, {h['lon']}°W: {h['dbz']} dBZ" for h in hits[:40]]
+            scan_blocks.append(
+                f"PIXEL SCAN rh={latest_rh} fh={fh} (≥20 dBZ, sorted by intensity):\n"
+                + "\n".join(lines)
+                + (
+                    f"\n  ... and {len(hits) - 40} more points"
+                    if len(hits) > 40
+                    else ""
+                )
+            )
+        else:
+            scan_blocks.append(
+                f"PIXEL SCAN rh={latest_rh} fh={fh}: No returns ≥20 dBZ anywhere in CONUS."
+            )
+
+    fetched_dp_fhs = [int(re.search(r"fh(\d+)", p).group(1)) for p in dp_files]
+    fetched_ref_fhs = [int(re.search(r"fh(\d+)", p).group(1)) for p in ref_files]
+    today = datetime.now(timezone.utc).strftime("%A, %B %-d, %Y")
+    resume_msg = (
+        f"Today is {today} UTC. RESUME MODE: a previous run was interrupted after fetching "
+        f"dew point (fh={fetched_dp_fhs}) and reflectivity (fh={fetched_ref_fhs}) data. "
+        "The SPC outlook and dew point images are shown above. "
+        "Reflectivity images are not re-attached — use the pixel scans below as ground truth. "
+        "Do NOT call get_available_runs, get_spc_outlook, get_dew_point, or get_reflectivity again. "
+        "Proceed directly to step 5 (soundings) then generate the map.\n\n"
+        + "\n\n".join(scan_blocks)
+    )
+    content.append({"type": "text", "text": resume_msg})
+
+    messages = [{"role": "user", "content": content}]
+    client = anthropic.Anthropic()
+    final_image_path = None
+    final_caption = None
+
+    for turn in range(MAX_AGENT_TURNS):
+        log.info("Agent turn %d (resume)", turn + 1)
+        with client.messages.stream(
+            model="claude-opus-4-6",
+            max_tokens=10000,
+            thinking={"type": "adaptive"},
+            system=SYSTEM,
+            tools=TOOLS,
+            messages=messages,
+        ) as stream:
+            response = stream.get_final_message()
+
+        messages.append({"role": "assistant", "content": response.content})
+        log.info("Stop reason: %s", response.stop_reason)
+
+        if response.stop_reason == "end_turn":
+            for block in response.content:
+                if block.type == "text" and block.text.strip():
+                    final_caption = block.text.strip()
+            break
+
+        if response.stop_reason == "tool_use":
+            tool_results = []
+            for block in response.content:
+                if block.type != "tool_use":
+                    continue
+                result = _dispatch(block.name, block.input)
+                if block.name == "generate_annotated_map" and isinstance(result, dict):
+                    final_image_path = result.get("image_path")
+                    content_out = json.dumps(result)
+                elif isinstance(result, list):
+                    content_out = result
+                else:
+                    content_out = (
+                        json.dumps(result) if not isinstance(result, str) else result
+                    )
+                tool_results.append(
+                    {
+                        "type": "tool_result",
+                        "tool_use_id": block.id,
+                        "content": content_out,
+                    }
+                )
+            messages.append({"role": "user", "content": tool_results})
+        elif response.stop_reason == "max_tokens":
+            log.warning("max_tokens hit on turn %d — continuing", turn + 1)
+            messages.append(
+                {"role": "user", "content": [{"type": "text", "text": "Continue."}]}
+            )
+        else:
+            log.warning("Unexpected stop_reason: %s", response.stop_reason)
+            break
+
+    if turn == MAX_AGENT_TURNS - 1:
+        log.warning("Hit max agent turns (%d)", MAX_AGENT_TURNS)
+
+    return final_image_path, final_caption
+
+
 def run_agent() -> tuple[str | None, str | None]:
     """Run the storm chase forecast agent. Returns (image_path, caption)."""
     global _sounding_counter
@@ -1897,6 +2074,11 @@ def main() -> None:
         metavar="YYYY-MM-DD",
         help="Retroactive mode: analyze a past date using HRRR archive from AWS S3 via herbie",
     )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Resume an interrupted run using images already saved in last_run/",
+    )
     args = parser.parse_args()
 
     if args.date:
@@ -1946,7 +2128,7 @@ def main() -> None:
             log.error("=== Chase Bot exiting — sounding service unavailable ===")
             sys.exit(1)
 
-    image_path, caption = run_agent()
+    image_path, caption = run_agent_resumed() if args.resume else run_agent()
 
     if not image_path:
         log.error("Agent did not generate a map image — nothing to post")
