@@ -13,6 +13,7 @@ import logging
 import math
 import os
 import re
+import subprocess
 import sys
 import time
 import xml.etree.ElementTree as ET
@@ -1842,6 +1843,40 @@ def spc_has_enhanced_risk() -> bool:
 
 
 # ---------------------------------------------------------------------------
+# Git commit
+# ---------------------------------------------------------------------------
+def commit_run_artifacts(date_label: str, image_path: str, caption_path: str) -> None:
+    """Stage and commit the run's output files to git."""
+    report_path = os.path.join(RUNS_DIR, f"chase_{date_label}_report.txt")
+    stage_paths = [LAST_RUN_DIR, image_path, caption_path]
+    if os.path.exists(report_path):
+        stage_paths.append(report_path)
+    try:
+        subprocess.run(
+            ["git", "-C", PROJECT_DIR, "add"] + stage_paths,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        result = subprocess.run(
+            [
+                "git",
+                "-C",
+                PROJECT_DIR,
+                "commit",
+                "-m",
+                f"Bot: Chase forecast {date_label}",
+            ],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+        log.info("Committed run artifacts: %s", result.stdout.strip())
+    except subprocess.CalledProcessError as exc:
+        log.error("Git commit failed:\n%s\n%s", exc.stdout, exc.stderr)
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main() -> None:
@@ -1927,6 +1962,8 @@ def main() -> None:
     with open(caption_path, "w") as f:
         f.write(caption)
     log.info("Saved caption: %s", caption_path)
+
+    commit_run_artifacts(date_label, image_path, caption_path)
 
     if args.dry_run:
         log.info("DRY RUN — skipping X post")
