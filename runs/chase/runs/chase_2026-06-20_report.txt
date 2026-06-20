@@ -1,0 +1,124 @@
+# Chase Forecast Analysis — Saturday, June 20, 2026
+
+## Model Run
+- **HRRR Init**: 2026-06-20 12Z
+- **Forward hours analyzed**: fh=6 (18Z), fh=7 (19Z), fh=8 (20Z), fh=9 (21Z), fh=12 (00Z)
+
+## SPC Day 1 Convective Outlook
+- **Moderate Risk (Level 4)** centered over **western Kansas** extending into the Oklahoma panhandle and southeastern Colorado
+- **Enhanced Risk** surrounding, covering broader Kansas, Nebraska, and northern Oklahoma
+- **Slight Risk** extending across the central Plains into the Upper Midwest
+- Forecasters: Gleason/Broyles — issued 1246Z
+
+## Dry Line Analysis
+Three dew point frames successfully retrieved (fh=6, fh=9, fh=12).
+
+A sharp, well-defined dry line is evident running roughly N-S through western Kansas:
+
+- **fh=6 (18Z / 1 PM CDT)**: Dry line along ~-100°W to -101°W in Kansas. Dew points drop from 55-68°F east of -99°W to teens/20s west of -102°W — a 40°F+ gradient over approximately 75 miles. In the Oklahoma panhandle/Texas panhandle, dew points are in the teens to 20s, transitioning rapidly to 60s-70s in central Oklahoma.
+- **fh=9 (21Z / 4 PM CDT)**: Dry line pushed slightly east. In Kansas, 57°F at -100°W dropping to 25°F at -102°W. The boundary is sharpening with afternoon heating.
+- **fh=12 (00Z / 7 PM CDT)**: Dry line maintained at approximately -99°W to -100°W. The moisture gradient has intensified with dew points of 60-65°F east of -99°W and dropping to 30s-40s west of -100.5°W.
+
+**Eastern edge of dry line**: ~-100°W in Kansas (where ≥55-60°F dew points begin).
+
+## Reflectivity Analysis
+
+### fh=6 (18Z / 1 PM CDT)
+- **No significant returns** in the western Kansas Moderate risk area
+- Main convection in the warm sector: 65 dBZ at 30.5°N, -96.0°W (east Texas), 60 dBZ across Mississippi/Louisiana
+- A band of low-level returns visible in the image across Colorado/western Kansas but below 20 dBZ threshold in the target area
+
+### fh=7 (19Z / 2 PM CDT)
+- Still no strong returns in western Kansas
+- Convection remains concentrated in the southeast (Texas, Mississippi)
+
+### fh=8 (20Z / 3 PM CDT)
+- **55 dBZ at 44.0°N, -98.0°W** (central South Dakota) — new cell initiating near the dry line
+- 45 dBZ at 44.5°N, -98.5°W — nearby South Dakota cell
+- No cells above 20 dBZ in western Kansas yet from the pixel scan
+
+### fh=9 (21Z / 4 PM CDT) — PEAK AFTERNOON
+- **55 dBZ at 39.0°N, -103.0°W** (eastern Colorado) — discrete cell right on the dry line!
+- 45 dBZ at 43.5°N, -104.5°W (western South Dakota)
+- 45 dBZ at 43.5°N, -97.5°W and -97.0°W (central South Dakota)
+- Image shows discrete cells breaking out along the dry line from eastern CO through western KS
+
+### fh=12 (00Z / 7 PM CDT)
+- **50 dBZ at 40.5°N, -101.5°W** (western Kansas!) — cell has moved NE from the CO initiation
+- 45 dBZ at 41.5°N, -101.0°W and 41.0°N, -101.5°W — additional cells in SW Nebraska
+- 45 dBZ at 39.0°N, -103.0°W — eastern CO cell still present
+- 50 dBZ at 44.5°N, -98.5°W — South Dakota cell maintaining intensity
+- Image shows **discrete supercell signatures** along the dry line in western Kansas — NOT a QLCS
+
+## Storm Mode Assessment
+- Cells are initiating as **discrete storms** along the dry line between fh=8 and fh=9
+- By fh=12, multiple discrete cells are evident along the dry line from eastern CO through western KS to SW Nebraska
+- No QLCS is present in the target area — this is a classic dry line discrete supercell setup
+- Cells are slow-moving (BRM ~8 kt), allowing for extended chase windows
+
+## Sounding Analysis
+
+### Sounding 1: 39.03°N, -101.95°W (Eastern Colorado border) — fh=9
+- CAPE: 1898 J/kg (SFC), LCL: 2977m, CIN: 0
+- 0-3km SRH: 108 m²/s², Supercell Composite: 3.8
+- STP: 0, SHIP: 0.8
+- BRM: 260°/6 kt (FROM)
+- **Assessment**: Moderate supercell potential. High LCL limits tornado risk. Cap has already broken at this location.
+- Critical Angle: 126°
+- Hazard Type: SVR (large hail, damaging winds)
+
+### Sounding 2: 40.52°N, -100.98°W (Western Kansas) — fh=9 ★ BEST
+- CAPE: 1915 J/kg (SFC), 1995 MU; LCL: 1166m; CIN: -114
+- **0-3km SRH: 420 m²/s²** — EXCEPTIONAL
+- **Supercell Composite: 15.5** — EXTREME
+- **STP: 1.7 (cin)** — significant tornado potential
+- SARS: 52% TOR, 57% SIG
+- BRM: 269°/8 kt (FROM)
+- **Assessment**: Outstanding supercell environment. Massive hodograph curvature with strong low-level veering. LCL at 1166m is very low for this region — favorable for tornadoes. CIN of -114 suggests cap breaks in late afternoon, confirmed by fh=12 cells at this location. This is a "loaded gun" environment waiting for the cap to break.
+- Critical Angle: 140° — optimal for right-moving supercells
+- Hazard Type: MRGL TOR with large hail (SARS significant hail analog: 1.75")
+- MeanW: 13.4 g/kg, 850-500mb LR: 6.6°C/km
+- BRN Shear: 94 m²/s²
+
+### Sounding 3: 38.03°N, -100.45°W (West-central Kansas) — fh=9
+- CAPE: 2262 J/kg (SFC), LCL: 2380m, CIN: -3
+- 0-3km SRH: 200 m²/s², Supercell Composite: 8.4
+- STP: 0, SHIP: 0.6
+- BRM: 263°/3 kt (FROM)
+- **Assessment**: Good supercell potential with highest CAPE of the three. Higher LCL limits tornado risk. Very slow storm motion (3 kt) may cause training and heavy rain.
+- Critical Angle: 152°
+- Hazard Type: SVR
+- SARS significant hail analogs: 2.75" (AMA), 3.75" (MAF) — significant hail risk
+
+## Target Selection
+
+### Hatch Area: 39.5°N, -101.5°W (Western Kansas)
+- Right on the dry line where discrete supercells initiate between fh=9 and fh=12
+- In the heart of the SPC Moderate risk area
+- Between the eastern CO initiation point and western KS propagation zone
+- Near the exceptional sounding environment at 40.52°N
+
+### Bunkers Right Storm Motion: 269°/8 kt (FROM 269°, TOWARD 89°)
+- Storms move nearly due east at 8 knots — very slow
+- Slow motion allows extended chase time on individual storms
+- Positioning should be ~75 miles east of the hatch area (clamped from 56 mi = 8kt × 7)
+
+### Positioning Location: 39.51°N, -100.09°W (West-central Kansas)
+- State: Kansas
+- Approximately 75 miles east of the hatch area along the storm motion vector
+- In the moist sector with dew points ≥55°F
+- Good road network in western Kansas for intercept
+
+## Risk Summary
+- **SPC Risk**: Moderate (Level 4/5)
+- **Primary Hazards**: Large hail (≥2"), damaging winds, marginal tornado risk
+- **Storm Mode**: Discrete supercells along the dry line
+- **Confidence**: HIGH — classic dry line supercell setup with exceptional shear parameters
+- **Chase Window**: ~3-8 PM CDT (fh=9 through fh=14)
+- **Key Watch**: Cap erosion timing. CIN is significant (-114 J/kg) in the best parameter space at 40.5°N. Once the cap breaks, explosive development is expected given MLCAPE near 2000 J/kg and SRH of 420 m²/s².
+
+## Threats and Caveats
+1. **Cap may hold longer than expected** — if CIN persists, initiation delays into evening hours (less favorable for visual chasing)
+2. **Storm clustering** — multiple initiations along the dry line could lead to storm interactions and upscale growth into a MCS by evening
+3. **Very slow storm motion** (8 kt) means storms may be difficult to stay ahead of if they produce large hail swaths
+4. **High LCL (2400-3000m)** at the southern target points reduces tornado potential there, though the 40.5°N sounding shows a much lower LCL (1166m) with better tornado parameters
