@@ -1,0 +1,113 @@
+# Chase Forecast Analysis — Wednesday, June 24, 2026
+
+## Model Run
+- **HRRR Init:** 2026-06-24 12Z
+- **Focus Window:** fh=6 (18Z/1PM CDT) through fh=9 (21Z/4PM CDT)
+
+## SPC Day 1 Convective Outlook
+- **Enhanced risk** (Level 3) centered over NE Colorado / SW Nebraska panhandle (~41.7°N, -104.1°W)
+- **Slight risk** (Level 2) areas extending into western KS/NE and a separate area over IA/WI
+- Broad **Marginal risk** across the central Plains, southern Plains, and Gulf states
+
+## Dry Line Analysis
+Three dew point frames analyzed (fh=6, fh=9, fh=12):
+
+- A well-defined dry line runs N-S across the central High Plains from the NE panhandle south through western KS
+- **Eastern edge (moisture side):** ~101-102°W at 41°N latitude, ~100-101°W at 38°N
+- **Gradient magnitude:** Dewpoints transition from 50s-62°F east of the line to 30s-40°F west, a 20-25°F drop over ~50-75 miles
+- The dry line sharpens by fh=9 (21Z) with peak afternoon mixing, with the strongest gradient tightening near 102°W in the NE CO / NE panhandle area
+- By fh=12 (00Z), the dry line remains in roughly the same position with some eastward advancement in central KS
+
+## Reflectivity Analysis
+
+### fh=6 (18Z / 1 PM CDT)
+- **No ≥20 dBZ returns in the Enhanced risk area** (NE CO / western NE)
+- Strongest cells: 37.0°N/-94.5°W (55 dBZ, SE KS — deep warm sector, not near dry line), 50.0°N/-94.5°W (55 dBZ, Manitoba)
+- Scattered weak returns visible in image along CO dry line but below 20 dBZ threshold
+
+### fh=7 (19Z / 2 PM CDT)
+- Cells beginning to develop along the dry line (blue/green returns in image across eastern CO)
+- Pixel scan: 46.5°N/-103.5°W (40 dBZ, western SD), 43.0°N/-100.5°W (30 dBZ, south-central SD)
+- Persistent SE KS convection: 36.5°N/-94.0°W (55 dBZ) — still deep in warm sector
+
+### fh=8 (20Z / 3 PM CDT)
+- Convection expanding along the dry line in eastern CO/western NE (visible in image)
+- New cell in eastern IA: 41.0°N/-91.0°W (50 dBZ)
+- Scattered cells developing across the northern Plains
+
+### fh=9 (21Z / 4 PM CDT) — PRIMARY TARGET FRAME
+- Convection has exploded along the dry line with multiple cells visible in the image
+- Pixel scan returns near the Enhanced risk area:
+  - 45.5°N/-103.0°W: 45 dBZ (western SD, discrete cell)
+  - 37.0°N/-105.0°W: 45 dBZ (southern CO)
+  - 47.0°N/-103.0°W: 40 dBZ (western ND)
+- Multiple developing cells along the dry line in eastern CO/western NE visible in the image (green/yellow returns)
+- Storm mode: **Discrete cells along the dry line**, no QLCS structure — favorable
+
+## Sounding Analysis
+
+### Location 1: 41.52°N, -102.55°W (NE CO / SW NE panhandle) — SELECTED TARGET
+| Parameter | Value | Assessment |
+|-----------|-------|------------|
+| SFC CAPE | 1978 J/kg | Robust |
+| CIN | 0 J/kg | No cap — storms fire freely |
+| LCL | 416 m | Extremely low — highly tornado-favorable |
+| SRH 0-1km | 86 m²/s² | Good |
+| SRH 0-3km | 256 m²/s² | Very strong |
+| Bulk Shear 0-6km | 65 kt | Excellent |
+| STP (cin) | 2.0 | Significant tornado parameter |
+| STP (fix) | 1.1 | Significant |
+| Supercell Composite | 7.2 | Very high |
+| SHIP | 1.3 | Moderate hail |
+| BRN Shear | 94 m²/s² | Favorable for supercells |
+| Critical Angle | 129° | Excellent mesocyclone potential |
+| **Bunkers Right Motion** | **317°/21 kt** | FROM 317° (NW), toward 137° (SE) |
+| SARS | 52% TOR, 67% SIG | Strong tornado/significant analogs |
+| Hazard Type | TOR | Tornado threat |
+
+**Hodograph:** Classic clockwise-curving loop with strong 0-3 km veering. The LLJ is evident near 850-925 hPa with strong southerly winds backing to southeasterly near the surface, creating impressive low-level shear.
+
+### Location 2: 40.02°N, -101.49°W (NW KS / SW NE)
+- CAPE: 2411 J/kg (strong), CIN: 0 J/kg
+- LCL: 1519 m — TOO HIGH for tornadoes
+- STP: 0.1-0.2 — Primarily a hail supercell environment
+- BRM: 334°/14 kt
+- Supercell Composite: 9.2 (big hail risk)
+
+### Location 3: 43.03°N, -101.0°W (south-central SD)
+- SFC CAPE: 0 J/kg — No surface-based instability
+- Not a viable chase target
+
+## Target Selection
+
+### Hatch Area: 41.5°N, -102.5°W (NE Colorado / SW Nebraska panhandle)
+**Rationale:**
+1. Located directly on the dry line's eastern edge where dewpoints transition sharply from 50s-60°F to 30s-40°F
+2. Centered in the SPC Enhanced risk area
+3. Outstanding sounding parameters: SFC CAPE 1978 J/kg, SRH 256, STP 2.0, LCL 416m
+4. Zero CIN allows for immediate convective initiation as afternoon heating peaks
+5. HRRR shows discrete cells developing along the dry line by 21Z (4 PM CDT)
+6. SARS analogs strongly favor significant tornadoes
+
+### Positioning Location: ~39.93°N, -100.61°W (northwestern Kansas)
+- 147 nm southeast of hatch area along BRM vector (21 kt × 7 hours)
+- Allows positioning ahead of right-moving supercells
+- In the moist sector east of the dry line
+
+### Bunkers Right Motion Vector
+- **Direction:** FROM 317° (toward 137° SE) at 21 kt
+- Storms will move southeast off the dry line into the deeper moisture
+
+## Confidence Assessment
+**HIGH CONFIDENCE** — All ingredients align:
+- SPC Enhanced risk confirms mesoscale threat
+- Dry line is well-defined and sharpening through the afternoon
+- Sounding shows textbook supercell/tornado environment (STP 2.0, LCL 416m, SRH 256)
+- HRRR develops discrete cells along the dry line by peak heating
+- No QLCS contamination — isolated discrete mode favored
+- BRM vector carries storms into deeper moisture for sustained supercell development
+
+## Key Risks
+- Cells may cluster/interact and lose isolation if too many initiate simultaneously along the dry line
+- Higher terrain of the NE CO area may affect storm behavior in the first 30 minutes of development
+- If the dry line mixes too far east, initiation point may shift toward NW Kansas
