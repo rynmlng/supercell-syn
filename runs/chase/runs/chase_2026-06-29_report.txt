@@ -1,0 +1,175 @@
+# Storm Chase Forecast — Monday, June 29, 2026
+
+## Model Run
+- **HRRR Init:** 2026-06-29 13Z
+- **Forward hours analyzed:** fh=5 through fh=11 (18Z–00Z)
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Enhanced risk** (Level 3/5) centered over eastern South Dakota (~46.4°N, -97.1°W), extending from central SD northward through eastern ND into western Minnesota
+- **Slight risk** (Level 2) covering a broader swath from SD through MN/IA/WI
+- **Marginal risk** extending from NE through KS into OK/TX
+- Issued 1222Z 06/29/2026 by forecasters Smith/Jewell
+
+---
+
+## Dry Line Analysis
+A **well-defined dry line** runs north-south along approximately **99–100°W** through the Dakotas, Nebraska, and Kansas.
+
+### fh=5 (18Z / 1 PM CDT)
+- West of 100°W: Dew points 14–30°F (arid High Plains air)
+- East of 99°W: Dew points 64–78°F (deep Gulf moisture return)
+- Gradient: 30–50°F dew point drop over ~75 miles — exceptionally sharp
+- Dry line most pronounced from central SD (~44°N) through central ND (~48°N)
+
+### fh=8 (21Z / 4 PM CDT)
+- Dry line remains anchored near 99–100°W
+- Western ND: 18–28°F dew points; Eastern ND: 64–76°F
+- Gradient sharpening slightly with afternoon mixing
+
+### fh=11 (00Z / 7 PM CDT)
+- Dry line holds position; boundary persists through evening
+- Moisture remains 60–75°F east of 99°W across the Dakotas
+
+**Conclusion:** The dry line is a persistent, well-defined forcing mechanism along ~99.5°W through the Dakotas, co-located with the western edge of the SPC Enhanced risk area.
+
+---
+
+## Reflectivity Analysis
+
+### fh=5 (18Z / 1 PM CDT)
+- Scattered convection developing across **Montana and western ND/SD**
+- Strongest CONUS return near the target: **49.0°N, -102.0°W: 45 dBZ** (ND/Saskatchewan border)
+- No significant returns (≥50 dBZ) within the Enhanced risk area of eastern SD at this time
+- Broad area of 20–35 dBZ returns across western Montana
+
+### fh=6 (19Z / 2 PM CDT)
+- **48.5°N, -104.5°W: 50 dBZ** — western ND near the Montana border
+- Convection expanding eastward from Montana into western ND
+- Some discrete cells visible among scattered returns
+
+### fh=7 (20Z / 3 PM CDT)
+- **49.5°N, -98.0°W: 50 dBZ** — southern Manitoba/ND border, near the dry line
+- **49.0°N, -101.0°W: 45 dBZ** — north-central ND
+- Cells organizing along the dry line boundary
+- Some discrete elements visible at the southern/eastern flanks of the convective complex
+
+### fh=8 (21Z / 4 PM CDT)
+- **49.5°N, -92.0°W: 55 dBZ** and **50.0°N, -96.0°W: 55 dBZ** — MN/Ontario border
+- **49.0°N, -103.5°W: 45 dBZ** — northwestern ND
+- Convection continues to organize across the northern tier
+- Image shows yellow/orange cores along the ND/MT border with eastward propagation
+
+### fh=9 (22Z / 5 PM CDT)
+- **49.5°N, -103.5°W: 55 dBZ** — ND/Saskatchewan border
+- **49.5°N, -101.5°W: 45 dBZ** — north-central ND
+- More organized convective line across Montana and western ND
+- Some discrete cells visible ahead of the line near the dry line boundary
+
+### fh=11 (00Z / 7 PM CDT)
+- **48.5°N, -101.0°W: 55 dBZ** — north-central North Dakota (Minot area)
+- Strong convective complex organized across ND with multiple 45–55 dBZ cores
+- Leading cells pushing east toward the Enhanced risk area
+- Semi-discrete to discrete supercell potential at the southeastern flank of the complex
+
+**Storm Mode Assessment:** The HRRR shows convection initiating in western Montana/ND and organizing eastward along the dry line. By late afternoon (fh=9–11), cells reach 50–55 dBZ in north-central ND near the dry line. The southeastern terminus of the developing line shows **bookend supercell potential** with discrete to semi-discrete cells firing ahead of the broader convective complex along the dry line boundary. These cells would track ENE into the rich moisture of eastern ND/western MN.
+
+---
+
+## Sounding Analysis
+
+### Location 1: 48.5°N, -100.5°W (north-central ND, near developing cells)
+- **CAPE:** SFC 2681, ML 1908, MU 2681 J/kg
+- **CIN:** 0 J/kg — completely uncapped
+- **LCL:** 541m — very low (favorable for tornado)
+- **BRM:** FROM 213° at 11 kt (TOWARD 033° / NNE) — very slow mover
+- **SRH 0-1km:** 12 m²/s² — weak low-level shear
+- **STP:** 0.2 — marginal tornado potential
+- **Supercell Composite:** 1.3
+- **Hazard type:** MRGL SVR
+- **Assessment:** Sufficient instability but weak shear/SRH at this location. Storms here would be high-based pulse severe, not classic supercells.
+
+### Location 2: 47.0°N, -99.0°W (central ND, at the dry line)
+- **CAPE:** SFC 2385, ML 1857, MU 2385 J/kg
+- **CIN:** 0 J/kg — uncapped
+- **LCL:** 829m — reasonably low
+- **BRM:** FROM 231° at 24 kt (TOWARD 051° / ENE)
+- **SRH 0-1km:** 26 m²/s², **SRH 0-3km:** 94 m²/s²
+- **Eff Inflow SRH:** 88 m²/s²
+- **0-6km Bulk Shear:** 66 kt — strong deep-layer shear
+- **STP (CIN):** 1.1 — notable tornado parameter
+- **Supercell Composite:** 4.2
+- **SHIP:** 1.4
+- **Critical Angle:** 43°
+- **Hazard type:** TOR (tornado)
+- **Assessment:** Good supercell environment with adequate shear and instability right at the dry line. The 0-6km shear of 66 kt supports supercell development. Low-level SRH is moderate but improving southeastward.
+
+### Location 3: 46.5°N, -97.5°W (eastern ND, SPC Enhanced risk centroid)
+- **CAPE:** SFC 2623, ML 2610, **MU 3004 J/kg**, FCST 3775 J/kg — extreme!
+- **CIN:** SFC -54, ML -47 J/kg — some cap present
+- **LCL:** 587m (SFC), 789m (ML) — very low
+- **LFC:** 3100m (SFC/ML) — elevated but MU-based shows 2855m
+- **BRM:** FROM 230° at 32 kt (TOWARD 050° / ENE)
+- **SRH 0-1km:** **144 m²/s²** — strong!
+- **SRH 0-3km:** **162 m²/s²**
+- **Eff Inflow SRH:** **148 m²/s²**
+- **0-6km Bulk Shear:** 58 kt, **0-8km:** 64 kt
+- **BRN Shear:** 87 m²/s²
+- **STP (CIN):** **2.5** — significant tornado parameter!
+- **STP (fixed):** **2.5**
+- **Supercell Composite:** **8.9** — extreme!
+- **SHIP:** 1.7
+- **Critical Angle:** 56° — highly favorable
+- **DCAPE:** 1189 J/kg
+- **MMP:** 1.0
+- **Low-level jet:** Strong south-southwesterly winds at 850–925 hPa (~30+ kt)
+- **Hodograph:** Classic curved/elongated shape supporting right-moving supercells
+- **Hazard type:** **TOR** (tornado)
+- **SARS Supercell Analogs:** 31 Aug 1990 (CHS) 2.50, 10 Aug 1990 (AHN) 1.75, 13 Aug 1990 (TBW) 1.75, 03 Jul 2006 (AD) 1.00, 28 Apr 2003 (MFL) 1.00
+- **Assessment:** OUTSTANDING supercell/tornado environment. STP of 2.5 and Supercell Composite of 8.9 indicate a high-end severe weather environment. The extremely strong 0-1km SRH (144) combined with high CAPE (3000+ MU) and low LCLs create significant tornado potential. Some CIN (-54 SFC) may delay initiation, but once storms break the cap, rapid supercell development is expected.
+
+**Key Finding:** The environment improves dramatically from the dry line (~99.5°W) eastward into the warm sector (~97.5°W). SRH 0-1km increases from 26 to 144 m²/s², STP from 1.1 to 2.5, and Supercell Composite from 4.2 to 8.9. Storms initiating at the dry line in central ND will track ENE into progressively better tornado environments.
+
+---
+
+## Target Selection
+
+### Hatch Area: 47.0°N, -99.5°W (central North Dakota)
+- Located right at the dry line boundary where supercell initiation is expected
+- Within the SPC Enhanced risk area
+- Near the sounding at 47°N/-99°W showing STP 1.1 and Supercell Composite 4.2
+- Storms forming here will track ENE into the STP 2.5+ environment of eastern ND
+
+### Bunkers Right Storm Motion
+- **FROM:** 231° (SSW)
+- **TOWARD:** 051° (ENE)
+- **Speed:** 24 kt
+- Source: Sounding at 47.0°N, -99.0°W (fh=8)
+
+### Positioning Location: 48.5°N, -96.6°W (northwestern Minnesota)
+- Calculated: 24 kt × 7 = 168 miles from hatch area toward 051°
+- This places the chaser in northwestern Minnesota, ahead of storms tracking ENE off the dry line
+- Storms approaching from the WSW will be intensifying as they enter the rich moisture and extreme shear environment
+- Good road network in the Red River Valley for storm intercept
+
+### Timing
+- **Initiation:** fh=6–8 (19–21Z / 2–4 PM CDT) — cells begin firing along the dry line in central ND
+- **Maturation:** fh=9–11 (22Z–00Z / 5–7 PM CDT) — supercells intensify as they track into the eastern ND/western MN corridor
+- **Peak chase window:** 4–7 PM CDT — storms tracking through the STP 2.5 corridor
+
+### Confidence
+- **Moderate-High.** The SPC Enhanced risk, sharp dry line, and extreme sounding parameters all support significant supercell development. The HRRR shows convection developing but initiation is initially skewed northward (48-49°N) with somewhat weaker shear. Cells further south along the dry line (46-47°N) will encounter the best tornado environment but may initiate slightly later due to modest CIN. The main uncertainty is whether discrete supercells will form ahead of or remain embedded within the organizing line from MT/western ND.
+
+### Risk Summary
+- **Primary threat:** Significant tornadoes (including strong/violent potential given STP 2.5, SRH 144, and CAPE 3000+)
+- **Secondary threats:** Very large hail (SHIP 1.7, CAPE/shear profiles), damaging winds
+- **Storm mode concern:** The convective complex from Montana may organize into a QLCS, but the southern/eastern flank near the dry line should produce discrete to semi-discrete supercells with the best tornado potential
+
+---
+
+## Final Map
+- **Chase forecast map saved:** chase_2026-06-29.png
+- **Hatch area:** Central North Dakota (47.0°N, -99.5°W) — marked on dry line
+- **Positioning:** Northwestern Minnesota (48.5°N, -96.6°W) — 168 miles ENE of hatch area
+- **Base map:** HRRR Composite Reflectivity fh=8 (21Z / 4 PM CDT)
