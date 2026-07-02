@@ -5,7 +5,7 @@
 ### Otto (`spc_bot.py`) — SPC Outlook Bot
 Posts daily SPC convective outlook images to X.
 - Pulls Day 1, Day 2, Day 3, and Day 4-8 outlook images from https://www.spc.noaa.gov/products/outlook/
-- Runs daily at 12:35 UTC via GitHub Actions (March–June), a few minutes after SPC publishes at ~12:30 UTC
+- Runs daily at 12:35 UTC via GitHub Actions (March–July), a few minutes after SPC publishes at ~12:30 UTC
 - Script checks UTC time for late-run detection: if run is >60 min past 12:35 UTC, prompts for confirmation before posting (macOS interactive relaunch via AppleScript)
 - Scheduled via `.github/workflows/spc-bot.yml`
 

@@ -2,7 +2,7 @@ name: Otto — SPC Convective Outlook Bot
 
 on:
   schedule:
-    - cron: '35 12 * 3-6 *'  # 12:35 UTC, March–June
+    - cron: '35 12 * 3-7 *'  # 12:35 UTC, March–July
   workflow_dispatch:           # allow manual runs from GitHub UI
 
 jobs:
