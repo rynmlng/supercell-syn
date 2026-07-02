@@ -1,0 +1,142 @@
+# Storm Chase Forecast — Thursday, July 2, 2026
+
+## Model Run
+- **HRRR Run**: 2026-07-02 15Z
+- **Analysis Window**: fh=3 (18Z/1PM CDT) through fh=9 (00Z/7PM CDT)
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Enhanced Risk** (Level 3) centered ~44.2°N, -97.2°W (eastern South Dakota)
+- Broad **Slight Risk** extending from the central Plains through the upper Midwest into Minnesota/Wisconsin
+- Separate **Slight Risk** area in the Southeast (Mississippi/Alabama)
+- **Marginal Risk** extending across much of the eastern CONUS
+
+---
+
+## Dry Line Analysis
+Three dew point frames were analyzed (fh=3, fh=6, fh=9):
+
+- **Dry line orientation**: North-south through the central Great Plains, approximately along **-99°W to -100°W** in the Dakotas/Nebraska corridor
+- **East of dry line**: Dew points 60–68°F (rich Gulf moisture return flow)
+- **West of dry line**: Dew points 20–45°F (continental/arid air mass)
+- **Gradient**: 20–30°F dew point drop across ~50–75 miles — a classic sharp dry line
+- **Temporal evolution**: The dry line is nearly stationary across all three frames, positioned just west of the SPC Enhanced risk area
+- **Eastern edge of dry line**: Approximately -98°W to -99°W at the ND/SD latitude
+
+---
+
+## Reflectivity / Convective Cell Analysis
+
+### fh=3 (18Z, 1 PM CDT)
+- Early-stage returns near the target area:
+  - **46.0°N, -100.5°W**: 30 dBZ — central ND/SD, near the dry line (early CI)
+  - **49.5°N, -97.5°W**: 40 dBZ — southern Manitoba border (too far north)
+  - **45.0°N, -95.5°W**: 25 dBZ — western Minnesota
+- No significant convection yet in the Enhanced risk area
+
+### fh=6 (21Z, 4 PM CDT)
+- Minimal returns in the SD/ND target area
+- Strongest nearby return: 46.0°N, -108.5°W: 40 dBZ (Montana — too far west)
+- The Enhanced risk area in eastern SD remains quiet
+
+### fh=7 (22Z, 5 PM CDT) — **KEY INITIATION FRAME**
+- **46.5°N, -99.0°W: 35 dBZ** — Discrete cell initiating RIGHT AT the dry line in central ND (near Jamestown)
+- **45.0°N, -93.0°W: 50 dBZ** — Strong cell near Minneapolis, but deep in warm sector
+- **47.5°N, -103.5°W: 30 dBZ** — Western ND (dry side, elevated convection)
+- The 46.5°N cell is isolated and discrete, positioned precisely at the moisture boundary
+
+### fh=9 (00Z, 7 PM CDT) — **MATURE STAGE**
+- **47.0°N, -97.5°W: 50 dBZ** — The dry-line-initiated cell has intensified and moved ESE, now a strong discrete supercell in eastern ND
+- **47.0°N, -97.0°W: 35 dBZ** — Associated returns around the same cell
+- **46.0–45.5°N, -91.5°W: 60 dBZ** — Strong cluster in NW Wisconsin (warm sector QLCS-type)
+- **43.0°N, -94.0°W: 45 dBZ** — Southern Minnesota cell
+- **47.5°N, -102.5°W: 45 dBZ** — Western ND elevated convection
+
+**Storm Mode Assessment**: The cell at 46.5°N/-99°W initiates as a discrete storm at the dry line at fh=7, then moves ESE to ~47.0°N/-97.5°W by fh=9, intensifying to 50 dBZ. This is a classic dry-line-initiated discrete supercell. The cells further east (Minneapolis, NW Wisconsin) are warm-sector multicell/QLCS activity — not targeted.
+
+---
+
+## Sounding Analysis
+
+### Location 1: Central ND (46.53°N, -98.98°W) — fh=7 (22Z) — **PRIMARY TARGET**
+| Parameter | Value |
+|---|---|
+| SBCAPE | 2397 J/kg |
+| MLCAPE | 1555 J/kg |
+| SBCIN | -21 J/kg |
+| LCL | 1017 m |
+| LFC | 1721 m |
+| SRH 0-1km | 74 m²/s² |
+| SRH 0-3km | 105 m²/s² |
+| Bulk Shear 0-6km | 32 kt |
+| BRN Shear | 29 m/s² |
+| Supercell Composite | **3.3** |
+| STP (eff) | **0.6** |
+| STP (cin) | 0.0 |
+| Critical Angle | **133°** |
+| Bunkers Right | **290°/20 kt** |
+| SARS | 52% SIG |
+| SHIP | 1.4 |
+| Psbl Haz Type | SVR |
+
+**Assessment**: Excellent supercell environment. Strong CAPE with minimal CIN, favorable hodograph curvature, and solid SRH values. The SCP of 3.3 and STP of 0.6 with a 133° critical angle indicate a real tornado threat with discrete supercells. Low-level jet is present from the south-southeast at 850–925 hPa around 15–20 kt, providing low-level moisture transport and backing. The hodograph shows a curved shape in the lowest 3 km with a transition to more unidirectional westerly flow aloft — classic Plains supercell profile.
+
+### Location 2: Eastern SD (44.53°N, -97.02°W) — fh=7 (22Z) — ENHANCED RISK CENTER
+| Parameter | Value |
+|---|---|
+| SBCAPE | 2569 J/kg |
+| MLCAPE | 2106 J/kg |
+| SBCIN | -3 J/kg |
+| SRH 0-1km | 11 m²/s² |
+| SRH 0-3km | 15 m²/s² |
+| Bulk Shear 0-6km | 25 kt |
+| Supercell Composite | **0.3** |
+| STP | **0.0** |
+| Bunkers Right | 286°/13 kt |
+| Psbl Haz Type | MRGL SVR |
+
+**Assessment**: Despite excellent CAPE (2569 J/kg), this location is severely shear-limited with SRH 0-1km of only 11 m²/s² and SCP of 0.3. This is a pulse/multicell environment, NOT favorable for organized supercells. The Enhanced risk here is likely driven by hail/wind from disorganized convection, not supercells.
+
+### Location 3: Eastern ND (47.02°N, -97.47°W) — fh=9 (00Z) — DOWNSTREAM TARGET
+| Parameter | Value |
+|---|---|
+| SBCAPE | 1884 J/kg |
+| MLCAPE | 1436 J/kg |
+| SBCIN | -30 J/kg |
+| SRH 0-1km | 25 m²/s² |
+| SRH 0-3km | 117 m²/s² |
+| Supercell Composite | **3.0** |
+| STP | 0.1 |
+| Bunkers Right | **297°/24 kt** |
+| Psbl Haz Type | SVR |
+
+**Assessment**: Good supercell environment downstream of the hatch area. SRH 0-3km of 117 m²/s² and SCP of 3.0 support continued supercell maintenance. The 50 dBZ cell at this location at fh=9 confirms the model is showing a supercell propagating through this environment.
+
+---
+
+## Target Selection
+
+### Hatch Area: **46.5°N, -99.0°W** (Central North Dakota, near Jamestown)
+- Right at the dry line where CI occurs at fh=7 (22Z / 5 PM CDT)
+- Best combination of instability (CAPE 2397), shear (SRH 105), and SCP (3.3)
+- Discrete cell confirmed in pixel scan at 35 dBZ, intensifying to 50 dBZ by fh=9
+
+### Bunkers Right Storm Motion: **290°/20 kt** (FROM 290° WNW, moving TOWARD 110° ESE)
+- Consistent between central ND (290°/20kt) and eastern ND (297°/24kt) soundings
+- Storms will track ESE from the dry line into western Minnesota
+
+### Positioning Location: **45.77°N, -96.27°W** (Western Minnesota)
+- ~140 miles ESE of the hatch area (BRM speed × 7 = 140 mi)
+- Along the storm's projected path
+- Allows intercept as supercell matures and moves into higher-shear environment
+
+---
+
+## Confidence & Caveats
+- **Moderate-High Confidence** in discrete supercell initiation along the dry line in central ND
+- The SPC Enhanced risk center (eastern SD) has poor shear — the best supercell environment is displaced ~150 miles NNW into central ND (still within the broader risk area)
+- Timing is late afternoon (22Z–00Z / 5–7 PM CDT) — within the daytime window
+- Main risk: The warm-sector cells (MN/WI) could congeal into a QLCS and complicate the target; however, the dry-line cell initiates independently and should remain discrete through the late afternoon
+- Tornado threat exists (STP 0.6, critical angle 133°) but is conditional on low-level backing increasing through the evening
+- Primary severe hazards: Large hail (SARS 52% SIG, SHIP 1.4), damaging winds, and possible tornadoes with discrete supercells
