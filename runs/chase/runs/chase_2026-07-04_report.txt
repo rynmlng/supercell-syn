@@ -1,0 +1,155 @@
+# Chase Forecast Analysis — Saturday, July 4, 2026
+
+## Model Run
+- **HRRR Init:** 2026-07-04 12Z
+- **Analysis Window:** fh=6 (18Z/1 PM CDT) through fh=12 (00Z/7 PM CDT)
+
+---
+
+## SPC Day 1 Convective Outlook
+- **Broad Marginal (Level 1)** risk from the Central Plains to the East Coast
+- **Slight (Level 2)** risk corridor from NE/KS through IA/MO/IL/IN to OH
+- **Enhanced (Level 3)** risk over central Kansas and separately over the Mid-Atlantic (WV/VA); SPC-provided centroid ~37.9°N, -87.6°W (western KY)
+- **Possible Moderate (Level 4)** risk area over central Kansas (small red area visible on the outlook image)
+- Primary chase-relevant threat is the central Plains Enhanced/Moderate area along the Kansas dry line
+
+---
+
+## Dry Line Analysis (3 frames: fh=6, fh=9, fh=12)
+
+A well-defined dry line is present through central Kansas at all three analysis times:
+
+| Longitude | Dew Point (°F) | Character |
+|-----------|----------------|-----------|
+| ≤ -100°W  | 10–25°F        | Arid (tan) |
+| -99°W to -97°W | 30–50°F   | Sharp gradient zone |
+| ≥ -96°W   | 60–72°F        | Humid (green/purple) |
+
+- **Gradient magnitude:** ~30°F drop over ~75 miles — classic sharp dry line
+- **Dry line eastern edge (moisture boundary):** approximately -97°W to -96°W across KS/NE
+- The dry line is quasi-stationary through the afternoon, with slight eastward mixing by fh=12
+- The dry line intersects the SPC Enhanced risk area in central Kansas
+
+---
+
+## Reflectivity Evolution (Pixel Scan Ground Truth)
+
+### fh=6 (18Z / 1 PM CDT)
+- Strongest return near target area: 36.0°N, -92.5°W at 60 dBZ (north-central Arkansas — warm sector, not near dry line)
+- Weak returns in Iowa/Nebraska: 41.0°N/-94.5°W at 30 dBZ, 40.0°N/-95.0°W at 25 dBZ
+- **No significant convection along the Kansas dry line at this hour**
+
+### fh=7 (19Z / 2 PM CDT)
+- Cells initiating in SE Nebraska: 41.0°N/-95.0°W at 30 dBZ, 40.5°N/-96.0°W at 25 dBZ, 41.0°N/-96.0°W at 25 dBZ
+- These are near the dry line's eastern edge — earliest CI signal in the target area
+- Still no cells in Kansas (cap holding)
+
+### fh=9 (21Z / 4 PM CDT) — PRIMARY DAYTIME WINDOW
+- **Discrete cells in SE Nebraska/SW Iowa intensifying:**
+  - 40.5°N, -95.5°W: **45 dBZ** (isolated, discrete)
+  - 40.0°N, -96.0°W: **45 dBZ** (isolated, discrete)
+  - 40.0°N, -96.5°W: 30 dBZ
+  - 41.0°N, -95.0°W: 30 dBZ
+- Northern Illinois cluster: 42.0°N/-89.0°W at 55 dBZ (far from dry line, not targeted)
+- Still no significant cells in central Kansas (cap intact)
+- **Storm mode:** Discrete, isolated cells near the dry line — favorable for chasing
+
+### fh=12 (00Z / 7 PM CDT)
+- **Explosive development in Kansas as cap breaks:**
+  - 39.0°N, -95.5°W: **60 dBZ** (NE Kansas)
+  - 39.5°N, -97.0°W: **55 dBZ** (north-central Kansas, ON the dry line)
+  - 39.0°N, -96.0°W: **55 dBZ** (NE Kansas)
+  - 37.5°N, -100.0°W: **55 dBZ** (SW Kansas, isolated cell RIGHT on the dry line)
+  - 40.5°N, -94.0°W: 45 dBZ (NW Missouri — SE Nebraska cells propagated here)
+- The 37.5°N/-100°W cell is a classic dry line–initiated discrete cell, well isolated
+- The NE Kansas cells (39-39.5°N) show a mix of propagated and newly-initiated convection
+
+---
+
+## Sounding Analysis (fh=9, 21Z)
+
+### Location 1: 40.48°N, -95.98°W (SE Nebraska — near active cells)
+| Parameter | Value | Assessment |
+|-----------|-------|------------|
+| SFC CAPE | 3073 J/kg | Very high |
+| MU CAPE | 3073 J/kg | Very high |
+| CIN | -1 J/kg | No cap — storms initiate freely |
+| LCL | 931 m AGL | Moderate |
+| 0-1km SRH | -14 m²/s² | Negative (unfavorable for right-movers) |
+| 0-3km SRH | -37 m²/s² | Negative |
+| 0-3km Bulk Shear | 15 kt | Marginal |
+| BRN Shear | 11 m²/s² | Low |
+| Supercell Composite | -0.0 | Not supportive |
+| STP | 0.0 | Not supportive |
+| Critical Angle | 94° | Good for tornado potential (if shear were present) |
+| **BRM** | **317°/22 kt** | FROM 317° (NNW), storm moves toward 137° (SSE) |
+| Surface T/Td | 83°F / 70°F | Very humid |
+| PW | 1.41 in | Moist column |
+
+**Assessment:** Extreme instability with no cap, but low-level shear is essentially zero to negative. Storms will be strong multicells/pulse-type rather than sustained supercells. The negative SRH favors left-moving or disorganized storm modes.
+
+### Location 2: 39.52°N, -97.05°W (North-central Kansas — dry line)
+| Parameter | Value | Assessment |
+|-----------|-------|------------|
+| SFC CAPE | 1134 J/kg | Moderate |
+| CIN | -123 J/kg | **Heavily capped** |
+| 0-3km Bulk Shear | 25 kt | Marginal-adequate |
+| BRN Shear | 38 m²/s² | Decent |
+| 0-3km SRH | 19 m²/s² | Low but positive |
+| Supercell Composite | -0.1 | Not supportive (due to cap) |
+| **BRM** | **347°/23 kt** | FROM 347° (NNW), storm moves toward 167° (SSE) |
+| Surface T/Td | 81°F / 63°F | Drier — near dry line |
+
+**Assessment:** Best shear profile of the three soundings. If the cap breaks (expected late afternoon per HRRR evolution), supercell mode is plausible. The 25 kt 0-3km bulk shear and 38 m²/s² BRN shear are adequate for supercell sustenance.
+
+### Location 3: 39.98°N, -95.04°W (NE Kansas — warm sector)
+| Parameter | Value | Assessment |
+|-----------|-------|------------|
+| SFC CAPE | 2067 J/kg | Good |
+| CIN | -9 J/kg | Minimal |
+| 0-3km Bulk Shear | 4 kt | **Very weak** |
+| BRN Shear | 2 m²/s² | **Extremely low** |
+| 0-1km SRH | 1 m²/s² | Negligible |
+| **BRM** | **297°/22 kt** | FROM 297° (WNW), storm moves toward 117° (ESE) |
+
+**Assessment:** Good CAPE, no cap, but essentially no shear whatsoever. Storms here will be pulse-type thunderstorms with minimal organization.
+
+---
+
+## Target Selection & Rationale
+
+### Hatch Area: 40.0°N, -96.0°W (SE Nebraska, near the NE/KS border)
+- **Why here:** This is where the HRRR shows discrete cells first initiating near the dry line during the peak afternoon window (fh=7-9). The 45 dBZ returns at fh=9 are isolated and near the dry line's eastern edge.
+- **Dry line proximity:** The moisture gradient runs from ~-99°W (dry) to ~-96°W (humid) at this latitude. The hatch area is right at the moisture boundary.
+- **SPC Risk:** At the northern margin of the Enhanced risk area; within Slight at minimum. Storms propagate SSE directly into the Enhanced/Moderate risk area in Kansas.
+
+### Storm Motion Vector
+- **Bunkers Right Motion:** FROM 317° at 22 kt (TOWARD 137°/SSE)
+- Based on the sounding at 40.48°N, -95.98°W (nearest to the active cells)
+
+### Positioning Location: Western Missouri (~38.35°N, -94.06°W)
+- **Distance:** 154 miles (22 kt × 7) toward 137° from hatch area
+- Positioned downstream of storm motion in western Missouri
+- Allows the chaser to intercept storms as they mature and move SSE into the Enhanced risk area in Kansas
+
+---
+
+## Confidence & Caveats
+
+### Confidence: MODERATE-LOW for supercell mode
+- **High confidence:** Strong discrete thunderstorms will fire along the dry line in SE Nebraska during the afternoon and expand into Kansas by evening
+- **Moderate confidence:** Cells will reach 45–60 dBZ (severe-caliber reflectivity)
+- **Low confidence:** Sustained supercell mode. All three soundings show marginal-to-poor supercell composite parameters. The best shear profile (north-central KS) is under a strong cap. The best CAPE/no-cap environment (SE NE) has negative SRH and weak bulk shear.
+- **Storm mode likely:** Pulse-type multicells or short-lived supercells. High CAPE will support large hail and strong outflow winds even without sustained rotation.
+- **Upside scenario:** If the cap breaks in central Kansas where the shear is better (0-3km bulk shear 25 kt, BRN shear 38), more organized supercells could fire along the dry line in the late afternoon.
+
+### Key Risks
+1. Weak low-level shear may prevent supercell sustenance
+2. The cap in Kansas may hold longer than expected, delaying initiation
+3. Multiple cells could cluster quickly, reducing isolation
+4. This is a typical July 4th pattern: high CAPE, marginal shear, favoring strong multicells over classic supercells
+
+---
+
+## Summary
+The July 4th, 2026 setup features a well-defined dry line through central Kansas with extreme instability (CAPE 2000-3000+ J/kg) but marginal deep-layer shear. The HRRR shows discrete cells initiating along the dry line in SE Nebraska by early afternoon (fh=7-9, 2-4 PM CDT), intensifying to 45 dBZ, then expanding explosively into Kansas by evening (55-60 dBZ by fh=12). The SPC has Enhanced risk over central Kansas. The best chase strategy is to position in western Missouri to intercept SE Nebraska cells as they propagate SSE into the Enhanced risk corridor. Storm mode will likely be pulse multicell to marginal supercell, with the primary threats being large hail and damaging outflow winds from high-CAPE storms.
