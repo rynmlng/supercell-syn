@@ -1,0 +1,149 @@
+# Chase Forecast Analysis — Wednesday, July 8, 2026
+
+## Model Run
+- **HRRR Init:** 2026-07-08 13Z
+- **Forward hours analyzed:** fh=6 (19Z/2PM CDT) through fh=12 (01Z/8PM CDT)
+
+## SPC Day 1 Outlook
+- **Enhanced risk** (Level 3/5) centered over **western Kansas** (~39.9°N, -101.7°W)
+- **Slight risk** extending NE through Missouri into Illinois/Indiana
+- Broad **Marginal risk** across much of the central/eastern CONUS
+- Issued 1243Z 07/08/2026 by Mosier/Thornton
+
+## Dry Line Analysis
+Three dew point frames successfully retrieved (fh=6, fh=9, fh=12). A well-defined dry line is evident through **western Kansas along ~100–101°W**:
+
+- **fh=6 (19Z):** Sharp gradient from 55–65°F east of ~100°W to 32–40°F west of ~101°W. A 25–30°F drop across ~75 miles. Classic dry line structure.
+- **fh=9 (22Z):** Dry line tightens. West side: 27–42°F. East side: 52–67°F. Boundary remains at ~100–101°W.
+- **fh=12 (01Z):** Dry line holds position. West: 22–44°F. East: 47–65°F. Slight eastward mixing noted in NW Kansas.
+
+The eastern edge of the dry line (where moisture remains ≥60°F) is at approximately **99–100°W** through central Kansas.
+
+## Reflectivity Analysis
+
+### fh=6 (19Z / 2 PM CDT)
+- Very sparse convection near the Enhanced risk area
+- Nearest returns: 38.5°N/-104.5°W at 30 dBZ (eastern Colorado foothills)
+- No returns ≥20 dBZ found in western Kansas from the pixel scan
+- Strongest returns on the map: 25°N/-106°W at 60 dBZ (Mexico) and 30.5°N/-94°W at 55 dBZ (SE Texas) — not relevant
+
+### fh=7 (20Z / 3 PM CDT)
+- Early CI along Colorado Front Range: 42.0°N/-105.0°W at 45 dBZ
+- Northern NM: 36.5°N/-105.5°W at 40 dBZ
+- Still no significant returns in western Kansas proper
+
+### fh=8 (21Z / 4 PM CDT)
+- **Key cell strengthens:** 42.5°N/-104.5°W reaches **55 dBZ** — discrete cell in SE Wyoming/NE Colorado
+- Additional development along Front Range: 42.0°N/-105.0°W at 35 dBZ
+- Image shows scattered blue dots (20–30 dBZ) beginning to appear across western KS
+
+### fh=9 (22Z / 5 PM CDT)
+- SE Wyoming cell tracks to 42.5°N/-104.0°W at **50 dBZ** — remains discrete
+- Secondary cells: 42.0°N/-104.0°W at 45 dBZ, 43.0°N/-105.0°W at 40 dBZ
+- Cells in NE Oklahoma: 36.0°N/-94.0°W at 45 dBZ
+- Image shows broader convective development across western KS/eastern CO, with scattered returns in the 20–35 dBZ range along the dry line
+- The strongest discrete cell near the dry line remains the SE WY/NE CO cell
+
+## Sounding Analysis
+
+### Sounding 1: SE Wyoming (42.5°N, -104.05°W) — fh=9
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 1009 J/kg |
+| ML CAPE | 656 J/kg |
+| SFC CIN | 0 J/kg |
+| LCL | 2708m |
+| LFC/EL | 2708m / 9568m |
+| BRM | 341°/21 kt (toward NNW) |
+| SRH-1km | 9 m²/s² |
+| SRH-3km | 108 m²/s² |
+| Eff Shear (EBWD) | 39 kt |
+| BRN Shear | 36 m²/s² |
+| Critical Angle | 115° |
+| Supercell Composite | 0.7 |
+| Sfc-3km LR | 10.0 C/km |
+| 850-500mb LR | 8.8 C/km |
+| Psbl Haz Type | MRGL SVR |
+| SARS | 02 Aug 04 22Z (BHS), 02 Aug 00 02Z (LWT) |
+
+- Excellent steep lapse rates (10.0 C/km Sfc-3km)
+- Good deep-layer shear and SRH-3km
+- Active convection confirmed (50–55 dBZ)
+- North of Enhanced risk area
+
+### Sounding 2: Western Kansas (39.47°N, -101.04°W) — fh=9 ⭐ SELECTED
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 1078 J/kg |
+| ML CAPE | 820 J/kg |
+| SFC CIN | -15 J/kg |
+| ML CIN | -58 J/kg |
+| LCL | 3032m |
+| LFC/EL | 3246m / 10130m |
+| BRM | 356°/18 kt (toward N) |
+| SRH-1km | 8 m²/s² |
+| SRH-3km | 52 m²/s² |
+| Eff SRH | 44 m²/s² |
+| Eff Shear (EBWD) | 39 kt |
+| BRN Shear | 12 m²/s² |
+| Critical Angle | 103° |
+| Supercell Composite | 0.8 |
+| STP (cin) | 0.0 |
+| Sfc-3km LR | 9.5 C/km |
+| 850-500mb LR | 8.6 C/km |
+| Surface Td/T | 52°F / 96°F |
+| Psbl Haz Type | MRGL SVR |
+| SARS | 03 Jun 00 00Z (ABQ) — 1.75" hail |
+
+- **Highest Supercell Composite (0.8)** of all three soundings
+- In the Enhanced risk area, right on the dry line
+- Good CAPE (1078 J/kg) with steep lapse rates (9.5 C/km)
+- Moderate EBWD shear (39 kt)
+- Critical angle 103° — favorable for right-moving supercells
+- ML CIN of -58 may delay CI until peak heating erodes the cap
+- SARS analog matches ABQ supercell with 1.75" hail
+
+### Sounding 3: NW Kansas (40.49°N, -102.05°W) — fh=9
+| Parameter | Value |
+|-----------|-------|
+| SFC CAPE | 1355 J/kg |
+| SFC CIN | -3 J/kg |
+| LCL | 2645m |
+| BRM | 337°/20 kt |
+| SRH-1km | 0 m²/s² |
+| SRH-3km | 35 m²/s² |
+| Eff Shear (EBWD) | 27 kt |
+| Critical Angle | 175° |
+| Supercell Composite | 0.0 |
+| Psbl Haz Type | NONE |
+
+- Highest CAPE (1355 J/kg) but **worst shear** — Supercell composite 0.0
+- Near-zero SRH at all levels kills organized supercell potential
+- Discarded as a target
+
+## Target Selection
+
+### Hatch Area: Western Kansas (39.5°N, -101.0°W)
+- Centered in the SPC Enhanced risk area
+- Situated directly on the dry line (100–101°W)
+- Highest Supercell Composite (0.8) with favorable critical angle (103°)
+- CAPE ~1078 J/kg with steep lapse rates supporting explosive convective growth
+- EBWD shear of 39 kt supports supercell mode
+- ML CIN of -58 may cause delayed initiation — storms likely fire late afternoon as CIN erodes
+- SARS analog suggests 1.75" hail potential
+
+### Bunkers Right Motion Vector
+- **Direction TOWARD:** 356° (due north)
+- **Speed:** 18 kt
+- **FROM direction (wind convention):** 176° (due south)
+- Storms will track northward along the dry line — classic for Kansas dry line supercells with weak steering flow
+
+### Positioning Location: Southern Nebraska (41.3°N, -101.2°W)
+- ~126 miles north of hatch area along the BRM vector
+- Computed as BRM speed × 7 = 126 miles
+- Allows interception as storms track northward along the dry line
+- Good road network in southern Nebraska for mobile chasing
+
+## Confidence Assessment
+- **Moderate confidence** — Enhanced risk with good supercell parameters (SCP=0.8), but convective initiation is delayed due to ML CIN. The HRRR does not show strong cells in western KS at fh=9, though the image shows scattered developing returns. Cells should fire as peak heating erodes the cap. The SE Wyoming cells (42.5°N, -104°W) are already firing and represent a backup target if KS initiation fails.
+- Storm mode: Expect discrete supercells firing along the dry line in western Kansas during the late afternoon/early evening. Storms track northward at ~18 kt. Primary threat is large hail (SARS 1.75").
