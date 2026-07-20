@@ -1,0 +1,104 @@
+
+# Chase Forecast Analysis — Monday, July 20, 2026
+
+## HRRR Model Run
+- **Run:** 2026072015 (15Z July 20, 2026)
+- **Max forward hour:** 18
+
+## SPC Day 1 Convective Outlook
+- **Enhanced risk** (orange) centered over Iowa/Wisconsin/Minnesota (~43.8°N, -90.9°W)
+- Slight risk (yellow) extends broadly across the upper Midwest and Great Lakes
+- Marginal risk (green) covers most of the central and eastern CONUS
+- Secondary Enhanced risk near the Carolinas (not our primary target)
+
+## Dry Line / Moisture Boundary Analysis
+Three dew point frames analyzed (fh=3/18Z, fh=6/21Z, fh=9/00Z):
+
+### Classic Western Dry Line
+- A N-S dry line runs through **central South Dakota and Nebraska** (~98-100°W)
+- East side: 55-62°F Td; West side: 35-45°F Td
+- Gradient: ~20°F drop over 75-100 miles
+- Weak convective development near this boundary (43.5°N, -97.5°W: 40 dBZ at fh=8), but insufficient for primary targeting
+
+### Primary Target: Warm Front / Moisture Boundary in Western Wisconsin
+- A sharp E-W moisture boundary identified between **45°N and 46°N** in western Wisconsin
+- **South of 45°N:** Td = 71-74°F (extreme moisture), CAPE 3700+ J/kg
+- **North of 46°N:** Td = 58°F, CAPE 1055 J/kg — dramatically drier
+- Drop of **13-16°F in ~50-75 miles** north-to-south
+- This boundary intersects the Enhanced risk zone and is the primary initiation axis
+
+## Reflectivity Evolution (Pixel Scan Ground Truth)
+| Time (fh) | UTC | CDT | Key Returns in Target Area |
+|---|---|---|---|
+| fh=3 | 18Z | 1 PM | 43.5°N, -90.0°W: 35 dBZ (weak, developing) |
+| fh=6 | 21Z | 4 PM | No significant returns in Enhanced risk area |
+| fh=7 | 22Z | 5 PM | 43.0°N, -100.5°W: 40 dBZ (SD dry line, minor) |
+| fh=8 | 23Z | 6 PM | **46.0°N, -91.0°W: 55 dBZ; 46.5°N, -90.0°W: 55 dBZ** (N WI, along boundary) |
+| fh=9 | 00Z | 7 PM | **45.0°N, -92.5°W: 50 dBZ** (discrete cell on boundary); 46.5-47.0°N, -89-89.5°W: 55 dBZ (northern WI cluster) |
+
+### Storm Mode Assessment
+- By fh=8-9, a developing convective cluster extends from northern Minnesota into northern Wisconsin (46-48°N)
+- A **discrete cell** fires at **45.0°N, -92.5°W** (50 dBZ at fh=9), positioned on the southern flank of the cluster, right on the moisture boundary
+- This cell is in the most favorable thermodynamic and kinematic environment (south of the boundary where CAPE/SRH are maximized)
+- Additional discrete cells at 45.0-45.5°N, -91 to -92.5°W (45 dBZ) support isolated supercell potential on the cluster's southern flank
+
+## Sounding Analysis
+
+### Sounding 1: 45.0°N, -92.5°W (Western WI, near Eau Claire) — fh=6/21Z
+- **CAPE:** SFC 3738 J/kg | **CINH:** 0 (no cap)
+- **LCL:** 1299m | **LFC:** 1299m
+- **0-1km SRH:** 67 m²/s² | **0-3km SRH:** 155 m²/s²
+- **Bunkers Right:** 301°/40 kt
+- **Supercell Composite:** 7.2 | **STP:** 1.0 | **SHIP:** 1.7
+- **SARS:** 38% TOR, 79% SIG
+- **Psbl Haz Type:** SVR
+- **850-500mb LR:** 7.4 C/km | **MeanW:** 15.8 g/kg
+
+### Sounding 2: 44.0°N, -91.0°W (SW Wisconsin, near La Crosse) — fh=6/21Z ⭐ BEST
+- **CAPE:** SFC 3707 J/kg | **CINH:** 0 (no cap)
+- **LCL:** 873m | **LFC:** 873m (very low — favorable for tornadoes)
+- **0-1km SRH:** 85 m²/s² | **0-3km SRH:** 165 m²/s² | **Eff SRH:** 138
+- **Bunkers Right:** 300°/35 kt
+- **Supercell Composite:** 10.2 | **STP:** 2.8 | **SHIP:** 2.4
+- **Critical Angle:** 73° | **Psbl Haz Type:** TOR
+- **850-500mb LR:** 7.2 C/km | **MeanW:** 17.7 g/kg | **PW:** 1.77"
+
+### Sounding 3: 46.0°N, -92.0°W (NW Wisconsin/Duluth) — fh=6/21Z
+- **CAPE:** SFC 1055 J/kg | **CINH:** 0 for SFC, -34 for ML
+- **LCL:** 2194m (very high)
+- **Bunkers Right:** 301°/35 kt
+- **Supercell Composite:** 1.2 | **STP:** 0.0 | **SHIP:** 0.3
+- **Psbl Haz Type:** MRGL SVR
+- **Surface Td:** 58°F — confirms position north of the moisture boundary
+
+### Hodograph / Low-Level Jet Assessment
+- Soundings 1 & 2 show well-curved hodographs with strong veering from SSE surface winds to WNW flow aloft
+- Low-level jet at 850-925 hPa: ~20-25 kt from the south, feeding warm moist air into the boundary
+- Deep-layer shear (effective bulk shear) of 43-62 m²/s² supports organized supercell development
+- 4-6km SR wind: 260/21 kt (sounding 1) — adequate for mesocyclone maintenance
+
+## Hatch Area & Positioning
+
+### Hatch Area: 45.0°N, -92.5°W (Western Wisconsin, near Eau Claire)
+- Located directly on the E-W moisture boundary (Td gradient from 74°F to 58°F)
+- HRRR develops a discrete 50 dBZ cell at this exact location by fh=9
+- South of the boundary: explosive CAPE (3700+), STP 1-2.8, SCP 7-10
+- Within the SPC Enhanced risk zone
+
+### Positioning Location: Southeastern Wisconsin (~43.15°N, -88.29°W)
+- BRM 300°/35 kt → storms move toward ~120° (ESE) at 35 kt
+- Positioning distance: 35 kt × 7 ≈ 245 nm downstream (clamped to 250 mi max), roughly 150 miles ESE of hatch
+- Allows intercept as discrete supercells propagate ESE through the rich moisture south of the boundary
+
+### Bunkers Right Storm Motion Vector
+- **FROM:** 300° (WNW)
+- **TOWARD:** 120° (ESE)
+- **Speed:** 35 knots
+
+## Confidence & Caveats
+- **CONFIDENCE: MODERATE-HIGH** for isolated supercells on the southern flank of the developing convective cluster
+- The primary risk is that the cluster may grow upscale into a QLCS by evening, potentially absorbing discrete cells
+- The STP of 2.8 and SCP of 10.2 support significant severe potential including tornadoes
+- Chase window: approximately 5-7 PM CDT (fh=8-9) for discrete cell initiation
+- Late-day merger into a line segment is possible — chasers should target the southern-most discrete cell
+- The warm frontal boundary orientation (E-W) may support backed surface winds and enhanced low-level SRH as storms cross it
